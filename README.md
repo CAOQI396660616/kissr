@@ -53,24 +53,6 @@
 
 
 
-VITE_SUPABASE_URL=https://dgmvwettqgbrhxqhyotv.supabase.co  
-VITE_SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImRnbXZ3ZXR0cWdicmh4cWh5b3R2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTYxMTAxNTksImV4cCI6MjA3MTY4NjE1OX0.2sc5XZi91_c8Qi18uL7xW6uR-hMu93x4PPBiWw8dPU8
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-git remote add origin git@github.com:CAOQI396660616/kissr.git
-
 
 
 
