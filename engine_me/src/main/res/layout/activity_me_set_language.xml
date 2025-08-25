@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+
+    <LinearLayout
+        android:id="@+id/clTopRoot"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/clF3F4F5"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!--顶部栏-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clTop"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_44"
+            app:layout_constraintTop_toBottomOf="@id/vStatus">
+
+            <ImageView
+                android:id="@+id/ivBack"
+                android:layout_width="@dimen/dp_39"
+                android:layout_height="match_parent"
+                android:paddingStart="@dimen/dp_16"
+                android:paddingEnd="@dimen/dp_8"
+                android:src="@drawable/ic_back_a"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                android:paddingHorizontal="@dimen/dp_50"
+                android:text="@string/good_at_language"
+                android:textColor="@color/cl1A1A1A"
+                android:textSize="@dimen/sp_16"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <com.hikennyc.view.MultiStateAiView
+            android:id="@+id/multiStateView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_0"
+            android:layout_weight="1"
+            app:msv_emptyView="@layout/layout_default_empty"
+            app:msv_errorView="@layout/layout_default_error"
+            app:msv_loadingView="@layout/layout_default_loading_m_bottom"
+            app:msv_viewState="loading">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_25"
+                    android:layout_marginStart="@dimen/dp_16"
+                    android:layout_marginTop="@dimen/dp_14"
+                    android:text="@string/plz_choose_good_at_language"
+                    android:textColor="@color/cl2C2E33"
+                    android:textSize="@dimen/sp_15"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_0"
+                    android:layout_marginHorizontal="@dimen/dp_10"
+                    android:layout_weight="1"
+                    android:scrollbars="none" />
+
+                <com.ruffian.library.widget.RTextView
+                    android:id="@+id/tvNext"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_51"
+                    android:layout_marginHorizontal="@dimen/dp_32"
+                    android:layout_marginTop="@dimen/dp_25"
+                    android:layout_marginBottom="@dimen/dp_22"
+                    android:gravity="center"
+                    android:text="@string/save"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_15"
+                    android:textStyle="bold"
+                    app:background_normal="@color/cl2C2E33"
+                    app:corner_radius="@dimen/dp_26"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv2" />
+
+            </LinearLayout>
+
+        </com.hikennyc.view.MultiStateAiView>
+    </LinearLayout>
+
+
+</layout>

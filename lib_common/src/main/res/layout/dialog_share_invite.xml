@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="clickListener"
+            type="android.view.View.OnClickListener" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/common_radius_15_bg_fff"
+            android:padding="@dimen/dp_20">
+
+
+            <com.dubu.common.views.cview.DrawableTextView
+                android:id="@+id/dd_tv_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:text="@string/app_name"
+                android:textColor="@color/color222222"
+                android:textSize="@dimen/sp_18"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:mediumWeight="true" />
+
+            <TextView
+                android:id="@+id/dd_tv_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_15"
+                android:background="@color/color999999"
+                android:maxHeight="@dimen/dp_130"
+                android:minHeight="@dimen/dp_130"
+                android:paddingStart="@dimen/dp_15"
+                android:paddingTop="@dimen/dp_11"
+                android:paddingEnd="@dimen/dp_15"
+                android:paddingBottom="@dimen/dp_11"
+                android:textDirection="locale"
+                android:scrollbars="vertical"
+                android:fadeScrollbars="true"
+                android:textColor="@color/color666666"
+                android:textSize="@dimen/sp_12"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/dd_tv_title"
+                tools:text="niubility_niubility_niubility_niubility_niubility_niubility_" />
+
+
+            <TextView
+                android:id="@+id/dd_btn_change"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp_50"
+                android:layout_marginTop="@dimen/dp_20"
+                android:layout_marginEnd="@dimen/dp_10"
+                android:background="@drawable/bg_stroke_r25_888888"
+                android:gravity="center"
+                android:onClick="@{clickListener}"
+                android:text="@string/app_name"
+                android:textColor="@color/color999999"
+                android:textSize="@dimen/sp_14"
+                app:layout_constraintEnd_toStartOf="@id/dd_btn_copy"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/dd_tv_content" />
+
+            <TextView
+                android:id="@+id/dd_btn_copy"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp_50"
+                android:layout_marginTop="@dimen/dp_20"
+                android:background="@drawable/common_radius_25_222222"
+                android:gravity="center"
+                android:onClick="@{clickListener}"
+                android:text="@string/app_name"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_14"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/dd_btn_change"
+                app:layout_constraintTop_toBottomOf="@id/dd_tv_content" />
+
+            <TextView
+                android:id="@+id/tv_share_to"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_25"
+                android:text="@string/app_name"
+                android:textColor="@color/color999999"
+                android:textSize="@dimen/sp_12"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/dd_btn_change" />
+
+
+            <ImageView
+                android:id="@+id/iv_fb"
+                android:layout_width="@dimen/dp_42"
+                android:layout_height="@dimen/dp_42"
+                android:layout_marginTop="@dimen/dp_15"
+                android:onClick="@{clickListener}"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_app_logo"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_share_to"
+                tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:id="@+id/iv_twitter"
+                android:layout_width="@dimen/dp_42"
+                android:layout_height="@dimen/dp_42"
+                android:onClick="@{clickListener}"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_app_logo"
+                app:layout_constraintBottom_toBottomOf="@id/iv_fb"
+                app:layout_constraintEnd_toStartOf="@id/iv_share_phone"
+                app:layout_constraintStart_toEndOf="@id/iv_fb"
+                app:layout_constraintTop_toTopOf="@id/iv_fb"
+                tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:id="@+id/iv_share_phone"
+                android:layout_width="@dimen/dp_42"
+                android:layout_height="@dimen/dp_42"
+                android:onClick="@{clickListener}"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_app_logo"
+                app:layout_constraintBottom_toBottomOf="@id/iv_fb"
+                app:layout_constraintEnd_toStartOf="@id/iv_share_link"
+                app:layout_constraintStart_toEndOf="@id/iv_twitter"
+                app:layout_constraintTop_toTopOf="@id/iv_fb"
+                tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:id="@+id/iv_share_link"
+                android:layout_width="@dimen/dp_42"
+                android:layout_height="@dimen/dp_42"
+                android:onClick="@{clickListener}"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_app_logo"
+                app:layout_constraintBottom_toBottomOf="@id/iv_fb"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/iv_fb"
+                tools:ignore="ContentDescription" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ImageView
+            android:id="@+id/iv_close"
+            android:layout_width="@dimen/dp_40"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginTop="@dimen/dp_15"
+            android:onClick="@{clickListener}"
+            android:padding="@dimen/dp_5"
+            android:src="@drawable/ic_app_logo" />
+    </LinearLayout>
+</layout>

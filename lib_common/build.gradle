@@ -1,0 +1,142 @@
+plugins {
+    id 'com.android.library'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'kotlin-parcelize'
+}
+
+android {
+    namespace = "com.dubu.common"
+    compileSdk versions.compileSdk
+
+    defaultConfig {
+        minSdk versions.minSdk
+        targetSdk versions.targetSdk
+        versionCode versions.versionCode
+        versionName versions.versionName
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = ["room.schemaLocation": "$projectDir/schemas".toString()]
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            buildConfigField("String", "versionName", "\"${rootProject.ext.versions.versionName}\"")
+            buildConfigField("String", "versionCode", "\"${rootProject.ext.versions.versionCode}\"")
+            minifyEnabled true
+        }
+        debug {
+            buildConfigField("String", "versionName", "\"${rootProject.ext.versions.versionName}\"")
+            buildConfigField("String", "versionCode", "\"${rootProject.ext.versions.versionCode}\"")
+            minifyEnabled false   // 关闭混淆
+            shrinkResources false // 关闭资源压缩
+            crunchPngs false      // 关闭 PNG 压缩（大型项目有效）
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    dataBinding {
+        enabled = true
+    }
+
+}
+
+
+dependencies {
+    api project(path: ':lib_wheel')
+    api project(path: ':lib_base')
+
+//    api 'com.google.android.gms:play-services-ads-identifier:18.0.1'
+//    implementation platform('com.google.firebase:firebase-bom:31.1.0')
+//    api 'com.google.firebase:firebase-messaging'
+//    api 'com.google.android.gms:play-services-auth:20.5.0'//google登录
+//    api 'com.android.billingclient:billing:5.2.0'//google支付
+    kapt "com.squareup.moshi:moshi-kotlin-codegen:$versions.moshiVersion"
+    kapt "com.alibaba:arouter-compiler:$versions.arouter_compiler"
+    // Wire Protocol Buffer runtime
+    api 'com.squareup.wire:wire-runtime:4.4.3'
+    // smartRefresh刷新 https://github.com/scwang90/SmartRefreshLayout
+    api "io.github.scwang90:refresh-layout-kernel:$versions.refreshLayoutVersion"
+    api "io.github.scwang90:refresh-header-material:$versions.refreshLayoutVersion"
+    //图片选择框架
+    implementation "io.github.lucksiege:pictureselector:$versions.picture_library"
+    //Gson
+    api "com.google.code.gson:gson:$versions.gsonVersion"
+
+    def dep = rootProject.ext.corelibrary
+    //伸缩布局
+    api dep.flexbox
+    api dep.rHelper
+//    api dep.facebooklogin
+
+    api 'com.tencent:mmkv-static:1.2.10'
+    // room
+    api "androidx.room:room-runtime:$versions.roomVersion"
+    api "androidx.room:room-ktx:$versions.roomVersion"
+    kapt "androidx.room:room-compiler:$versions.roomVersion"
+    api 'com.afollestad.material-dialogs:core:3.3.0'
+    api 'com.afollestad.material-dialogs:lifecycle:3.3.0'
+    api 'io.github.razerdp:BasePopup:3.2.0'//popup弹窗
+    /*PhotoView大图*/
+    api 'com.github.chrisbanes:PhotoView:2.0.0'
+    /*Lottie动画*/
+    api 'com.airbnb.android:lottie:5.2.0'
+    api 'io.reactivex.rxjava2:rxandroid:2.1.1'
+    //banner相关
+    api 'io.github.youth5201314:banner:2.2.2'
+    api 'com.github.zhpanvip:bannerviewpager:3.5.11'
+    //万能适配器 https://github.com/CymChad/BaseRecyclerViewAdapterHelper
+    api 'com.github.CymChad:BaseRecyclerViewAdapterHelper:3.0.6'
+    api dep.circleimageview
+    api "androidx.navigation:navigation-ui-ktx:2.3.5"
+    api "androidx.navigation:navigation-fragment-ktx:2.3.5"
+    implementation 'com.aliyun.dpa:oss-android-sdk:2.9.5'
+    api "com.google.android.exoplayer:exoplayer-core:$versions.exo"
+    api "com.google.android.exoplayer:exoplayer-ui:$versions.exo"
+    //工具类
+    //https://github.com/Blankj/AndroidUtilCode/blob/master/lib/utilcode/README-CN.md
+    api "com.blankj:utilcodex:$versions.utilcode"
+    //沉浸式状态栏
+    api 'com.geyifeng.immersionbar:immersionbar:3.2.2'
+    /*屏幕适配 https://github.com/JessYanCoding/AndroidAutoSize*/
+    api 'com.github.JessYanCoding:AndroidAutoSize:v1.2.1'
+    /*播放器 https://github.com/CarGuo/GSYVideoPlayer?tab=readme-ov-file*/
+    api 'com.github.CarGuo.GSYVideoPlayer:gsyvideoplayer:v10.0.0'
+
+    // 语种切换框架：https://github.com/getActivity/MultiLanguages
+    api 'com.github.getActivity:MultiLanguages:9.5'
+
+    /*谷歌emj*/
+    api 'com.vanniktech:emoji-google:0.15.0'
+
+    /*图片选择*/
+    api 'io.github.lucksiege:pictureselector:v3.11.2'
+
+    //https://github.com/guolindev/PermissionX
+    api 'com.guolindev.permissionx:permissionx:1.8.1'
+
+    // 吐司框架：https://github.com/getActivity/Toaster
+    api 'com.github.getActivity:Toaster:13.0'
+
+    //https://bugly.qq.com/docs/user-guide/instruction-manual-android/?v=1.0.0
+    api 'com.tencent.bugly:crashreport:4.1.9.3'
+
+    //https://github.com/zhaoyubetter/ExtractMultiString
+
+}
+
+kapt {
+    arguments {
+        arg("AROUTER_MODULE_NAME", project.getName())
+    }
+    useBuildCache = false
+    correctErrorTypes = true
+}

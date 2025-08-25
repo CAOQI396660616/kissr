@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data></data>
+
+    <com.hikennyc.view.MultiStateAiView
+        android:id="@+id/multiStateView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:msv_emptyView="@layout/layout_default_empty"
+        app:msv_errorView="@layout/layout_default_error"
+        app:msv_loadingView="@layout/layout_default_loading"
+        app:msv_viewState="content">
+
+
+        <com.ruffian.library.widget.RConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <View
+                android:id="@+id/vTop"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_0"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!--顶部栏-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clTop"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_44"
+                app:layout_constraintTop_toBottomOf="@+id/vTop">
+
+                <ImageView
+                    android:id="@+id/ivBack"
+                    android:layout_width="@dimen/dp_52"
+                    android:layout_height="match_parent"
+                    android:paddingHorizontal="@dimen/dp_15"
+                    android:src="@drawable/ic_hi_back"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvTitle"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dp_81"
+                    android:ellipsize="end"
+                    android:gravity="start"
+                    android:maxLines="1"
+                    android:text="@string/app_name"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_16"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/ivBack"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/ivHelp"
+                    android:layout_width="@dimen/dp_44"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="@dimen/dp_4"
+                    android:padding="@dimen/dp_7"
+                    android:src="@drawable/ic_more"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </com.ruffian.library.widget.RConstraintLayout>
+
+    </com.hikennyc.view.MultiStateAiView>
+
+</layout>

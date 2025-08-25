@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_bottom_dialog_light"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/dp_10">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/ivClose"
+            android:layout_width="@dimen/dp_42"
+            android:layout_height="@dimen/dp_42"
+            android:padding="@dimen/dp_7"
+            android:src="@drawable/ic_close_dialog"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.dubu.common.views.cview.DrawableTextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_21"
+            android:layout_marginTop="@dimen/dp_25"
+            android:drawablePadding="@dimen/dp_16"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="@string/dialog_lv_rate"
+            android:textColor="@color/cl2C2E33"
+            android:textSize="@dimen/sp_16"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dp_17"
+        android:layout_marginTop="@dimen/dp_18"
+        android:gravity="center_vertical|start"
+        android:includeFontPadding="false"
+        android:text="@string/dialog_lv_rate_tip"
+        android:textColor="@color/cl6E7380"
+        android:textSize="@dimen/sp_14" />
+
+
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dp_17"
+        android:layout_marginTop="@dimen/dp_18"
+        android:gravity="center_vertical|start"
+        android:includeFontPadding="false"
+        android:text="@string/dialog_lv_rate_title"
+        android:textColor="@color/cl16171A"
+        android:textSize="@dimen/sp_14" />
+
+    <com.dubu.common.views.tv.ToggleBoldTextView
+        android:id="@+id/tv2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dp_17"
+        android:layout_marginTop="@dimen/dp_14"
+        android:gravity="center_vertical|start"
+        android:includeFontPadding="false"
+        android:text="@string/dialog_lv_connection_rate"
+        android:textColor="@color/cl16171A"
+        android:textSize="@dimen/sp_14" />
+
+    <com.dubu.common.views.tv.ToggleBoldTextView
+        android:id="@+id/tv3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dp_17"
+        android:layout_marginTop="@dimen/dp_14"
+        android:gravity="center_vertical|start"
+        android:includeFontPadding="false"
+        android:text="@string/dialog_lv_num_calls"
+        android:textColor="@color/cl16171A"
+        android:textSize="@dimen/sp_14" />
+
+    <com.dubu.common.views.tv.ToggleBoldTextView
+        android:id="@+id/tv4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dp_17"
+        android:layout_marginTop="@dimen/dp_14"
+        android:gravity="center_vertical|start"
+        android:includeFontPadding="false"
+        android:text="@string/dialog_lv_average_call_duration"
+        android:textColor="@color/cl16171A"
+        android:textSize="@dimen/sp_14" />
+
+    <com.dubu.common.views.tv.ToggleBoldTextView
+        android:id="@+id/tv5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dp_17"
+        android:layout_marginTop="@dimen/dp_14"
+        android:gravity="center_vertical|start"
+        android:includeFontPadding="false"
+        android:text="@string/dialog_lv_report_num"
+        android:textColor="@color/cl16171A"
+        android:textSize="@dimen/sp_14" />
+
+    <TextView
+        android:id="@+id/tv6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dp_17"
+        android:layout_marginTop="@dimen/dp_19"
+        android:gravity="center_vertical|start"
+        android:includeFontPadding="false"
+        android:text="@string/dialog_lv_calculate"
+        android:textColor="#FA5B0C"
+        android:textSize="@dimen/sp_14" />
+
+    <TextView
+        android:id="@+id/tv7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dp_17"
+        android:layout_marginTop="@dimen/dp_7"
+        android:gravity="center_vertical|start"
+        android:includeFontPadding="false"
+        android:text="@string/dialog_lv_calculate_tip"
+        android:textColor="@color/cl6E7380"
+        android:textSize="@dimen/sp_14" />
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_13"
+        android:layout_marginBottom="@dimen/dp_20"
+        android:scrollbars="none">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.ruffian.library.widget.RConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dp_17"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/dp_18"
+                android:paddingBottom="@dimen/dp_20"
+                app:border_color_normal="#DBDBDB"
+                app:border_width_normal="@dimen/dp_0_5f"
+                app:corner_radius="@dimen/dp_10"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <View
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="@dimen/dp_0_5f"
+                    android:layout_marginTop="@dimen/dp_48"
+                    android:background="#DBDBDB"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <!-- 1 -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_30"
+                            android:layout_marginStart="@dimen/dp_12"
+                            android:layout_marginTop="@dimen/dp_7"
+                            android:layout_marginEnd="@dimen/dp_12"
+                            android:gravity="center"
+                            android:includeFontPadding="false"
+                            android:text="@string/dialog_row_calculate"
+                            android:textColor="@color/cl6E7380"
+                            android:textSize="@dimen/sp_11" />
+
+                        <com.dubu.common.views.tv.UbuntuMediumTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_33"
+                            android:gravity="center"
+                            android:includeFontPadding="false"
+                            android:lineSpacingExtra="@dimen/dp_20"
+                            android:text="@string/dialog_row_calculate_tip"
+                            android:textColor="@color/cl2C2E33"
+                            android:textSize="@dimen/sp_14" />
+
+                    </LinearLayout>
+
+                    <!-- 2 -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_30"
+                            android:layout_marginHorizontal="@dimen/dp_12"
+                            android:layout_marginTop="@dimen/dp_7"
+                            android:gravity="center"
+                            android:includeFontPadding="false"
+                            android:text="@string/dialog_row_connection_rate"
+                            android:textColor="@color/cl6E7380"
+                            android:textSize="@dimen/sp_11" />
+
+                        <com.dubu.common.views.tv.UbuntuRegularTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_33"
+                            android:gravity="center"
+                            android:includeFontPadding="false"
+                            android:lineSpacingExtra="@dimen/dp_20"
+                            android:text="@string/dialog_row_connection_rate_tip"
+                            android:textColor="#585C66"
+                            android:textSize="@dimen/sp_14" />
+
+                    </LinearLayout>
+                    <!-- 3 -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_30"
+                            android:layout_marginHorizontal="@dimen/dp_12"
+                            android:layout_marginTop="@dimen/dp_7"
+                            android:gravity="center"
+                            android:includeFontPadding="false"
+                            android:text="@string/dialog_row_num_calls"
+                            android:textColor="@color/cl6E7380"
+                            android:textSize="@dimen/sp_11" />
+
+                        <com.dubu.common.views.tv.UbuntuRegularTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_33"
+                            android:gravity="center"
+                            android:includeFontPadding="false"
+                            android:lineSpacingExtra="@dimen/dp_20"
+                            android:text="@string/dialog_row_num_calls_tip"
+                            android:textColor="#585C66"
+                            android:textSize="@dimen/sp_14" />
+
+                    </LinearLayout>
+                    <!-- 4 -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_30"
+                            android:layout_marginHorizontal="@dimen/dp_12"
+                            android:layout_marginTop="@dimen/dp_7"
+                            android:gravity="center"
+                            android:includeFontPadding="false"
+                            android:text="@string/dialog_row_average_call_duration"
+                            android:textColor="@color/cl6E7380"
+                            android:textSize="@dimen/sp_11" />
+
+                        <com.dubu.common.views.tv.UbuntuRegularTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_33"
+                            android:gravity="center"
+                            android:includeFontPadding="false"
+                            android:lineSpacingExtra="@dimen/dp_20"
+                            android:text="@string/dialog_row_average_call_duration_tip"
+                            android:textColor="#585C66"
+                            android:textSize="@dimen/sp_14" />
+
+                    </LinearLayout>
+                    <!-- 5 -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_30"
+                            android:layout_marginHorizontal="@dimen/dp_12"
+                            android:layout_marginTop="@dimen/dp_7"
+                            android:gravity="center"
+                            android:includeFontPadding="false"
+                            android:text="@string/dialog_row_report_num"
+                            android:textColor="@color/cl6E7380"
+                            android:textSize="@dimen/sp_11" />
+
+                        <com.dubu.common.views.tv.UbuntuRegularTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_33"
+                            android:gravity="center"
+                            android:includeFontPadding="false"
+                            android:lineSpacingExtra="@dimen/dp_20"
+                            android:text="@string/dialog_row_report_num_tip"
+                            android:textColor="#585C66"
+                            android:textSize="@dimen/sp_14" />
+
+                    </LinearLayout>
+                    <!-- 6 -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_30"
+                            android:layout_marginHorizontal="@dimen/dp_12"
+                            android:layout_marginTop="@dimen/dp_7"
+                            android:gravity="center"
+                            android:includeFontPadding="false"
+                            android:text="@string/dialog_row_exchange_rate"
+                            android:textColor="@color/cl6E7380"
+                            android:textSize="@dimen/sp_11" />
+
+                        <com.dubu.common.views.tv.UbuntuRegularTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_33"
+                            android:gravity="center"
+                            android:includeFontPadding="false"
+                            android:lineSpacingExtra="@dimen/dp_20"
+                            android:text="@string/dialog_row_exchange_rate_tip"
+                            android:textColor="#585C66"
+                            android:textSize="@dimen/sp_14" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </com.ruffian.library.widget.RConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </HorizontalScrollView>
+
+</LinearLayout>
+
+
+
+
+
+

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppTheme" parent="Theme.HiReal">
+        <item name="windowNoTitle">true</item>
+        <!--设置全局字体 苹方-简 暂时没有用-->
+        <!--<item name="android:fontFamily" tool:targetApi="l">@font/din_medium</item>-->
+    </style>
+
+</resources>

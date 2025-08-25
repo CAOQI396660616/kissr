@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_bottom_dialog_dark"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/dd_tv_open_camera"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_55"
+        android:layout_marginTop="@dimen/dp_10"
+        android:gravity="center"
+        android:text="@string/open_camera"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_16"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/dd_tv_open_album"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_55"
+        android:gravity="center"
+        android:text="@string/open_album"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_16"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dd_tv_open_camera" />
+
+
+    <View
+        android:id="@+id/v_divider"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_8"
+        android:background="#FF17122C"
+        app:layout_constraintTop_toBottomOf="@id/dd_tv_open_album" />
+
+
+    <TextView
+        android:id="@+id/dd_tv_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_55"
+        android:layout_marginBottom="@dimen/dp_34"
+        android:gravity="center"
+        android:text="@string/cancel"
+        android:textColor="@color/cl55506D"
+        android:textSize="@dimen/sp_16"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/v_divider" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_18"
+        android:background="@drawable/ln_4_bottom_bar"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

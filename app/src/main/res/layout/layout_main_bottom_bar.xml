@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cl_main_bottom_bar"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_48"
+    android:background="@color/transparent"
+    android:clickable="true"
+    app:layout_constraintBottom_toBottomOf="parent">
+
+
+    <ImageView
+        android:id="@+id/iv_home"
+        android:layout_width="@dimen/dp_21"
+        android:layout_height="@dimen/dp_21"
+        android:layout_marginStart="@dimen/dp_51"
+        android:scaleType="fitXY"
+        android:src="@drawable/sl_tab_home"
+        app:layout_constraintBottom_toTopOf="@+id/tv_home"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+
+    <com.dubu.common.views.tv.UbuntuRegularTextView
+        android:layout_marginTop="@dimen/dp_2"
+        android:id="@+id/tv_home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:includeFontPadding="false"
+        android:text="@string/home_tab_home"
+        android:textColor="@color/main_bot_text"
+        android:textSize="@dimen/sp_10"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/iv_home"
+        app:layout_constraintStart_toStartOf="@id/iv_home"
+        app:layout_constraintTop_toBottomOf="@id/iv_home" />
+
+
+    <ImageView
+        android:id="@+id/iv_discovery"
+        android:layout_width="@dimen/dp_21"
+        android:layout_height="@dimen/dp_21"
+        android:scaleType="fitXY"
+        android:src="@drawable/sl_tab_theme"
+        app:layout_constraintBottom_toBottomOf="@id/iv_home"
+        app:layout_constraintEnd_toStartOf="@id/iv_msg"
+        app:layout_constraintStart_toEndOf="@id/iv_home"
+        app:layout_constraintTop_toTopOf="@id/iv_home" />
+
+
+    <com.dubu.common.views.tv.UbuntuRegularTextView
+        android:layout_marginTop="@dimen/dp_2"
+        android:id="@+id/tv_discovery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:includeFontPadding="false"
+        android:text="@string/home_tab_msg"
+        android:textColor="@color/main_bot_text"
+        android:textSize="@dimen/sp_10"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="@id/iv_discovery"
+        app:layout_constraintStart_toStartOf="@id/iv_discovery"
+        app:layout_constraintTop_toBottomOf="@id/iv_discovery" />
+
+
+    <ImageView
+        android:id="@+id/iv_msg"
+        android:layout_width="@dimen/dp_21"
+        android:layout_height="@dimen/dp_21"
+        android:scaleType="fitXY"
+        android:src="@drawable/sl_tab_wallpaper"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/iv_home"
+        app:layout_constraintEnd_toStartOf="@id/iv_mine"
+        app:layout_constraintStart_toEndOf="@id/iv_discovery"
+        app:layout_constraintTop_toTopOf="@id/iv_home"
+        tools:visibility="visible" />
+
+    <com.dubu.common.views.tv.UbuntuRegularTextView
+        android:layout_marginTop="@dimen/dp_2"
+        android:id="@+id/tv_msg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:includeFontPadding="false"
+        android:text="@string/app_name"
+        android:textColor="@color/main_bot_text"
+        android:textSize="@dimen/sp_10"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@id/iv_msg"
+        app:layout_constraintStart_toStartOf="@id/iv_msg"
+        app:layout_constraintTop_toBottomOf="@id/iv_msg" />
+
+
+    <ImageView
+        android:id="@+id/iv_mine"
+        android:layout_width="@dimen/dp_21"
+        android:layout_height="@dimen/dp_21"
+        android:layout_marginEnd="@dimen/dp_51"
+        android:scaleType="fitXY"
+        android:src="@drawable/sl_tab_mine"
+        app:layout_constraintBottom_toBottomOf="@id/iv_home"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/iv_home" />
+
+
+    <com.dubu.common.views.tv.UbuntuRegularTextView
+        android:layout_marginTop="@dimen/dp_2"
+        android:id="@+id/tv_mine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:includeFontPadding="false"
+        android:text="@string/home_tab_me"
+        android:textColor="@color/main_bot_text"
+        android:textSize="@dimen/sp_10"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="@id/iv_mine"
+        app:layout_constraintStart_toStartOf="@id/iv_mine"
+        app:layout_constraintTop_toBottomOf="@id/iv_mine" />
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_0_5f"
+        android:background="@color/clEBEBEB"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <com.ruffian.library.widget.RConstraintLayout
+        android:id="@+id/flMsg"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_18"
+        android:minWidth="@dimen/dp_18"
+        android:paddingHorizontal="@dimen/dp_5"
+        android:visibility="invisible"
+        app:background_normal="@color/clFF5E7D"
+        app:border_color_normal="@color/white"
+        app:border_width_normal="@dimen/dp_1"
+        app:corner_radius="@dimen/dp_20"
+        app:layout_constraintCircle="@id/iv_discovery"
+        app:layout_constraintCircleAngle="45"
+        app:layout_constraintCircleRadius="@dimen/dp_15"
+        app:layout_constraintEnd_toEndOf="@+id/iv_discovery"
+        app:layout_constraintTop_toTopOf="@+id/iv_discovery"
+        tools:visibility="visible">
+
+
+        <com.ruffian.library.widget.RTextView
+            android:id="@+id/tvMsg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="1"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_11"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </com.ruffian.library.widget.RConstraintLayout>
+
+
+    <View
+        android:id="@+id/fl1"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="@dimen/dp_50"
+        android:layout_marginHorizontal="@dimen/dp_10"
+        android:layout_marginStart="@dimen/dp_100"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/fl2"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/fl2"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="@dimen/dp_50"
+        android:layout_marginHorizontal="@dimen/dp_10"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/fl3"
+        app:layout_constraintStart_toEndOf="@+id/fl1"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/fl3"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="@dimen/dp_50"
+        android:layout_marginHorizontal="@dimen/dp_10"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/fl4"
+        app:layout_constraintStart_toEndOf="@+id/fl2"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible" />
+
+    <View
+        android:id="@+id/fl4"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="@dimen/dp_50"
+        android:layout_marginHorizontal="@dimen/dp_10"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/fl3"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

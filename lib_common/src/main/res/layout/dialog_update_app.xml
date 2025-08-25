@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_solid_r15_white"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_0"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_share_bg"
+        app:layout_constraintDimensionRatio="h,250:108"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/dd_tv_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dp_20"
+        android:layout_marginTop="@dimen/dp_19"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:textColor="@color/cl2C2E33"
+        android:textSize="@dimen/sp_15"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="NIUBILITY_" />
+
+
+    <com.dubu.common.views.tv.ScrollableTextView
+        android:id="@+id/dd_tv_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dp_19"
+        android:layout_marginTop="@dimen/dp_16"
+        android:gravity="start|center_vertical"
+        android:includeFontPadding="false"
+        android:maxLines="5"
+        android:minHeight="@dimen/dp_40"
+        android:text="niubility_\n niubilit\ny_ni\nubili\nty_niu\nbilit\ny_\niub\nilit\ny_n\niu\nbil\nity_"
+        android:textColor="#CD42454D"
+        android:textSize="@dimen/sp_13"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dd_tv_title"
+        app:layout_goneMarginTop="@dimen/dp_28" />
+
+    <com.ruffian.library.widget.RTextView
+        android:id="@+id/dd_btn_start"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="@dimen/dp_43"
+        android:layout_marginStart="@dimen/dp_20"
+        android:layout_marginTop="@dimen/dp_18"
+        android:layout_marginEnd="@dimen/dp_20"
+        app:layout_goneMarginBottom="@dimen/dp_24"
+        android:gravity="center"
+        android:text="@string/app_update_now"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_13"
+        android:textStyle="bold"
+        app:background_normal="#FF4D6F"
+        app:corner_radius="@dimen/dp_24"
+        app:layout_constraintBottom_toTopOf="@+id/dd_btn_end"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dd_tv_content" />
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/dd_btn_end"
+        android:layout_width="@dimen/dp_0"
+        android:layout_marginTop="@dimen/dp_13"
+        android:layout_marginBottom="@dimen/dp_13"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_20"
+        android:layout_marginEnd="@dimen/dp_20"
+        android:gravity="center"
+        android:text="@string/app_update_later"
+        android:textColor="@color/cl848A99"
+        android:textSize="@dimen/sp_13"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dd_btn_start" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

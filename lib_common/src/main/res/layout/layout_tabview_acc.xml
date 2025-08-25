@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <com.dubu.common.views.tv.UbuntuMediumTextView
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_31"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:paddingHorizontal="@dimen/dp_16"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_14"
+        android:visibility="invisible"
+        android:background="@drawable/bg_r_16_fe617f" />
+
+    <com.dubu.common.views.tv.UbuntuRegularTextView
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_31"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:paddingHorizontal="@dimen/dp_16"
+        android:textColor="@color/cl2C2E33"
+        android:textSize="@dimen/sp_14"
+        android:background="@drawable/bg_r_16_ffffff" />
+
+</FrameLayout>

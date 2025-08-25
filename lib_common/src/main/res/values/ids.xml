@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="quick_click" type="id" />
+    <item name="quick_click_limit" type="id" />
+
+    <item name="last_click_time" type="id" />
+
+    <item name="view_tag" type="id" />
+</resources>

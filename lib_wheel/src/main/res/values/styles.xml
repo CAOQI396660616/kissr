@@ -1,0 +1,54 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="textViewForLiveRoomGiftUserName">
+        <!--
+             不适用字数限定
+             <item name="android:maxLength">@integer/text_view_live_room_name_max_show_length</item>
+            -->
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:shadowColor">@color/white</item>
+        <item name="android:shadowDx">0</item>
+        <item name="android:shadowDy">0</item>
+        <item name="android:shadowRadius">1</item>
+        <item name="android:maxWidth">60dp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="textViewForLiveRoomGiftContent">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:textColor">#CDFFFFFF</item>
+        <item name="android:textSize">8sp</item>
+        <item name="android:minWidth">50dp</item>
+    </style>
+
+    <declare-styleable name="MultiStateAiAiView">
+        <attr format="reference" name="msv_loadingView"/>
+        <attr format="reference" name="msv_emptyView"/>
+        <attr format="reference" name="msv_errorView"/>
+        <attr format="enum" name="msv_viewState">
+            <enum name="content" value="0"/>
+            <enum name="error" value="1"/>
+            <enum name="empty" value="2"/>
+            <enum name="loading" value="3"/>
+        </attr>
+        <attr format="boolean" name="msv_animateViewChanges"/>
+    </declare-styleable>
+
+
+</resources>

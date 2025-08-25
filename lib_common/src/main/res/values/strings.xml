@@ -1,0 +1,544 @@
+<resources>
+    <string name="text_long" translatable="false">abcdefghijklmnopqrstuvwxyz这是无序的测试文本1234567890abcdefghijklmnopqrstuvwxyz这是无序的测试文本1234567890!_+</string>
+    <string name="text_long_2" translatable="false">1修复若干问题\n2修复若干问题\n3修复若干问题\n4修复若干问题\n5修复若干问题\n6修复若干问题\n6修复若干问题\n6修复若干问题\n6修复若干问题\n6修复若干问题</string>
+    <string name="text_content" translatable="false"> Allison Burton intended to disclose her identity and pregnancy via a major project.Allison Burton intended to disclose her identity and pregnancy via a major project.Allison Burton intended to disclose her identity and pregnancy via a major project.Allison Burton intended to disclose her identity and pregnancy via a major project.Allison Burton intended to disclose her identity and pregnancy via a major project.Allison Burton intended to disclose her identity and pregnancy via a major project.</string>
+
+    <string name="app_name" translatable="false">KissChat</string>
+    <string name="server_client_id" translatable="false">440557587699-60l79rcaqi2kjrl2ihqigbbh0eov1pj8.apps.googleusercontent.com</string>
+    <string name="watch_all" translatable="false">Watch ALL</string>
+    <string name="emojicon_test_name" translatable="false">Example</string>
+
+    <string name="lv_1" translatable="false">A</string>
+    <string name="lv_1_q" translatable="false">$150</string>
+    <string name="lv_1_p" translatable="false">95%</string>
+
+    <string name="lv_2" translatable="false">B</string>
+    <string name="lv_2_q" translatable="false">$100</string>
+    <string name="lv_2_p" translatable="false">80%</string>
+
+    <string name="lv_3" translatable="false">C</string>
+    <string name="lv_3_q" translatable="false">$50</string>
+    <string name="lv_3_p" translatable="false">60%</string>
+
+    <string name="lv_4" translatable="false">D</string>
+    <string name="lv_4_q" translatable="false">$20</string>
+    <string name="lv_4_p" translatable="false">40%</string>
+
+
+    <string name="chat_title_vr_share_fb" translatable="false">Facebook</string> <!---->
+    <string name="chat_title_vr_share_line" translatable="false">Line</string> <!---->
+    <string name="chat_title_vr_share_mg" translatable="false">Messenger</string> <!---->
+    <string name="chat_title_vr_share_whats" translatable="false">WhatsApp</string> <!---->
+    <string name="chat_title_vr_share_twitter" translatable="false">Twitter</string> <!---->
+    <string name="chat_title_vr_share_telegram" translatable="false">Telegram</string> <!---->
+
+    <string name="dialog_row_calculate_tip" translatable="false">A\nB\nC\nD</string>
+    <string name="dialog_row_connection_rate_tip" translatable="false">≥95%\n≥80%\n≥60%\n&lt;60%</string>
+    <string name="dialog_row_num_calls_tip" translatable="false">≥80\n≥50\n≥25\n&lt;25</string>
+    <string name="dialog_row_average_call_duration_tip" translatable="false">≥3\n≥1.5\n≥1\n&lt;1</string>
+    <string name="dialog_row_report_num_tip" translatable="false">≤3\n≤2\n≤3\n≥&lt;4</string>
+    <string name="dialog_row_exchange_rate_tip" translatable="false">$50\n$40\n$30\n$20</string>
+
+    <!--上面是不需要翻译的-->
+
+    <string name="loading">Loading…</string>
+    <string name="load_complete">Loaded</string>
+    <string name="load_failed">Failed to load</string>
+    <string name="load_no_more">- That\'s all -</string>
+    <string name="pull_load_more">Pull to load more</string>
+    <string name="toast_err_empty_data">No data from server</string>
+    <string name="toast_err_net">Please check your network connection</string>
+    <string name="toast_err_service">Server error, please try again later</string>
+    <string name="toast_err_system">System error, please try again later</string>
+    <string name="toast_err_play_audio">Error playing audio, please try again later</string>
+    <string name="toast_save_success">Saved successfully</string>
+    <string name="toast_save_failed">Failed to save, please try again later</string>
+    <string name="toast_op_failed">Operation failed, please try again later</string>
+    <string name="toast_upload_failed">Upload failed, please try again later</string>
+    <string name="toast_upload_success">Uploaded successfully</string>
+    <string name="toast_delete_fail">Deletion failed, please try again later</string>
+    <string name="toast_send_fail">Failed to send</string>
+    <string name="toast_send_ok">Sent successfully</string>
+    <string name="toast_login_expired">Session expired, please log in again</string>
+    <string name="toast_denied_camera">Camera permission denied. Please enable it in system settings.</string>
+    <string name="toast_denied_storage">Media library permission denied. Please enable it in system settings.</string>
+    <string name="toast_err_empty_msg">No messages yet</string>
+    <string name="toast_err_must_complete_cur_step">Please complete the current step to proceed.</string>
+    <string name="toast_input_text">Please enter some text.</string>
+    <string name="toast_err_not_say_hi">You\'ve already said hi. Cannot send again.</string>
+    <string name="toast_err_plz_select_data">You need to select the pinned post to submit changes.</string>
+    <string name="toast_err_only_top">Sorry, you can only pin up to 2 posts.</string>
+    <string name="toast_err_only_published">Sorry, only published posts can be pinned.</string>
+    <string name="toast_translate">Translation is on. The latest 50 messages will be translated, and new messages will be translated automatically.</string>
+    <string name="default_">Default</string>
+    <string name="cancel">Cancel</string>
+    <string name="confirm">Confirm</string>
+    <string name="retry">Refresh</string>
+    <string name="delete">Delete</string>
+    <string name="reply">Reply</string>
+    <string name="go_on">Continue</string>
+    <string name="skip">Skip</string>
+    <string name="submit">Submit</string>
+    <string name="save">Save</string>
+    <string name="start">Start</string>
+    <string name="reset">Reset</string>
+    <string name="edit">Edit</string>
+    <string name="done">Done</string>
+    <string name="copy">Copy</string>
+    <string name="send">Send</string>
+    <string name="more">More</string>
+    <string name="record_again">Record again</string>
+    <string name="notice">Notice</string>
+    <string name="remove">Remove</string>
+    <string name="buy">Buy</string>
+    <string name="all_photo">All Photos</string>
+    <string name="all_video">All Videos</string>
+    <string name="pre_view">Preview</string>
+    <string name="no_picture_found">No files found</string>
+    <string name="open_camera">Take Photo</string>
+    <string name="open_album">Upload from Album</string>
+    <string name="toast_at_least_photos">Please select at least %d photos</string>
+    <string name="toast_at_least_videos">Please select at least %d videos</string>
+    <string name="toast_max_select_media">Select up to %d photos/videos</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="user_terms">User Agreement</string>
+    <string name="no_install">%s is not installed. Please install it to share.</string>
+    <string name="time_now">Just now</string>
+    <string name="time_before_minute_ago">%d minute ago</string>
+    <string name="time_before_minutes_ago">%d minutes ago</string>
+    <string name="time_before_hour_ago">%d hour ago</string>
+    <string name="time_before_hours_ago">%d hours ago</string>
+    <string name="time_before_day_ago">%d day ago</string>
+    <string name="time_before_days_ago">%d days ago</string>
+    <string name="time_before_week_ago">%d week ago</string>
+    <string name="time_before_weeks_ago">%d weeks ago</string>
+    <string name="time_before_month_ago">%d month ago</string>
+    <string name="time_before_months_ago">%d months ago</string>
+    <string name="time_before_year_ago">%d year ago</string>
+    <string name="time_before_years_ago">%d years ago</string>
+    <string name="gkd_date_just">Just now</string>
+    <string name="gkd_date_yesterday">Yesterday</string>
+    <string name="message_air_drop_time_today">Today</string>
+    <string name="urge_001">Don\'t worry, stay online to meet more users!</string>
+    <string name="urge_002">Being a little flirty or cute can be a secret weapon to keep users around~</string>
+    <string name="urge_003">Extend the call a bit longer for a chance to get gifts or good reviews~</string>
+    <string name="urge_004">Keep smiling with a sweet tone, chat about their hobbies, and you might get a little surprise~</string>
+    <string name="urge_005">Great job just now! Keep it up, and longer calls will be no problem!</string>
+    <string name="urge_006">No gifts this time, but the call duration was great. Aim for a longer chat and more surprises next time!</string>
+    <string name="urge_007">Relax a bit more, captivate him, and a surprise might just come your way!</string>
+    <string name="hello_1">Do you like a girl who takes the lead? Can I get a little closer?</string>
+    <string name="hello_2">Just got out of the shower and I smell amazing. Want a sniff?</string>
+    <string name="hello_3">I\'m all alone in my room. Are you here to make my heart race?</string>
+    <string name="hello_4">Should I say \'welcome\' or \'welcome to explore deeper\'?</string>
+    <string name="hello_5">The way you\'re staring at me... trying to make me blush or strip?</string>
+    <string name="hello_6">Wanna guess what color my under... wear my mood is?</string>
+    <string name="hello_7">Others come to chat, but when you walked in, I wanted to go off-script.</string>
+    <string name="hello_8">I was just thinking who could give me butterflies tonight, and then you showed up.</string>
+    <string name="hello_9">Do you want to see me smile first, or flirt first?</string>
+    <string name="hello_10">I was about to sleep, but you\'re here. Are you going to lull me to sleep?</string>
+    <string name="hello_default">Hey, nice to meet you.</string>
+    <string name="home_tab_home">Home</string>
+    <string name="home_tab_msg">Messages</string>
+    <string name="home_tab_me">Me</string>
+    <string name="home_share_page">Share Profile</string>
+    <string name="home_my_status">My Status</string>
+    <string name="home_online">Online</string>
+    <string name="home_offline">Offline</string>
+    <string name="home_my_lv">My Level:</string>
+    <string name="home_exchange_rate">Exchange Rate: 1000 Coins = $50</string>
+    <string name="home_user_recommend">User Recommendations</string>
+    <string name="home_call_history">Call History</string>
+    <string name="dialog_lv_rate">What is Rating</string>
+    <string name="dialog_lv_rate_tip">Host rating is based on overall performance. The higher the level, the better the coin exchange rate.</string>
+    <string name="dialog_lv_rate_title">Your rating is determined by the following metrics:</string>
+    <string name="dialog_lv_connection_rate">Answer Rate:</string>
+    <string name="dialog_lv_connection_rate_tip">Successfully answered calls / Total calls initiated by users.</string>
+    <string name="dialog_lv_num_calls">Number of Calls:</string>
+    <string name="dialog_lv_num_calls_tip">Number of successfully answered video calls.</string>
+    <string name="dialog_lv_average_call_duration">Average Call Duration:</string>
+    <string name="dialog_lv_average_call_duration_tip">Total call duration / Number of successfully answered calls.</string>
+    <string name="dialog_lv_report_num">Successful Complaints:</string>
+    <string name="dialog_lv_report_num_tip">Number of times a user\'s complaint was successful.</string>
+    <string name="dialog_lv_calculate">How is the rating determined?</string>
+    <string name="dialog_lv_calculate_tip">*For level D, only one condition needs to be met. For levels above D, all conditions must be met to be promoted.</string>
+    <string name="dialog_row_calculate">Rating</string>
+    <string name="dialog_row_connection_rate">Answer Rate</string>
+    <string name="dialog_row_num_calls">Calls</string>
+    <string name="dialog_row_average_call_duration">Avg. Call\nDuration (min)</string>
+    <string name="dialog_row_report_num">Complaint\nRate</string>
+    <string name="dialog_row_exchange_rate">Exchange Rate\n(10000 Coins)</string>
+    <string name="date_today">Today</string>
+    <string name="date_yesterday">Yesterday</string>
+    <string name="date_all">All</string>
+    <string name="tab_msg">Messages</string>
+    <string name="tab_call">Calls</string>
+    <string name="tab_fans">Fans</string>
+    <string name="login_email">Email Login</string>
+    <string name="talk_time">Call duration: %s</string>
+    <string name="game">Game</string>
+    <string name="menu">Menu</string>
+    <string name="input_message">Enter a message</string>
+    <string name="recently_Used">Recently Used</string>
+    <string name="all_emoticons">All Emoticons</string>
+    <string name="send_gift_tip">Sent [IMAGE] x%1$s</string>
+    <string name="send_gift_p1">Sent a</string>
+    <string name="send_gift_p2">x%s</string>
+    <string name="msg_tip_image">[Image]</string>
+    <string name="msg_tip_gift">[Gift]</string>
+    <string name="msg_tip_game">[Game]</string>
+    <string name="msg_tip_no_data">[No data]</string>
+    <string name="choose_u_game">Choose a game to play</string>
+    <string name="service_list">Service List</string>
+    <string name="requested_service">Requested the [%s] service</string>
+    <string name="my_income">My Earnings</string>
+    <string name="num_received_calls">Answered Calls</string>
+    <string name="setting_publish">Post</string>
+    <string name="setting_my_photo_album">My Album</string>
+    <string name="setting_important">Important Settings</string>
+    <string name="setting_invite">Invite Friends</string>
+    <string name="setting_join_guild">Join a Guild</string>
+    <string name="setting_stitch_language">Switch Language</string>
+    <string name="setting_help_center">Help Center</string>
+    <string name="setting_settings">Settings</string>
+    <string name="user_tip">Welcome, Host!</string>
+    <string name="user_input_name_hint">Please enter your name</string>
+    <string name="next_step">Next</string>
+    <string name="user_input_name">Please enter a name</string>
+    <string name="user_input_age_title">What\'s your age?</string>
+    <string name="user_input_age_tip">Show your age on your profile?</string>
+    <string name="user_input_country">Please select your country</string>
+    <string name="user_input_commonly_language">Please select the languages you speak</string>
+    <string name="user_input_click">Tap to select</string>
+    <string name="user_input_info">Please write a bio</string>
+    <string name="user_input_demo">Demo</string>
+    <string name="user_input_upload_image">Upload your profile background photos (0/6)</string>
+    <string name="user_input_upload_image_tip">Upload at least one real-life photo to make your profile stand out.</string>
+    <string name="profile_avatar">Avatar</string>
+    <string name="profile_name">Name</string>
+    <string name="profile_country">Country</string>
+    <string name="profile_birthday">Date of Birth</string>
+    <string name="profile_info">Bio</string>
+    <string name="profile_input_info">Please fill in your bio</string>
+    <string name="profile_homepage_bg">Profile Background</string>
+    <string name="profile_user_info">Personal Info</string>
+    <string name="profile_update_name">Edit Name</string>
+    <string name="profile_input_text">Enter text</string>
+    <string name="profile_upfate_info">Edit Bio</string>
+    <string name="publish_video">Post a Video</string>
+    <string name="publish_video_tip">Post high-quality videos to your profile collection</string>
+    <string name="publish_image">Post a Photo</string>
+    <string name="publish_image_tip">Post beautiful photos to your profile collection</string>
+    <string name="publish_video_content">Upload videos that showcase your style and let more people see your charm!</string>
+    <string name="publish_iamge_content">Carefully selected beautiful pictures can make your profile more eye-catching!</string>
+    <string name="my_photo_album">My Album</string>
+    <string name="photo_tab_all">All</string>
+    <string name="photo_tab_published">Published</string>
+    <string name="photo_tab_under_review">Under Review</string>
+    <string name="photo_tab_not_passed">Not Approved</string>
+    <string name="beauty">Beauty</string>
+    <string name="call_price">Call Price</string>
+    <string name="open_notifications">Turn on Notifications</string>
+    <string name="improve_rating">Answer calls to improve your rating</string>
+    <string name="good_at_language">Languages</string>
+    <string name="service_menu">Service Menu</string>
+    <string name="service_tip">Paid services for users to request in the live room</string>
+    <string name="set_call_price_content">Video Call Price (%s coins/min)</string>
+    <string name="restore_default_price">Restore Default Price</string>
+    <string name="default_price_content">Default price: %s coins/min</string>
+    <string name="notification_settings">Notification Settings</string>
+    <string name="quickly_improve_u_rating">Get messages instantly, boost connection chances\nNever miss a call, quickly improve your rating</string>
+    <string name="open_system_notifications">Open System Notifications</string>
+    <string name="chat_messages">Chat Messages</string>
+    <string name="call_notifications">Call Notifications</string>
+    <string name="open_tip">Turn On</string>
+    <string name="plz_choose_good_at_language">Please select the languages you are fluent in (multiple selections allowed)</string>
+    <string name="service_menu_settings">Service Menu Settings</string>
+    <string name="switch_service_list">Enable services</string>
+    <string name="create_service">Create Service</string>
+    <string name="add_service">Add Service</string>
+    <string name="plz_enter_name">Please enter a name</string>
+    <string name="sing_song">Sing a song</string>
+    <string name="dance_dance">Perform a dance</string>
+    <string name="service_price_gold">Service Price (Coins)</string>
+    <string name="plz_enter_service_price">Please enter the service price</string>
+    <string name="search_action">Search</string>
+    <string name="input_guild_name">Enter guild name</string>
+    <string name="bind_guild_action">Bind Guild</string>
+    <string name="bind_guild">Bind Guild</string>
+    <string name="bind_guild_tip">You are applying to bind to a guild. Are you sure this is the guild you want to join?</string>
+    <string name="today_income">Today\'s Earnings</string>
+    <string name="goto_cash">Withdraw</string>
+    <string name="income_tab_details">Earning Details</string>
+    <string name="income_tab_call_income">Call Earnings</string>
+    <string name="income_tab_chat_income">Chat Earnings</string>
+    <string name="income_tab_gift_income">Gift Earnings</string>
+    <string name="ac_exchange_rate">Exchange Rate: 3000 Coins = $1.0</string>
+    <string name="accumulated_income">Total Earnings</string>
+    <string name="can_cash">Withdrawable</string>
+    <string name="waiting_received">Pending</string>
+    <string name="waiting_received_tip">Pending Balance Explanation</string>
+    <string name="waiting_received_content">After a user makes a purchase, your earnings enter a \'Processing\' state. If there\'s no refund within 15 days from the purchase date, the earnings will automatically become \'Pending\'. (At this point, earnings are settled), and this portion of income will be deducted according to the process.</string>
+    <string name="can_cash_tip">Withdrawable Balance Explanation</string>
+    <string name="can_cash_content">Earnings in the \'Pending\' state will be converted to \'Withdrawable\' on the 20th of the following month, at which point you can request a withdrawal.</string>
+    <string name="cash_account">Withdraw to Account</string>
+    <string name="company_paypal">PayPal</string>
+    <string name="minimum_cash_limit">Minimum withdrawal $10.00</string>
+    <string name="currency_unit">USD $90</string>
+    <string name="withdraw_all">Withdraw All</string>
+    <string name="withdraw_immediately">Withdraw Now</string>
+    <string name="withdraw_rules">Withdrawal Rules</string>
+    <string name="withdraw_rules_content">1. The withdrawal amount will be transferred to the account you provide. \n \n 2. Withdrawal processing time is T+7, excluding holidays. \n \n 3. The actual arrival time and fees are subject to the third-party payment platform\'s processing. \n \n 4. Only one withdrawal request is allowed per day. Withdrawn funds cannot be returned. Please verify the amount carefully before withdrawing. \n \n 5. According to the platform\'s anti-fraud terms in the user agreement, one account can only be linked to one third-party payment platform.</string>
+    <string name="cash_title">Withdraw</string>
+    <string name="cash_history">Withdrawal History</string>
+    <string name="cash_unbound">Not Bound</string>
+    <string name="cash_unbind">Unbind</string>
+    <string name="cash_account_title">Withdrawal Account</string>
+    <string name="cash_unbind_account">Unbind Account</string>
+    <string name="cash_account_tip">To ensure security, the name on the withdrawal account must match the name on your ID.</string>
+    <string name="cash_account_t">Account</string>
+    <string name="cash_account_input_pp">Please enter your PayPal account</string>
+    <string name="confirm_again">Confirm Again</string>
+    <string name="account_user_name">Username</string>
+    <string name="input_account_name">Please enter username</string>
+    <string name="email_code_t">Email Verification Code</string>
+    <string name="verification_code_t">Verification Code</string>
+    <string name="bind_account_t">Bind Account</string>
+    <string name="cardholder_name">Cardholder Name</string>
+    <string name="card_num">Credit Card Number</string>
+    <string name="card_expiration_date">Expiration Date</string>
+    <string name="card_date_m_y">MM/YY</string>
+    <string name="card_cvc">CVC</string>
+    <string name="card_cvc_tip">3 digits</string>
+    <string name="select_country">Select Country</string>
+    <string name="select_language">Select Language</string>
+    <string name="select_date">Select Date</string>
+    <string name="select_app_language">App Language</string>
+    <string name="select_os_language">Select App Interface Language</string>
+    <string name="delete_account">Delete Account</string>
+    <string name="login_out">Log Out</string>
+    <string name="login_in">Log In</string>
+    <string name="delete_account_tip">After deleting your account, all data will be permanently removed, and you will not be able to log in again. Are you sure you want to delete your account?</string>
+    <string name="change_content">Change Content</string>
+    <string name="copy_content">Copy Content</string>
+    <string name="share_to">Share to</string>
+    <string name="copied_to_clipboard">Copied to clipboard</string>
+    <string name="copied_invite_link">Invite link copied</string>
+    <string name="no_facebook">Facebook is not installed. Please install it to share.</string>
+    <string name="no_facebook_login">Facebook is not installed. Please install it to log in.</string>
+    <string name="no_twitter">Twitter is not installed. Please install it to share.</string>
+    <string name="share_page_tip">No Web3-enabled apps found.</string>
+    <string name="invite_video_call">Invites you to a video call</string>
+    <string name="connect_video">Accept</string>
+    <string name="hang_up_video">Hang Up</string>
+    <string name="gifts_received">Gifts Received</string>
+    <string name="video_over">Video Call Ended</string>
+    <string name="gift_common">Backpack Gifts</string>
+    <string name="gift_lucky">Lucky Gifts</string>
+    <string name="gift_lucky_content">Send Lucky Gifts for a chance to get coin rebates. The more you send, the more you get back!</string>
+    <string name="report_result_notification">Report Result Notification</string>
+    <string name="withdrawal_arrival_reminder">Withdrawal Arrival Reminder</string>
+    <string name="cash_details_t">Details</string>
+    <string name="withdrawal_amount">Withdrawal Amount</string>
+    <string name="withdraw_to">Withdraw to</string>
+    <string name="withdrawal_time">Withdrawal Time</string>
+    <string name="deposit_arrival_time">Arrival Time</string>
+    <string name="withdrawal_change">Balance Withdrawal</string>
+    <string name="current_status">Current Status</string>
+    <string name="initiation_time">Initiation Time</string>
+    <string name="handling_fee">Service Fee</string>
+    <string name="receiving_account">Receiving Account</string>
+    <string name="kind_tips">Friendly Reminder</string>
+    <string name="kind_tip_un_init">You cannot use the app without completing the host registration. Are you sure you want to exit?</string>
+    <string name="kind_tip_remove_image">Are you sure you want to remove this picture?</string>
+    <string name="kind_tip_hug_video">End call with %s?</string>
+    <string name="kind_tip_recording">Camera and microphone permissions are required for the live room. Since you\'ve denied them, please go to system settings to grant access manually.</string>
+    <string name="kind_tip_conversation">Delete this conversation?</string>
+    <string name="kind_tip_del_service">Are you sure you want to delete this service?</string>
+    <string name="send_verification_code">Send Code</string>
+    <string name="enter_correct_email">Enter a valid email</string>
+    <string name="Login_with_email">Log in with Email</string>
+    <string name="plz_enter_correct_email">Please enter a valid email address</string>
+    <string name="plz_enter_correct_code">Please enter the correct verification code</string>
+    <string name="translation">Translate</string>
+    <string name="published_successfully">Published successfully</string>
+    <string name="no_selected_any_pictures">You haven\'t selected any pictures</string>
+    <string name="update_ok">Updated successfully</string>
+    <string name="update_ok_tip">You haven\'t made any changes to submit</string>
+    <string name="update_ok_err">Sorry, you can upload a maximum of 6 background photos. Please delete some before adding more.</string>
+    <string name="update_ok_content">Background photo cannot be empty</string>
+    <string name="user_hangs_up_call">User hung up</string>
+    <string name="switching_successful">Switched successfully</string>
+    <string name="dailog_status">Status</string>
+    <string name="dailog_status_tip">You can manually adjust your online status to manage your work time flexibly:</string>
+    <string name="dailog_online">Online:</string>
+    <string name="dailog_online_tip">Users can see your profile and start video calls with you.</string>
+    <string name="dailog_offline">Offline:</string>
+    <string name="dailog_offline_tip">Users cannot call you. Suitable for when you need a break or are temporarily unavailable.</string>
+    <string name="new_user_recommend">New User Recommendations</string>
+    <string name="new_user_recommend_tip">The system provides a \'New Users\' channel for top hosts. You can see newly registered users in the recommendation list and proactively send them messages to encourage calls and increase your earnings.</string>
+    <string name="tip_plz_select_one_video">Please select 1 video</string>
+    <string name="login_out_ok">Logged out successfully</string>
+    <string name="some_items">You have %s items to set up</string>
+    <string name="opened_system_notifications">You have enabled system notifications</string>
+    <string name="plz_enter_valid_price">Please enter a valid price</string>
+    <string name="opened">Enabled</string>
+    <string name="err_empty_data">No data available</string>
+    <string name="cancel_top">Unpin</string>
+    <string name="confirm_top">Pin</string>
+    <string name="select_all">Select All</string>
+    <string name="plz_select_data">You haven\'t selected any data</string>
+    <string name="talk_time_an">Call duration %s</string>
+    <string name="verification_code_login">Login with Code</string>
+    <string name="sign_in_hint">By logging in, you agree to the</string>
+    <string name="plz_valid_email_and_code">Please enter a valid email address and verification code</string>
+    <string name="missed_calls">Missed Calls</string>
+    <string name="reject_call_t">Call Rejected</string>
+    <string name="this_income">This session\'s earnings:</string>
+    <string name="view_earnings">View Earnings</string>
+    <string name="system_msg">System Message</string>
+    <string name="system_msg_tip">System messages cannot be deleted.</string>
+    <string name="app_update">New Version Update</string>
+    <string name="app_update_tip">Fixed bugs and improved the user video experience.</string>
+    <string name="app_update_now">Update Now</string>
+    <string name="app_update_later">Update Later</string>
+    <string name="app_update_auto">Auto-update</string>
+    <string name="app_update_loading">Downloading, please wait...</string>
+    <string name="toast_err_choose_lang">You have selected the current app language. Please choose a different one.</string>
+    <string name="app_update_install">Download complete. Tap to install.</string>
+    <string name="collapse">Collapse</string>
+    <string name="expand">Expand</string>
+    <string name="favorites">Favorites</string>
+    <string name="toast_no_install_permission">You have not granted installation permission. Please tap install again and grant permission.</string>
+    <string name="video_effect">Beauty</string>
+    <string name="none">None</string>
+    <string name="effect_tab_1">Beauty</string>
+    <string name="effect_tab_2">Filters</string>
+    <string name="effect_tab_3">Stickers</string>
+    <string name="beauty_tab_1">Smooth</string>
+    <string name="beauty_tab_2">Whiten</string>
+    <string name="beauty_tab_3">Sharpen</string>
+    <string name="income_tab_service_income">Service Earnings</string>
+    <string name="setting_interactive_tip">System sends messages to users on behalf of online top hosts</string>
+    <string name="setting_interactive_title">Interaction Settings</string>
+    <string name="sys_msg_report_tip">Platform Notice: Violation Detected</string>
+    <string name="sys_msg_report_content">After investigation, it was confirmed that you were reported for [%s]. A warning has been issued. Please ensure your conduct complies with our guidelines. Thank you for your cooperation.</string>
+    <string name="sys_msg_report">Complaint: You\'ve received a user complaint</string>
+    <string name="sys_msg_cash">Withdrawal: You have a withdrawal arrival reminder</string>
+    <string name="none_effect">Off</string>
+    <string name="effect_degree">Intensity</string>
+    <string name="beauty_smooth">Smooth</string>
+    <string name="beauty_whiten">Whiten</string>
+    <string name="beauty_sharp">Sharpen</string>
+    <string name="filter_soft">Soft</string>
+    <string name="filter_chujian">First Sight</string>
+    <string name="filter_gaojihui">Chic Gray</string>
+    <string name="filter_lengbaipi">Cool Tone</string>
+    <string name="filter_liangju">Bright Orange</string>
+    <string name="filter_qingtou">Clear</string>
+    <string name="filter_roubai">Soft White</string>
+    <string name="filter_touliang">Luminous</string>
+    <string name="filter_wentou">Gentle</string>
+    <string name="filter_ziran">Natural</string>
+    <string name="sticker_chaodatou">Big Head</string>
+    <string name="sticker_duochongyingfenshen">Clone Jutsu</string>
+    <string name="sticker_fadaimianmo">Face Mask</string>
+    <string name="sticker_fugudv">Vintage Cam</string>
+    <string name="sticker_heimaoyanjing">Black Cat Eyes</string>
+    <string name="sticker_hudiewanshengzhuang">Butterfly Makeup</string>
+    <string name="sticker_qianduoduo">Money Rain</string>
+    <string name="sticker_qianshuiting">Submarine Game</string>
+    <string name="sticker_tuziaichiluoboqingcai">Bunny Eats Carrot</string>
+    <string name="sticker_zhaocaimao">Lucky Cat</string>
+    <string name="copy_effect_start">Loading beauty resources...</string>
+    <string name="copy_effect_end">Beauty resources loaded.</string>
+    <string name="copy_effect_err">Failed to load beauty resources. Please try again later.</string>
+    <string name="question_des">Hi, welcome! Please select from the list below to find a solution.</string>
+    <string name="question_1">What is a rating?</string>
+    <string name="question_2">What are the benefits of a higher rating?</string>
+    <string name="question_3">How are my earnings calculated?</string>
+    <string name="question_4">How long does a withdrawal take to arrive?</string>
+    <string name="question_5">What if my withdrawal fails?</string>
+    <string name="answer_1">Host rating is based on overall performance. The higher the level, the better the coin-to-dollar exchange rate. For specific rules, please check the rating description on the homepage.</string>
+    <string name="answer_2">A higher rating not only gives you a better earnings exchange rate but also extra exposure rewards from the platform. You can improve your rating through frequent calls and high-quality video interactions.</string>
+    <string name="answer_3">Your earnings consist of video call duration, the value of gifts received, and the number of chat messages, converted to dollars based on your rating\'s exchange rate.</string>
+    <string name="answer_4">Withdrawals usually arrive within 7 business days, depending on the withdrawal method used.</string>
+    <string name="answer_5">Please first check if your account information is correct. If the problem persists, please contact customer service for assistance.</string>
+
+
+    <string name="download_retry">点击重试</string>
+    <string name="quick_replay">快捷回复</string>
+
+    <string name="chat_msg_1">哈喽～终于等到你~</string>
+    <string name="chat_msg_2">第一次和你聊天，有点小激动</string>
+    <string name="chat_msg_3">我刚上线，正好看到你，真巧呀～</string>
+    <string name="chat_msg_4">你现在在做什么呢？</string>
+    <string name="chat_msg_5">我还在想会是谁先跟我打招呼～</string>
+    <string name="chat_msg_6">你平时喜欢跟什么样的女生聊天？</string>
+    <string name="chat_msg_7">我喜欢交新朋友，你呢？</string>
+    <string name="chat_msg_8">嘿～刚看到你消息，你在干嘛呢？</string>
+    <string name="chat_msg_9">要不要做个小游戏互相了解一下？</string>
+    <string name="chat_msg_10">要不要开个视频？我更想看见你～</string>
+    <string name="chat_msg_11">视频聊更真实，我想看看你的样子。</string>
+    <string name="chat_msg_12">我刚打扮好，视频里更漂亮哦～</string>
+    <string name="chat_msg_13">我喜欢面对面聊天，更有感觉，你呢？</string>
+    <string name="chat_msg_14">视频感觉都不错，你想试试吗？</string>
+    <string name="chat_msg_15">我也好奇你现在的表情是什么样的～</string>
+    <string name="chat_msg_16">你说得我都想立刻见到你啦～</string>
+    <string name="chat_msg_17">要不要开视频，让我看看你是不是在害羞</string>
+    <string name="chat_msg_18">我在等你开视频哦，你敢不敢？</string>
+    <string name="chat_msg_19">视频里聊更自在，我们可以聊更久～</string>
+    <string name="chat_msg_20">可以陪我聊会儿吗？</string>
+
+
+    <string name="union_status_join">+加入</string>
+    <string name="union_status_review">加入中</string>
+    <string name="union_join_time">进会日期: %s</string>
+    <string name="union_status_out">退出公会</string>
+    <string name="union_status_out_pending">退出中</string>
+    <string name="joined_union">已加入公会</string>
+    <string name="joined_union_review">已提交加入公会申请，不能重复提交</string>
+    <string name="joined_union_owner">您是公会长，无法加入其他工会</string>
+    <string name="exit_union_pending">已提交退出公会申请，不能重复提交</string>
+
+    <string name="exit_guild_tip">您正在申请退出公会，确定这是你要退出的公会?</string>
+    <string name="joined_union_history">记录</string>
+    <string name="setting_manager_guild">公会入驻</string>
+    <string name="setting_mine_guild">我的公会</string>
+
+
+    <string name="join_union_states_pending">待审核</string>
+    <string name="join_union_states_invalid">已失效</string>
+    <string name="join_union_states_agree">已同意</string>
+    <string name="join_union_states_reject">已拒绝</string>
+
+    <string name="join_union_apply_time">申请时间</string>
+    <string name="join_union_pending_time">审核时间</string>
+    <string name="join_union_invalid_time">失效时间</string>
+    <string name="join_union_history">申请记录</string>
+
+
+    <string name="create_union_tip1">您已加入其他公会，暂无法申请。如需入驻，请先退出当前公会。</string>
+    <string name="create_union_tip2">您已有待审核的公会申请，暂无法申请。</string>
+</resources>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

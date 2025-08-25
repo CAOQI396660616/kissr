@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <View
+            android:id="@+id/vTop"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_0"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/vStatus"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_0"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <com.hikennyc.view.MultiStateAiView
+            android:id="@+id/multiStateView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/cl_main_bottom_bar"
+            app:layout_constraintTop_toTopOf="parent"
+            app:msv_emptyView="@layout/layout_default_empty"
+            app:msv_errorView="@layout/layout_default_error"
+            app:msv_loadingView="@layout/layout_default_loading_for_main"
+            app:msv_viewState="loading">
+
+            <FrameLayout
+                android:id="@+id/fl_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </com.hikennyc.view.MultiStateAiView>
+
+
+        <include
+            android:id="@+id/cl_main_bottom_bar"
+            layout="@layout/layout_main_bottom_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

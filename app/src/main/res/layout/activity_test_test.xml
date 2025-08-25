@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+
+        <View
+            android:id="@+id/vTop"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_0_5f"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!--顶部栏-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clTop"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_44"
+            app:layout_constraintTop_toBottomOf="@id/vTop">
+
+            <ImageView
+                android:id="@+id/ivBack"
+                android:layout_width="@dimen/dp_46"
+                android:layout_height="match_parent"
+                android:paddingStart="@dimen/dp_15"
+                android:paddingEnd="@dimen/dp_12"
+                android:src="@drawable/ic_back_a"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <com.dubu.common.views.tv.UbuntuMediumTextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:gravity="start"
+                android:maxLines="1"
+                android:text="测试页面"
+                android:textColor="@color/cl1A1A1A"
+                android:textSize="@dimen/sp_18"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/ivBack"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_0"
+            android:layout_weight="1"
+            android:overScrollMode="never"
+            android:scrollbars="none"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:background="@color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+
+                <EditText
+                    android:layout_marginHorizontal="@dimen/dp_15"
+                    android:id="@+id/etMsg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/color_black_alpha_50"
+                    android:digits="0123456789"
+                    android:hint=" 请输入用户id (不输入则默认id 10000)"
+                    android:importantForAutofill="no"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:paddingVertical="@dimen/dp_20"
+                    android:paddingStart="@dimen/dp_16"
+                    android:paddingEnd="@dimen/dp_16"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:textSize="@dimen/sp_15"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvDes" />
+
+
+                <Button
+                    android:background="@color/cl2C2E33"
+                    android:id="@+id/bt9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_30"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:textColor="@color/white"
+                    android:padding="@dimen/dp_10"
+                    android:text="发送一条文本带视频或图片的消息" />
+
+
+
+                <Button
+                    android:background="@color/cl2C2E33"
+                    android:id="@+id/bt7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_30"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:textColor="@color/white"
+                    android:padding="@dimen/dp_10"
+                    android:text="测试处理投诉接口(在输入框输入提交投诉的id)" />
+
+                <Button
+                    android:visibility="gone"
+                    android:background="@color/cl2C2E33"
+                    android:id="@+id/bt11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_30"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:textColor="@color/white"
+                    android:padding="@dimen/dp_10"
+                    android:text="点击返回首页-走升级弹框业务逻辑: 强制升级" />
+
+                <Button
+                    android:visibility="gone"
+                    android:background="@color/cl2C2E33"
+                    android:id="@+id/bt12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_30"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:textColor="@color/white"
+                    android:padding="@dimen/dp_10"
+                    android:text="点击返回首页-走升级弹框业务逻辑: 可选升级" />
+
+
+                <Button
+                    android:id="@+id/bt1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_30"
+                    android:layout_marginStart="@dimen/dp_30"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:padding="@dimen/dp_5"
+                    android:text="用户输入的id: 进入聊天页面" />
+
+
+                <Button
+                    android:id="@+id/bt2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_30"
+                    android:layout_marginStart="@dimen/dp_30"
+                    android:layout_marginTop="@dimen/dp_0"
+                    android:padding="@dimen/dp_5"
+                    android:text="测试对系统消息:提现和举报结果等自定义消息" />
+
+
+                <Button
+                    android:id="@+id/bt3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_30"
+                    android:layout_marginStart="@dimen/dp_30"
+                    android:layout_marginTop="@dimen/dp_0"
+                    android:padding="@dimen/dp_5"
+                    android:text="将Token本地存储时间无效" />
+
+
+                <Button
+                    android:id="@+id/bt4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_30"
+                    android:layout_marginStart="@dimen/dp_30"
+                    android:layout_marginTop="@dimen/dp_0"
+                    android:padding="@dimen/dp_5"
+                    android:text="测试接口" />
+
+
+                <Button
+                    android:id="@+id/bt5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_30"
+                    android:layout_marginStart="@dimen/dp_30"
+                    android:layout_marginTop="@dimen/dp_0"
+                    android:padding="@dimen/dp_5"
+                    android:text="发送安卓互相邀请打电话消息" />
+
+
+                <Button
+                    android:id="@+id/bt6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_30"
+                    android:layout_marginStart="@dimen/dp_30"
+                    android:layout_marginTop="@dimen/dp_0"
+                    android:padding="@dimen/dp_5"
+                    android:text="测试投诉接口" />
+
+
+                <Button
+                    android:id="@+id/bt8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_30"
+                    android:layout_marginStart="@dimen/dp_30"
+                    android:layout_marginTop="@dimen/dp_0"
+                    android:padding="@dimen/dp_5"
+                    android:text="播放视频铃声" />
+
+
+                <Button
+                    android:id="@+id/bt10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_30"
+                    android:layout_marginStart="@dimen/dp_30"
+                    android:layout_marginTop="@dimen/dp_0"
+                    android:padding="@dimen/dp_5"
+                    android:text="RTC" />
+
+                <Button
+                    android:id="@+id/bt13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_30"
+                    android:layout_marginStart="@dimen/dp_30"
+                    android:layout_marginTop="@dimen/dp_0"
+                    android:padding="@dimen/dp_5"
+                    android:text="清空会话列表数据 前50条" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_250"
+                    android:orientation="horizontal">
+
+                    <!--主播的视频区域-->
+                    <FrameLayout
+                        android:id="@+id/local_view_container"
+                        android:layout_width="@dimen/dp_0"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/red" />
+
+                    <FrameLayout
+                        android:id="@+id/remote_view_container"
+                        android:layout_width="@dimen/dp_0"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/blue" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+
+    </LinearLayout>
+
+
+</layout>

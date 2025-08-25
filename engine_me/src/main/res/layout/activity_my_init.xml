@@ -1,0 +1,572 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+
+    <LinearLayout
+        android:id="@+id/clTopRoot"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/clF3F4F5"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!--顶部栏-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clTop"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_44"
+            app:layout_constraintTop_toBottomOf="@id/vStatus">
+
+            <ImageView
+                android:id="@+id/ivBack"
+                android:layout_width="@dimen/dp_39"
+                android:layout_height="match_parent"
+                android:paddingStart="@dimen/dp_16"
+                android:paddingEnd="@dimen/dp_8"
+                android:src="@drawable/ic_back_a"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                android:paddingHorizontal="@dimen/dp_50"
+                android:text="@string/user_tip"
+                android:textColor="@color/cl1A1A1A"
+                android:textSize="@dimen/sp_16"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.hikennyc.view.MultiStateAiView
+            android:id="@+id/multiStateView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_0"
+            android:layout_weight="1"
+            app:msv_emptyView="@layout/layout_default_empty"
+            app:msv_errorView="@layout/layout_default_error"
+            app:msv_loadingView="@layout/layout_default_loading_m_bottom"
+            app:msv_viewState="loading">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:id="@+id/llRoot"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/dp_12"
+                    android:layout_marginTop="@dimen/dp_13"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toBottomOf="@id/clTop">
+
+                    <com.ruffian.library.widget.RView
+                        android:id="@+id/view1"
+                        android:layout_width="@dimen/dp_0"
+                        android:layout_height="@dimen/dp_5"
+                        android:layout_marginHorizontal="@dimen/dp_4"
+                        android:layout_weight="1"
+                        app:background_normal="@color/clD8D8D8"
+                        app:corner_radius="@dimen/dp_3" />
+
+                    <com.ruffian.library.widget.RView
+                        android:id="@+id/view2"
+                        android:layout_width="@dimen/dp_0"
+                        android:layout_height="@dimen/dp_5"
+                        android:layout_marginHorizontal="@dimen/dp_4"
+                        android:layout_weight="1"
+                        app:background_normal="@color/clD8D8D8"
+                        app:corner_radius="@dimen/dp_3" />
+
+                    <com.ruffian.library.widget.RView
+                        android:id="@+id/view3"
+                        android:layout_width="@dimen/dp_0"
+                        android:layout_height="@dimen/dp_5"
+                        android:layout_marginHorizontal="@dimen/dp_4"
+                        android:layout_weight="1"
+                        app:background_normal="@color/clD8D8D8"
+                        app:corner_radius="@dimen/dp_3" />
+
+                    <com.ruffian.library.widget.RView
+                        android:id="@+id/view4"
+                        android:layout_width="@dimen/dp_0"
+                        android:layout_height="@dimen/dp_5"
+                        android:layout_marginHorizontal="@dimen/dp_4"
+                        android:layout_weight="1"
+                        app:background_normal="@color/clD8D8D8"
+                        app:corner_radius="@dimen/dp_3" />
+
+                </LinearLayout>
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_0"
+                    android:layout_marginBottom="@dimen/dp_20"
+                    android:layout_weight="1"
+                    android:overScrollMode="never"
+                    android:scrollbars="none"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/clRoot"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_0"
+                        app:layout_constraintBottom_toTopOf="@+id/tvNext"
+                        app:layout_constraintTop_toBottomOf="@id/llRoot">
+
+
+                        <!--1-->
+                        <LinearLayout
+                            android:id="@+id/clRoot1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:visibility="visible">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/dp_25"
+                                android:layout_marginStart="@dimen/dp_16"
+                                android:layout_marginTop="@dimen/dp_42"
+                                android:text="@string/user_input_name_hint"
+                                android:textColor="@color/cl2C2E33"
+                                android:textSize="@dimen/sp_18"
+                                android:textStyle="bold" />
+
+                            <com.ruffian.library.widget.RLinearLayout
+                                android:id="@+id/clUp"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/dp_54"
+                                android:layout_marginHorizontal="@dimen/dp_16"
+                                android:layout_marginTop="@dimen/dp_20"
+                                android:layoutDirection="locale"
+                                android:orientation="horizontal"
+                                app:background_normal="@color/white"
+                                app:corner_radius="@dimen/dp_10">
+
+                                <EditText
+                                    android:id="@+id/etMsg"
+                                    android:layout_width="@dimen/dp_0"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:background="@null"
+                                    android:hint="@string/user_input_name"
+                                    android:importantForAutofill="no"
+                                    android:inputType="textAutoComplete"
+                                    android:maxLength="15"
+                                    android:paddingStart="@dimen/dp_16"
+                                    android:paddingEnd="@dimen/dp_16"
+                                    android:textColor="@color/cl2C2E33"
+                                    android:textColorHint="@color/cl848A99"
+                                    android:textSize="@dimen/sp_17"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toStartOf="@+id/ivSend"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@id/iv_back"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <TextView
+                                    android:id="@+id/tvNameSum"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:ellipsize="end"
+                                    android:gravity="center"
+                                    android:maxLines="1"
+                                    android:paddingHorizontal="@dimen/dp_17"
+                                    android:text="0/15"
+                                    android:textColor="@color/cl2C2E33"
+                                    android:textSize="@dimen/sp_13"
+                                    android:textStyle="bold"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                            </com.ruffian.library.widget.RLinearLayout>
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/dp_25"
+                                android:layout_marginStart="@dimen/dp_16"
+                                android:layout_marginTop="@dimen/dp_42"
+                                android:text="@string/user_input_age_title"
+                                android:textColor="@color/cl2C2E33"
+                                android:textSize="@dimen/sp_18"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/dp_25"
+                                android:layout_marginStart="@dimen/dp_16"
+                                android:layout_marginTop="@dimen/dp_14"
+                                android:text="@string/user_input_age_tip"
+                                android:textColor="@color/cl848A99"
+                                android:textSize="@dimen/sp_14" />
+
+
+                            <LinearLayout
+                                android:id="@+id/llData"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/dp_16"
+                                android:layout_marginTop="@dimen/dp_32"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+                                    <com.dubu.common.views.tv.UbuntuMediumTextView
+                                        android:id="@+id/tvMM"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="@dimen/dp_22"
+                                        android:text="MM"
+                                        android:textColor="@color/clABADB3"
+                                        android:textSize="@dimen/sp_22"
+                                        android:textStyle="bold" />
+
+                                    <View
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/dp_2"
+                                        android:layout_marginTop="@dimen/dp_14"
+                                        android:background="@color/cl2C2E33" />
+
+                                </LinearLayout>
+
+
+                                <com.dubu.common.views.tv.UbuntuMediumTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="@dimen/dp_22"
+                                    android:layout_marginHorizontal="@dimen/dp_5"
+                                    android:text="/"
+                                    android:textColor="@color/cl2C2E33"
+                                    android:textSize="@dimen/sp_22"
+                                    android:textStyle="bold" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+                                    <com.dubu.common.views.tv.UbuntuMediumTextView
+                                        android:id="@+id/tvDD"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="@dimen/dp_22"
+                                        android:text="DD"
+                                        android:textColor="@color/clABADB3"
+                                        android:textSize="@dimen/sp_22"
+                                        android:textStyle="bold" />
+
+                                    <View
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/dp_2"
+                                        android:layout_marginTop="@dimen/dp_14"
+                                        android:background="@color/cl2C2E33" />
+
+                                </LinearLayout>
+
+                                <com.dubu.common.views.tv.UbuntuMediumTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="@dimen/dp_22"
+                                    android:layout_marginHorizontal="@dimen/dp_5"
+                                    android:text="/"
+                                    android:textColor="@color/cl2C2E33"
+                                    android:textSize="@dimen/sp_22"
+                                    android:textStyle="bold" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+                                    <com.dubu.common.views.tv.UbuntuMediumTextView
+                                        android:id="@+id/tvYY"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="@dimen/dp_22"
+                                        android:text="YYYY"
+                                        android:textColor="@color/clABADB3"
+                                        android:textSize="@dimen/sp_22"
+                                        android:textStyle="bold" />
+
+                                    <View
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/dp_2"
+                                        android:layout_marginTop="@dimen/dp_14"
+                                        android:background="@color/cl2C2E33" />
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <!--2-->
+                        <LinearLayout
+                            android:id="@+id/clRoot2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:visibility="invisible">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/dp_25"
+                                android:layout_marginStart="@dimen/dp_16"
+                                android:layout_marginTop="@dimen/dp_42"
+                                android:text="@string/user_input_country"
+                                android:textColor="@color/cl2C2E33"
+                                android:textSize="@dimen/sp_18"
+                                android:textStyle="bold" />
+
+                            <com.ruffian.library.widget.RLinearLayout
+                                android:id="@+id/llCountry"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/dp_54"
+                                android:layout_marginHorizontal="@dimen/dp_16"
+                                android:layout_marginTop="@dimen/dp_20"
+                                android:gravity="center_vertical"
+                                android:layoutDirection="locale"
+                                android:orientation="horizontal"
+                                app:background_normal="@color/white"
+                                app:corner_radius="@dimen/dp_10">
+
+                                <TextView
+                                    android:id="@+id/tvCountry"
+                                    android:layout_width="@dimen/dp_0"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginStart="@dimen/dp_16"
+                                    android:layout_weight="1"
+                                    android:gravity="start|center_vertical"
+                                    android:text="@string/user_input_click"
+                                    android:textColor="@color/cl848A99"
+                                    android:textSize="@dimen/sp_16"
+                                    android:textStyle="bold" />
+
+                                <ImageView
+                                    android:layout_width="@dimen/dp_11"
+                                    android:layout_height="@dimen/dp_7"
+                                    android:layout_marginEnd="@dimen/dp_16"
+                                    android:src="@drawable/ic_f_down" />
+
+                            </com.ruffian.library.widget.RLinearLayout>
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/dp_25"
+                                android:layout_marginStart="@dimen/dp_16"
+                                android:layout_marginTop="@dimen/dp_49"
+                                android:text="@string/user_input_commonly_language"
+                                android:textColor="@color/cl2C2E33"
+                                android:textSize="@dimen/sp_18"
+                                android:textStyle="bold" />
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:layout_marginHorizontal="@dimen/dp_10"
+                                android:id="@+id/recyclerViewLang"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:scrollbars="none"/>
+
+
+                        </LinearLayout>
+
+                        <!--3-->
+                        <LinearLayout
+                            android:id="@+id/clRoot3"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:visibility="invisible">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/dp_25"
+                                android:layout_marginStart="@dimen/dp_16"
+                                android:layout_marginTop="@dimen/dp_42"
+                                android:text="@string/user_input_info"
+                                android:textColor="@color/cl2C2E33"
+                                android:textSize="@dimen/sp_18"
+                                android:textStyle="bold" />
+
+                            <com.ruffian.library.widget.RLinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="@dimen/dp_16"
+                                android:layout_marginTop="@dimen/dp_20"
+                                android:layoutDirection="locale"
+                                android:orientation="vertical"
+                                app:background_normal="@color/white"
+                                app:corner_radius="@dimen/dp_10">
+
+                                <EditText
+                                    android:id="@+id/etDes"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/dp_160"
+                                    android:background="@null"
+                                    android:gravity="start"
+                                    android:hint="@string/user_input_info"
+                                    android:inputType="textMultiLine"
+                                    android:maxLength="500"
+                                    android:padding="@dimen/dp_14"
+                                    android:textColor="@color/cl2C2E33"
+                                    android:textColorHint="@color/cl848A99"
+                                    android:textSize="@dimen/sp_15" />
+
+                                <TextView
+                                    android:id="@+id/tvDesSum"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="@dimen/dp_13"
+                                    android:ellipsize="end"
+                                    android:gravity="end"
+                                    android:maxLines="1"
+                                    android:paddingHorizontal="@dimen/dp_13"
+                                    android:text="0/500"
+                                    android:textColor="@color/cl2C2E33"
+                                    android:textSize="@dimen/sp_13"
+                                    android:textStyle="bold"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                            </com.ruffian.library.widget.RLinearLayout>
+
+
+                        </LinearLayout>
+
+                        <!--4-->
+                        <LinearLayout
+                            android:id="@+id/clRoot4"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:visibility="invisible">
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/dp_25"
+                                android:layout_marginStart="@dimen/dp_16"
+                                android:layout_marginTop="@dimen/dp_42"
+                                android:text="@string/user_input_upload_image"
+                                android:textColor="@color/cl2C2E33"
+                                android:textSize="@dimen/sp_18"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/dp_25"
+                                android:layout_marginStart="@dimen/dp_16"
+                                android:layout_marginTop="@dimen/dp_14"
+                                android:text="@string/user_input_upload_image_tip"
+                                android:textColor="@color/cl848A99"
+                                android:textSize="@dimen/sp_14" />
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/recyclerView"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="@dimen/dp_10"
+                                android:layout_marginTop="@dimen/dp_24"
+                                android:minHeight="@dimen/dp_160"
+                                android:scrollbars="none" />
+
+
+                            <com.ruffian.library.widget.RConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="@dimen/dp_16"
+                                android:layout_marginTop="@dimen/dp_20"
+                                android:layoutDirection="locale"
+                                android:orientation="vertical"
+                                app:background_normal="@color/white"
+                                app:corner_radius="@dimen/dp_10">
+
+                                <TextView
+                                    android:id="@+id/tvTT"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="@dimen/dp_25"
+                                    android:layout_marginStart="@dimen/dp_16"
+                                    android:layout_marginTop="@dimen/dp_18"
+                                    android:text="@string/user_input_demo"
+                                    android:textColor="@color/cl2C2E33"
+                                    android:textSize="@dimen/sp_15"
+                                    android:textStyle="bold"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <com.ruffian.library.widget.RImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/dp_0"
+                                    android:layout_marginHorizontal="@dimen/dp_17"
+                                    android:layout_marginTop="@dimen/dp_12"
+                                    android:layout_marginBottom="@dimen/dp_17"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/ic_init_bg"
+                                    app:corner_radius="@dimen/dp_10"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintDimensionRatio="h,310:206"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/tvTT" />
+
+
+                            </com.ruffian.library.widget.RConstraintLayout>
+
+                        </LinearLayout>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </ScrollView>
+
+                <com.ruffian.library.widget.RTextView
+                    android:id="@+id/tvNext"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_51"
+                    android:layout_marginHorizontal="@dimen/dp_33"
+                    android:layout_marginBottom="@dimen/dp_20"
+                    android:gravity="center"
+                    android:text="@string/next_step"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_15"
+                    android:textStyle="bold"
+                    app:background_normal="@color/cl2C2E33"
+                    app:corner_radius="@dimen/dp_26"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+            </LinearLayout>
+
+        </com.hikennyc.view.MultiStateAiView>
+    </LinearLayout>
+
+
+</layout>

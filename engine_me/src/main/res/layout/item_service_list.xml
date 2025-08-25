@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ruffian.library.widget.RConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/dp_7"
+    android:layout_marginVertical="@dimen/dp_7"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    app:background_normal="@color/white"
+    app:corner_radius="@dimen/dp_10"
+    tools:ignore="MissingDefaultResource">
+
+    <com.dubu.common.views.cview.DrawableTextView
+        android:id="@+id/tv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_15"
+        android:layout_marginTop="@dimen/dp_32"
+        android:layout_marginBottom="@dimen/dp_15"
+        android:drawablePadding="@dimen/dp_12"
+        android:gravity="center"
+        android:text="@string/app_name"
+        android:textColor="@color/cl2C2E33"
+        android:textSize="@dimen/sp_15"
+        app:drawable="@drawable/ic_service_s"
+        app:drawableHeight="@dimen/dp_40"
+        app:drawablePosition="1"
+        app:drawableWidth="@dimen/dp_40"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:layout_marginTop="@dimen/dp_3"
+        android:id="@+id/ivDelete"
+        android:layout_width="@dimen/dp_35"
+        android:layout_height="@dimen/dp_35"
+        android:layout_marginEnd="@dimen/dp_5"
+        android:padding="@dimen/dp_10"
+        android:src="@drawable/ic_delete"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_marginEnd="@dimen/dp_5"
+        android:id="@+id/ivEdit"
+        android:layout_width="@dimen/dp_35"
+        android:layout_height="@dimen/dp_35"
+        android:padding="@dimen/dp_10"
+        android:src="@drawable/ic_edit_gray"
+        app:layout_constraintEnd_toStartOf="@+id/ivDelete"
+        app:layout_constraintTop_toTopOf="@+id/ivDelete" />
+
+
+    <com.dubu.common.views.cview.DrawableTextView
+        android:id="@+id/tv2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dp_15"
+        android:drawablePadding="@dimen/dp_4"
+        android:gravity="center"
+        android:text="50"
+        android:textColor="@color/cl2C2E33"
+        android:textSize="@dimen/sp_19"
+        android:textStyle="bold"
+        app:drawable="@drawable/ic_gold"
+        app:drawableHeight="@dimen/dp_18"
+        app:drawablePosition="1"
+        app:drawableWidth="@dimen/dp_18"
+        app:layout_constraintBottom_toBottomOf="@+id/tv1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv1" />
+
+</com.ruffian.library.widget.RConstraintLayout>
+
+
+

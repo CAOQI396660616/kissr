@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.HiReal.Going" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenAnimatedIcon">@color/white</item>
+        <item name="windowSplashScreenAnimationDuration">0</item>
+        <item name="windowSplashScreenBackground">@color/white</item>
+        <item name="postSplashScreenTheme">@style/Theme.HiReal</item>
+    </style>
+
+</resources>

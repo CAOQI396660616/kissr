@@ -1,0 +1,50 @@
+[
+    {
+        "country_code": "zh",
+        "name": "China",
+        "native_name": "中文",
+        "is_current": "zh"
+    },
+    {
+        "country_code": "en",
+        "name": "English",
+        "native_name": "English",
+        "is_current": "en"
+    },
+    {
+        "country_code": "id",
+        "name": "Indonesia",
+        "native_name": "Indonesia",
+        "is_current": "id"
+    },
+    {
+        "country_code": "pt",
+        "name": "Portuguese",
+        "native_name": "Português",
+        "is_current": "pt"
+    },
+    {
+        "country_code": "de",
+        "name": "German",
+        "native_name": "Deutsch",
+        "is_current": "de"
+    },
+    {
+        "country_code": "es",
+        "name": "Spanish",
+        "native_name": "Español",
+        "is_current": "es"
+    },
+    {
+        "country_code": "fr",
+        "name": "French",
+        "native_name": "Français",
+        "is_current": "fr"
+    },
+    {
+        "country_code": "ar",
+        "name": "Arabic",
+        "native_name": "عربي",
+        "is_current": "ar"
+    }
+]

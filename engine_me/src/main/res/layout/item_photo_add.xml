@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ruffian.library.widget.RConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/dp_3"
+    android:layout_marginVertical="@dimen/dp_8"
+    app:corner_radius="@dimen/dp_7"
+    tools:ignore="MissingDefaultResource">
+
+
+    <com.ruffian.library.widget.RImageView
+        android:layout_width="@dimen/dp_77"
+        android:layout_height="@dimen/dp_77"
+        android:layout_margin="@dimen/dp_5"
+        android:src="@color/clECECEC"
+        app:corner_radius="@dimen/dp_7"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="@dimen/dp_12"
+        android:layout_height="@dimen/dp_12"
+        android:src="@drawable/ic_close"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <com.ruffian.library.widget.RImageView
+        android:layout_width="@dimen/dp_30"
+        android:layout_height="@dimen/dp_30"
+        android:src="@drawable/ic_add"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</com.ruffian.library.widget.RConstraintLayout>
+
+
+
+
+

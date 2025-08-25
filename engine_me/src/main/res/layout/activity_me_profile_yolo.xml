@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+
+    <com.hikennyc.view.MultiStateAiView
+        android:id="@+id/multiStateView"
+        android:background="@color/clF3F4F5"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:msv_emptyView="@layout/layout_default_empty"
+        app:msv_errorView="@layout/layout_default_error"
+        app:msv_loadingView="@layout/layout_default_loading_for_main"
+        app:msv_viewState="content">
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/ablAppBarLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:elevation="@dimen/dp_0">
+
+                <com.google.android.material.appbar.CollapsingToolbarLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fitsSystemWindows="true"
+                    app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/rl_main_header"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <View
+                            android:id="@+id/vStatus"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_0_5f"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:id="@+id/ivBack"
+                            android:layout_width="@dimen/dp_39"
+                            android:layout_height="match_parent"
+                            android:paddingStart="@dimen/dp_16"
+                            android:paddingEnd="@dimen/dp_8"
+                            android:src="@drawable/ic_back_a"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <!--顶部个人中心背景-->
+                        <!--用户白色资料区域背景-->
+                        <ImageView
+                            android:id="@+id/ivUserBgMine"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_276"
+                            android:layout_marginTop="@dimen/dp_136"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/bg_r_6_ff4e34"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    <!--折叠起来的高度在于Toolbar的高度
+                        这里就是顶部右边 不变的 more按钮
+                    -->
+                    <androidx.appcompat.widget.Toolbar
+                        android:id="@+id/toolbar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:contentInsetStart="0dp"
+                        app:layout_collapseMode="pin">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/clTopToolBar"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:paddingTop="@dimen/dp_0">
+
+
+                            <!--青少年模式之上的占位view 主要是 和 stateBar齐平高度-->
+                            <View
+                                android:id="@+id/vSpaceTop"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/dp_44"
+                                android:background="@color/transparent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+
+
+                            <!--展开顶部展示view-->
+                            <!--更多-->
+                            <ImageView
+                                android:id="@+id/ivMore"
+                                android:layout_width="@dimen/dp_34"
+                                android:layout_height="@dimen/dp_34"
+                                android:layout_marginEnd="@dimen/dp_12"
+                                android:src="@mipmap/loading"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/vSpaceTop" />
+
+
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.appcompat.widget.Toolbar>
+
+                </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <!--下面联动区域-->
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:background="@color/blue"
+                    android:id="@+id/mViewPager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </LinearLayout>
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    </com.hikennyc.view.MultiStateAiView>
+
+
+
+
+</layout>

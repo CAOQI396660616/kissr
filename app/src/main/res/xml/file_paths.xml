@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <!-- 正确配置外部私有下载目录 -->
+    <external-files-path
+        name="external_download"
+        path="download/" />
+
+    <!-- 添加更多路径确保覆盖 -->
+    <external-path
+        name="external_storage_root"
+        path="." />
+
+    <root-path
+        name="root"
+        path="." />
+
+
+    <files-path
+        name="files_path"
+        path="." />
+    <external-path
+        name="external_path"
+        path="." />
+
+    <external-files-path
+        name="external_file_path"
+        path="." />
+</paths>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+
+    <RelativeLayout
+        android:id="@+id/infoRl"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_gravity="center_vertical"
+        android:background="@mipmap/live_bg_gifts_ambiglow5">
+
+
+        <ImageView
+            android:id="@+id/headIv"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="5dp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/icon" />
+
+
+        <TextView
+            android:id="@+id/nickNameTv"
+            style="@style/textViewForLiveRoomGiftUserName"
+            android:layout_alignTop="@+id/headIv"
+            android:layout_marginStart="8dp"
+            android:layout_toEndOf="@id/headIv"
+            android:text="123"
+            android:textSize="13sp" />
+
+
+        <TextView
+            android:id="@+id/infoTv"
+            style="@style/textViewForLiveRoomGiftContent"
+            android:layout_below="@id/nickNameTv"
+            android:layout_alignLeft="@id/nickNameTv"
+            android:layout_marginTop="4dp"
+            android:ellipsize="end"
+            android:text="送xxx礼物"
+            android:textColor="#B2FFFFFF"
+            android:textSize="11sp" />
+
+        <ImageView
+            android:id="@+id/giftIv"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="6dp"
+            android:layout_toEndOf="@+id/infoTv"
+            android:layout_toRightOf="@id/infoTv"
+            android:scaleType="centerCrop" />
+
+
+        <org.dync.giftlibrary.widget.StrokeTextView
+            android:id="@+id/animation_num"
+            style="@style/textViewForLiveRoomGiftUserName"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="12dp"
+            android:layout_toEndOf="@id/giftIv"
+            android:gravity="center"
+            android:shadowColor="#19000000"
+            android:shadowRadius="3"
+            android:text="x 1"
+            android:textSize="22sp"
+            app:innnerColor="#ffffff"
+            app:outerColor="#0076ff" />
+    </RelativeLayout>
+
+
+    <ImageView
+        android:id="@+id/light"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="120dp" />
+
+
+</FrameLayout>

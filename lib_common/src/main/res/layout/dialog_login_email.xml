@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingDefaultResource">
+
+    <data></data>
+
+    <com.ruffian.library.widget.RConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/dp_250"
+        android:orientation="vertical"
+        app:background_normal="#FFF5F6F7"
+        app:corner_radius_top_left="@dimen/dp_15"
+        app:corner_radius_top_right="@dimen/dp_15"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_0"
+            android:src="@drawable/ic_game_bg"
+            app:layout_constraintDimensionRatio="h,375:205" />
+
+        <ImageView
+            android:id="@+id/ivClose"
+            android:layout_width="@dimen/dp_42"
+            android:layout_height="@dimen/dp_42"
+            android:padding="@dimen/dp_8"
+            android:src="@drawable/ic_close_dialog"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvTS"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_22"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="@string/Login_with_email"
+            android:textColor="@color/cl2C2E33"
+            android:textSize="@dimen/sp_16"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.ruffian.library.widget.RLinearLayout
+            android:id="@+id/llEmail"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:layout_marginHorizontal="@dimen/dp_16"
+            android:layout_marginTop="@dimen/dp_27"
+            android:layoutDirection="locale"
+            android:orientation="vertical"
+            app:background_normal="@color/white"
+            app:border_color_normal="#DBDBDB"
+            app:border_width_normal="0.75dp"
+            app:corner_radius="@dimen/dp_8"
+            app:layout_constraintTop_toBottomOf="@+id/tvTS">
+
+            <EditText
+                android:focusable="true"
+                android:clickable="true"
+                android:id="@+id/etEmail"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:gravity="start"
+                android:hint="@string/enter_correct_email"
+                android:inputType="textAutoComplete"
+                android:maxLength="100"
+                android:padding="@dimen/dp_14"
+                android:textColor="@color/cl2C2E33"
+                android:textColorHint="@color/cl848A99"
+                android:textSize="@dimen/sp_15" />
+
+
+        </com.ruffian.library.widget.RLinearLayout>
+
+
+        <com.ruffian.library.widget.RLinearLayout
+            android:id="@+id/llCode"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:layout_marginHorizontal="@dimen/dp_16"
+            android:layout_marginTop="@dimen/dp_16"
+            android:layoutDirection="locale"
+            android:orientation="horizontal"
+            app:background_normal="@color/white"
+            app:border_color_normal="#DBDBDB"
+            app:border_width_normal="0.75dp"
+            app:corner_radius="@dimen/dp_8"
+            app:layout_constraintTop_toBottomOf="@+id/llEmail">
+
+            <EditText
+                android:id="@+id/etDes"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:gravity="start"
+                android:hint="@string/verification_code_t"
+                android:inputType="number"
+                android:digits="0123456789"
+                android:maxLength="50"
+                android:paddingVertical="@dimen/dp_14"
+                android:paddingStart="@dimen/dp_14"
+                android:textColor="@color/cl2C2E33"
+                android:textColorHint="@color/cl848A99"
+                android:textSize="@dimen/sp_15" />
+
+            <TextView
+                android:id="@+id/tvDesSum"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                android:paddingHorizontal="@dimen/dp_14"
+                android:text="@string/send_verification_code"
+                android:textColor="@color/cl2C2E33"
+                android:textSize="@dimen/sp_15"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </com.ruffian.library.widget.RLinearLayout>
+
+
+        <com.ruffian.library.widget.RTextView
+            android:id="@+id/tvNext"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_52"
+            android:layout_marginHorizontal="@dimen/dp_20"
+            android:layout_marginTop="@dimen/dp_28"
+            android:layout_marginBottom="@dimen/dp_22"
+            android:gravity="center"
+            android:text="@string/login_in"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_15"
+            android:textStyle="bold"
+            app:background_normal="@color/cl2C2E33"
+            app:corner_radius="@dimen/dp_26"
+            app:layout_constraintTop_toBottomOf="@+id/llCode"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+    </com.ruffian.library.widget.RConstraintLayout>
+
+
+</layout>

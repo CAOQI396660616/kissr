@@ -1,0 +1,24 @@
+<resources>
+
+
+    <string name="toast_login_fail">Login failed</string>
+    <string name="toast_login_success">Login successful</string>
+    <string name="other_login_title">Your account is currently logged in on another device, you will be logged out of the current device.</string>
+
+    <string name="logining">"Logging "</string>
+
+
+    <string name="upgrade_content">" You are using an older version of the app, please update for a better experience."</string>
+    <string name="cannot_find_play_store">Google Play is not installed on the device.</string>
+    <string name="facebook_login">Facebook</string>
+    <string name="google_login">Google</string>
+    <string name="toast_delete_account_success">The account has been canceled successfully</string>
+
+
+    <!--FaceBook 登录所需-->
+    <string name="facebook_app_id" translatable="false">1033872657998722</string>
+    <string name="fb_login_protocol_scheme" translatable="false">fb1033872657998722</string>
+    <string name="facebook_client_token" translatable="false">44590148aca07488446e3bb98a863d5e</string>
+
+
+</resources>

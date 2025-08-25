@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.hikennyc.view.MultiStateAiView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/multiStateView"
+    android:background="@color/clF3F4F5"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:msv_emptyView="@layout/layout_default_empty"
+    app:msv_errorView="@layout/layout_default_error"
+    app:msv_loadingView="@layout/layout_default_loading_for_main"
+    app:msv_viewState="loading">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+            android:id="@+id/vStatus"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_0_5f"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <com.ruffian.library.widget.RLinearLayout
+            android:id="@+id/llFun"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_135"
+            android:gravity="center_vertical"
+            app:background_normal="#FFEDD9"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/vStatus">
+
+            <ImageView
+                android:layout_width="@dimen/dp_100"
+                android:layout_height="@dimen/dp_100"
+                android:layout_marginStart="@dimen/dp_5"
+                android:src="@drawable/ic_back_j" />
+
+
+        </com.ruffian.library.widget.RLinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</com.hikennyc.view.MultiStateAiView>
+

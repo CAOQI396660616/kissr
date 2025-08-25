@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <attr name="drawableHeight" format="dimension" />
+    <attr name="drawableWidth" format="dimension" />
+    <attr name="bgColor" format="color" />
+
+    <declare-styleable name="DrawableTextView">
+        <attr name="drawable" format="reference" />
+        <attr name="drawableWidth" />
+        <attr name="drawableHeight" />
+        <attr name="drawablePosition" format="integer" />
+        <attr name="mediumWeight" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="BubbleLayout">
+        <attr name="bgColor" />
+        <attr name="android:padding" />
+        <attr name="shadowColor" format="color" />
+        <attr name="cornerRadius" format="dimension" />
+    </declare-styleable>
+
+</resources>

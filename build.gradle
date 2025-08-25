@@ -1,0 +1,54 @@
+buildscript {
+    apply from: './dependencies.gradle'
+    repositories {
+        // 使用阿里镜像源
+        maven { url "https://maven.aliyun.com/repository/public" }
+        maven { url "https://maven.aliyun.com/repository/google" }
+        maven { url "https://maven.aliyun.com/repository/central" }
+        maven { url "https://maven.aliyun.com/repository/gradle-plugin" }
+        maven {  url 'https://artifact.bytedance.com/repository/Volcengine/' }
+        maven { url 'https://maven.aliyun.com/nexus/content/groups/public/' }
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+        mavenLocal()
+        maven { url 'https://jitpack.io' }
+//        maven { url "https://repo.eclipse.org/content/repositories/paho-snapshots/" }
+        maven { url "https://plugins.gradle.org/m2/" }
+        maven { url "https://mirrors.tencent.com/nexus/repository/maven-public/" }
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:7.4.2"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$versions.kotlin"
+
+//        classpath 'com.google.gms:google-services:4.3.14'
+//        classpath "gradle.plugin.com.flurry:symbol-upload:7.3.0"
+    }
+}
+allprojects {
+    repositories {
+
+        // 使用阿里镜像源
+        maven { url "https://maven.aliyun.com/repository/public" }
+        maven { url "https://maven.aliyun.com/repository/google" }
+        maven { url "https://maven.aliyun.com/repository/central" }
+        maven { url "https://maven.aliyun.com/repository/gradle-plugin" }
+        maven {  url 'https://artifact.bytedance.com/repository/Volcengine/' }
+
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+        mavenLocal()
+        maven { url 'https://jitpack.io' }
+
+        maven { url 'https://maven.aliyun.com/nexus/content/groups/public/' }
+        maven { url 'https://maven.aliyun.com/nexus/content/repositories/jcenter' }
+        // 私有仓库地址
+        maven { url "https://lib.gcssloop.com/repository/gcssloop-central/" }
+//        maven { url "https://repo.eclipse.org/content/repositories/paho-snapshots/" }
+    }
+}
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+

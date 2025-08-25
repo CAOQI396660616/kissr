@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <style name="Theme.HiReal" parent="Theme.MaterialComponents.DayNight.NoActionBar.Bridge">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">#FFFF4E34</item>
+        <item name="colorPrimaryVariant">#FFFFD360</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">#FF13FAC8</item>
+        <item name="colorSecondaryVariant">#FF028688</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <!-- Customize your theme here. -->
+        <item name="colorControlActivated">@color/clFF4E34</item>
+        <item name="colorControlHighlight">@color/clFF4E34</item>
+    </style>
+
+    <style name="BottomSheetStyle" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+    </style>
+
+    <style name="Theme.HiReal.BottomDialog" parent="Theme.AppCompat.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowAnimationStyle">@style/Theme.Dialog.BottomAnimation</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:gravity">bottom</item>
+        <item name="android:navigationBarColor">@color/transparent</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
+
+    <style name="Theme.Dialog.BottomAnimation" parent="android:Animation.Dialog">
+        <item name="android:windowEnterAnimation">@anim/dialog_show_in</item>
+        <item name="android:windowExitAnimation">@anim/dialog_show_out</item>
+    </style>
+
+
+    <!-- 圆形图片 -->
+    <style name="circleImageStyle">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+
+    <!--弹窗动画-->
+    <style name="dialog_fragment_anim">
+        <item name="android:windowEnterAnimation">@anim/dialog_show_in</item>
+        <item name="android:windowExitAnimation">@anim/dialog_show_out</item>
+    </style>
+
+    <style name="tip_dialog_anim">
+        <item name="android:windowEnterAnimation">@anim/common_tip_dialog_in</item>
+        <item name="android:windowExitAnimation">@anim/common_tip_dialog_out</item>
+    </style>
+
+    <declare-styleable name="circleProgress">
+        <attr name="circle_max" format="float" />
+        <attr name="circle_progress" format="float" />
+        <attr name="circle_width" format="dimension" />
+        <attr name="circle_progress_color" format="color" />
+        <attr name="circle_color" format="color" />
+        <attr name="circle_text_color" format="color" />
+        <attr name="circle_text_size" format="dimension" />
+        <attr name="circle_text_isBold" format="boolean" />
+        <attr name="circle_center_color" format="color" />
+    </declare-styleable>
+
+
+    <!--MaterialComponents.Button 相关style===================================================== -->
+    <style name="materialButtonForBase2LiveRoom" parent="Widget.MaterialComponents.Button">
+        <!-- 直播间中使用到的 materialButton 基础样式-->
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingLeft">@dimen/dp_0</item>
+        <item name="android:paddingRight">@dimen/dp_0</item>
+        <item name="android:paddingTop">@dimen/dp_0</item>
+        <item name="android:paddingBottom">@dimen/dp_0</item>
+        <item name="android:inset">@dimen/dp_0</item>
+        <item name="android:insetLeft">@dimen/dp_0</item>
+        <item name="android:insetRight">@dimen/dp_0</item>
+        <item name="android:insetBottom">@dimen/dp_0</item>
+        <item name="android:insetTop">@dimen/dp_0</item>
+        <item name="android:minWidth">@dimen/dp_0</item>
+        <item name="android:minHeight">@dimen/dp_0</item>
+        <item name="android:elevation">@dimen/dp_0</item>
+    </style>
+    <!-- 直播间>某某进去直播间 动画view 按钮-->
+    <style name="materialButtonForJoinLiveRoomMsgBt" parent="materialButtonForBase2LiveRoom">
+        <item name="android:orientation">vertical</item>
+        <item name="android:gravity">center</item>
+        <item name="android:stateListAnimator">@null</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/sp_13</item>
+
+        <item name="android:shadowColor">@color/white</item>
+        <item name="android:shadowDx">0</item>
+        <item name="android:shadowDy">0</item>
+        <item name="android:shadowRadius">1</item>
+
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minWidth">@dimen/dp_70</item>
+        <item name="android:minHeight">@dimen/dp_20</item>
+
+        <item name="android:paddingLeft">@dimen/dp_8</item>
+        <item name="android:paddingRight">@dimen/dp_8</item>
+        <item name="android:paddingTop">@dimen/dp_0</item>
+        <item name="android:paddingBottom">@dimen/dp_0</item>
+    </style>
+
+    <declare-styleable name="SVGAImageView">
+        <attr name="source" format="string" />
+        <attr name="autoPlay" format="boolean" />
+        <attr name="antiAlias" format="boolean" />
+        <attr name="loopCount" format="integer" />
+        <attr name="clearsAfterStop" format="boolean" />
+        <attr name="clearsAfterDetached" format="boolean" />
+        <attr name="fillMode" format="enum">
+            <enum name="Backward" value="0" />
+            <enum name="Forward" value="1" />
+            <enum name="Clear" value="2"/>
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="DynamicHeightRecyclerView">
+        <attr name="maxHeight" format="dimension" />
+        <attr name="minHeight" format="dimension" />
+        <attr name="maxItemCount" format="integer" />
+    </declare-styleable>
+
+</resources>

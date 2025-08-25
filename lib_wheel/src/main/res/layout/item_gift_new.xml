@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <RelativeLayout
+        android:id="@+id/infoRl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <View
+                android:layout_width="200dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="11dp"
+                android:layout_marginVertical="5dp"
+                android:background="@mipmap/live_bg_gifts_ambiglow0"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/headIv"
+                android:layout_width="33dp"
+                android:layout_height="33dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="17dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_default_avatar_mmm"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <org.dync.giftlibrary.widget.UbuntuMediumTextView2
+                android:id="@+id/nickNameTv"
+                style="@style/textViewForLiveRoomGiftUserName"
+                android:layout_alignTop="@+id/headIv"
+                android:layout_marginStart="7dp"
+                android:layout_marginTop="1dp"
+                android:maxWidth="70dp"
+                android:text="Travis li…"
+                android:textSize="15sp"
+                app:layout_constraintStart_toEndOf="@+id/headIv"
+                app:layout_constraintTop_toTopOf="@+id/headIv" />
+
+
+            <org.dync.giftlibrary.widget.UbuntuRegularTextView2
+                android:id="@+id/infoTv"
+                style="@style/textViewForLiveRoomGiftContent"
+                android:layout_marginTop="5dp"
+                android:ellipsize="end"
+                android:maxWidth="70dp"
+                android:text="@string/gift_send_1"
+                android:textColor="#B2FFFFFF"
+                android:textSize="11sp"
+                app:layout_constraintStart_toStartOf="@+id/nickNameTv"
+                app:layout_constraintBottom_toBottomOf="@+id/headIv" />
+
+            <ImageView
+                android:id="@+id/giftIv"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="7dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/nickNameTv"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <org.dync.giftlibrary.widget.UbuntuBoldTextView2
+                android:id="@+id/animation_num"
+                style="@style/textViewForLiveRoomGiftUserName"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:gravity="center"
+                android:shadowColor="#19000000"
+                android:shadowRadius="3"
+                android:text="x1"
+                android:textSize="25sp"
+                app:innnerColor="#ffffff"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/giftIv"
+                app:layout_constraintTop_toTopOf="parent"
+                app:outerColor="#0076ff" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </RelativeLayout>
+
+
+    <ImageView
+        android:id="@+id/light"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="120dp" />
+
+
+</FrameLayout>

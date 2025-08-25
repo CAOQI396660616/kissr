@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingDefaultResource">
+
+    <data></data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/rlRootArea"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical">
+
+
+        <com.dubu.common.views.cview.DrawableTextView
+            android:id="@+id/tvTitle1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/dp_28"
+            android:layout_marginStart="@dimen/dp_19"
+            android:layout_marginTop="@dimen/dp_21"
+            android:drawablePadding="@dimen/dp_5"
+            android:maxWidth="@dimen/dp_150"
+            android:text="@string/app_name"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_18"
+            app:drawable="@drawable/ic_app_logo"
+            app:drawableHeight="@dimen/dp_20"
+            app:drawablePosition="1"
+            app:drawableWidth="@dimen/dp_20"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_marginHorizontal="@dimen/dp_10"
+            android:id="@+id/rvOne"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/dp_120"
+            android:scrollbars="none"
+            android:layout_marginTop="@dimen/dp_16"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvTitle1"/>
+
+        <com.dubu.common.views.cview.DrawableTextView
+            android:id="@+id/tvTitle2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/dp_28"
+            android:layout_marginStart="@dimen/dp_19"
+            android:layout_marginTop="@dimen/dp_24"
+            android:drawablePadding="@dimen/dp_5"
+            android:maxWidth="@dimen/dp_150"
+            android:text="@string/app_name"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_18"
+            app:drawable="@drawable/ic_app_logo"
+            app:drawableHeight="@dimen/dp_20"
+            app:drawablePosition="1"
+            app:drawableWidth="@dimen/dp_20"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rvOne"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_marginHorizontal="@dimen/dp_10"
+            android:id="@+id/rvTwo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/dp_120"
+            android:scrollbars="none"
+            android:layout_marginTop="@dimen/dp_16"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvTitle2"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

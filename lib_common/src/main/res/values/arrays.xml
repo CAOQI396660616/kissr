@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <array name="common_msg_banner_bg">
+        <item>#ff9749fe</item>
+        <item>#ffbd61fe</item>
+    </array>
+
+    <array name="common_bt_bg">
+        <item>#FFFF8025</item>
+        <item>#FFF50062</item>
+    </array>
+    <array name="vip_bt_bg">
+        <item>#10F2F2F2</item>
+        <item>#1cFFB800</item>
+    </array>
+    <array name="expires_bt_bg">
+        <item>#10666666</item>
+        <item>#339D4700</item>
+    </array>
+
+
+    <array name="vip_cl_bg">
+        <item>#ffF1CEB1</item>
+        <item>#ffF9E9DA</item>
+    </array>
+
+    <array name="store_bt_bg">
+        <item>#19FFFFFF</item>
+        <item>#33FFFFFF</item>
+    </array>
+
+
+
+
+
+
+    <array name="game_bt_bg">
+        <item>#FFBD31FF</item>
+        <item>#FF34B8FF</item>
+    </array>
+    <array name="menu_bt_bg">
+        <item>#FFFF4727</item>
+        <item>#FFFFC06E</item>
+    </array>
+    <array name="gold_bt_bg">
+        <item>#FFFF2459</item>
+        <item>#FFFFA650</item>
+    </array>
+    <array name="bt_bg_1">
+        <item>#FF64F565</item>
+        <item>#FF1CEA5A</item>
+    </array>
+    <array name="bt_bg_2">
+        <item>#FF5EF0F7</item>
+        <item>#FF45C6F6</item>
+    </array>
+    <array name="bt_bg_3">
+        <item>#00000000</item>
+        <item>#CD000000</item>
+    </array>
+    <array name="bt_bg_4">
+        <item>#7F000000</item>
+        <item>#FF000000</item>
+    </array>
+
+    <array name="bt_bg_5">
+        <item>#FFFF2459</item>
+        <item>#FFFFA650</item>
+    </array>
+
+</resources>

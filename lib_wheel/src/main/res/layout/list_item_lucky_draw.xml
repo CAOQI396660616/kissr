@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="3.5dp">
+
+    <ImageView
+        android:id="@+id/iv_bg"
+        android:layout_width="88dp"
+        android:layout_height="80dp"
+        android:background="@drawable/bg_lottery_item"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_lottery"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/ac0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_lottery_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:includeFontPadding="false"
+        android:textColor="@color/white"
+        android:textSize="13dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_lottery"
+        tools:text="ac娘萌萌哒" />
+
+    <View
+        android:id="@+id/view_shadow"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/icon_lottery_shadow"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_bg"
+        app:layout_constraintLeft_toLeftOf="@+id/iv_bg"
+        app:layout_constraintRight_toRightOf="@+id/iv_bg"
+        app:layout_constraintTop_toTopOf="@+id/iv_bg" />
+</androidx.constraintlayout.widget.ConstraintLayout>

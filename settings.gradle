@@ -1,0 +1,9 @@
+rootProject.name = "KissR"
+include ':app'
+include ':engine_home'
+include ':engine_me'
+include ':engine_chat'
+include ':engine_message'
+include ':lib_common'
+include ':lib_wheel'
+include ':lib_base'

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <com.hikennyc.view.MultiStateAiView
+        android:id="@+id/multiStateView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:msv_emptyView="@layout/layout_default_empty"
+        app:msv_errorView="@layout/layout_default_error"
+        app:msv_loadingView="@layout/layout_default_loading"
+        app:msv_viewState="content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <View
+                android:id="@+id/vStatus"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_0_5f"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:layout_width="@dimen/dp_300"
+                android:layout_height="@dimen/dp_300"
+                android:text="@string/app_name"
+                android:textSize="@dimen/sp_24"
+                android:textColor="@color/cl2C2E33"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.hikennyc.view.MultiStateAiView>
+</layout>
