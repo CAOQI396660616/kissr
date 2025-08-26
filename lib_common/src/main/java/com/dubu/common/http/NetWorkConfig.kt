@@ -33,7 +33,7 @@ object NetConfig {
     } else NetWorkConst.BASE_URL_DEBUG
 
 
-    const val RS_SUCCESS = 200
+    const val RS_SUCCESS = 0
     const val RS_FAIL = 400
     const val RS_DUPLICATED_ORDER = 501
 

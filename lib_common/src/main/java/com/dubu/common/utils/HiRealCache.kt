@@ -30,25 +30,27 @@ object HiRealCache {
             return field
         }
 
+
+    // 性别： 0-未设置 1-男性, 2-女性, 3-其他
     var userGender: String = "" //0男 1女 3未知  (后台对应的是 M=man W=woman)
         get() {
             if (field.isEmpty()) {
 
                 if (user == null) {
-                    field = "3"
+                    field = "0"
                 } else {
-                    if (user?.gender?.isNullOrEmpty() == true) {
-                        field = "3"
+                    if (user?.sex?.isEmpty() == true) {
+                        field = "0"
                     } else {
-                        field = when (user?.gender ?: "") {
-                            "M" -> {
-                                "0"
+                        field = when (user?.sex ?: "") {
+                            "1" -> {
+                                "男性"
                             }
-                            "W" -> {
-                                "1"
+                            "2" -> {
+                                "女性"
                             }
                             else -> {
-                                "3"
+                                "其他"
                             }
                         }
                     }
