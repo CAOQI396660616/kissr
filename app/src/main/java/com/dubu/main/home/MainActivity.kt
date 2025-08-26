@@ -75,7 +75,7 @@ class MainActivity : BaseBindingActivity<ActivityMainBinding>() {
         initView()
         initFragment()
         HiLog.e(
-            Tag2Common.TAG_RTC,
+            Tag2Common.TAG_12300,
             "获取设备的deviceId ： ${HiRealCache.deviceId}"
         )
     }

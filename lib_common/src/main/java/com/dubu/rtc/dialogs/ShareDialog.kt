@@ -289,8 +289,8 @@ class ShareDialog : BaseBottomDialog() {
         sp.append(toWebUserInfo)
         copyStr = sp.toString()
 
-        HiLog.e(Tag2Common.TAG_12301, "toWebUserInfo = $toWebUserInfo")
-        HiLog.e(Tag2Common.TAG_12301, "copyStr = $copyStr")
+        HiLog.e(Tag2Common.TAG_12300, "toWebUserInfo = $toWebUserInfo")
+        HiLog.e(Tag2Common.TAG_12300, "copyStr = $copyStr")
 
         TextViewUtils.setDrawableFirstTxt(
             tvLink,

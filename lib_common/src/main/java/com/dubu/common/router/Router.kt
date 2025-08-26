@@ -35,14 +35,14 @@ object Router {
 
     //用户 1v1打视频 直播页面
     fun toRtcCallActivity(json: String, type: Int) {
-        HiLog.e(Tag2Common.TAG_12301, "toRtcCallActivity  json = $json")
+        HiLog.e(Tag2Common.TAG_12300, "toRtcCallActivity  json = $json")
         ARouter.getInstance().build(RouteConst.ACTIVITY_RTV_CALL)
             .withString(RouteConst.P_JSON, json)
             .withInt(RouteConst.P_TYPE, type)
             .navigation()
     }
     fun toRtcEffectActivity(json: String, type: Int) {
-        HiLog.e(Tag2Common.TAG_12301, "toRtcEffectActivity  json = $json")
+        HiLog.e(Tag2Common.TAG_12300, "toRtcEffectActivity  json = $json")
         ARouter.getInstance().build(RouteConst.ACTIVITY_RTV_EFFECT)
             .withString(RouteConst.P_JSON, json)
             .withInt(RouteConst.P_TYPE, type)
@@ -50,7 +50,7 @@ object Router {
     }
 
     fun toCallInviteActivity(json: String, type: Int) {
-        HiLog.e(Tag2Common.TAG_12301, "toCallInviteActivity  json = $json")
+        HiLog.e(Tag2Common.TAG_12300, "toCallInviteActivity  json = $json")
         ARouter.getInstance().build(RouteConst.ACTIVITY_CALL_INVITE)
             .withString(RouteConst.P_JSON, json)
             .withInt(RouteConst.P_TYPE, type)
@@ -58,7 +58,7 @@ object Router {
     }
 
     fun toCallOverActivity(json: String, type: Int) {
-        HiLog.e(Tag2Common.TAG_12301, "toCallOverActivity  json = $json")
+        HiLog.e(Tag2Common.TAG_12300, "toCallOverActivity  json = $json")
         ARouter.getInstance().build(RouteConst.ACTIVITY_CALL_OVER)
             .withString(RouteConst.P_JSON, json)
             .withInt(RouteConst.P_TYPE, type)
@@ -66,7 +66,7 @@ object Router {
     }
 
     fun toWebViewActivity(title: String, url: String) {
-        HiLog.e(Tag2Common.TAG_12301, "toWebViewActivity  json = $title = $url")
+        HiLog.e(Tag2Common.TAG_12300, "toWebViewActivity  json = $title = $url")
         ARouter.getInstance().build(RouteConst.ACTIVITY_SIMPLE_WEB)
             .withString(RouteConst.P_TITLE, title)
             .withString(RouteConst.P_URL, url)
@@ -74,7 +74,7 @@ object Router {
     }
 
     fun toWebViewUnionActivity(title: String, url: String) {
-        HiLog.e(Tag2Common.TAG_12301, "toWebViewUnionActivity  json = $title = $url")
+        HiLog.e(Tag2Common.TAG_12300, "toWebViewUnionActivity  json = $title = $url")
         ARouter.getInstance().build(RouteConst.ACTIVITY_UNION_WEB)
             .withString(RouteConst.P_TITLE, title)
             .withString(RouteConst.P_URL, url)
@@ -84,7 +84,7 @@ object Router {
 
     //用户  聊天页面
     fun toBimChatActivity(conversationID: String, type: Int , json: String? = "") {
-        HiLog.e(Tag2Common.TAG_12301, "toBimChatActivity  json = $json")
+        HiLog.e(Tag2Common.TAG_12300, "toBimChatActivity  json = $json")
         ARouter.getInstance().build(RouteConst.ACTIVITY_BIM_CHAT)
             .withString(RouteConst.P_ID, conversationID)
             .withInt(RouteConst.P_TYPE, type)
@@ -93,7 +93,7 @@ object Router {
     }
 
     fun toTestActivity(json: String, type: Int) {
-        HiLog.e(Tag2Common.TAG_12301, "toTestActivity  json = $json")
+        HiLog.e(Tag2Common.TAG_12300, "toTestActivity  json = $json")
         ARouter.getInstance().build(RouteConst.ACTIVITY_TEST)
             .withString(RouteConst.P_JSON, json)
             .withInt(RouteConst.P_TYPE, type)
@@ -101,7 +101,7 @@ object Router {
     }
 
     fun toSystemMsgActivity(json: String, type: Int) {
-        HiLog.e(Tag2Common.TAG_12301, "toSystemMsgActivity  json = $json")
+        HiLog.e(Tag2Common.TAG_12300, "toSystemMsgActivity  json = $json")
         ARouter.getInstance().build(RouteConst.ACTIVITY_BIM_CHAT_SYS)
             .withString(RouteConst.P_JSON, json)
             .withInt(RouteConst.P_TYPE, type)
@@ -109,7 +109,7 @@ object Router {
     }
 
     fun toVideoPlayActivity(json: String, type: Int) {
-        HiLog.e(Tag2Common.TAG_12301, "toVideoPlayActivity  json = $json")
+        HiLog.e(Tag2Common.TAG_12300, "toVideoPlayActivity  json = $json")
         ARouter.getInstance().build(RouteConst.ACTIVITY_VIDEO_PLAY)
             .withString(RouteConst.P_JSON, json)
             .withInt(RouteConst.P_TYPE, type)
@@ -117,7 +117,7 @@ object Router {
     }
 
     fun toSystemMsgCashDetailActivity(json: String, type: Int) {
-        HiLog.e(Tag2Common.TAG_12301, "toSystemMsgCashDetailActivity  json = $json")
+        HiLog.e(Tag2Common.TAG_12300, "toSystemMsgCashDetailActivity  json = $json")
         ARouter.getInstance().build(RouteConst.ACTIVITY_SYS_CASH)
             .withString(RouteConst.P_JSON, json)
             .withInt(RouteConst.P_TYPE, type)

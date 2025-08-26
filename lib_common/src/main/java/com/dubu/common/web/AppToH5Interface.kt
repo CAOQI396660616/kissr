@@ -21,7 +21,7 @@ class AppToH5Interface(private val mContext: WebViewUnionActivity) {
     fun route(appScheme: String) {
         if (appScheme.isNullOrEmpty())
             return
-        HiLog.e(Tag2Common.TAG_12301, "JS route  -> $appScheme")
+        HiLog.e(Tag2Common.TAG_12300, "JS route  -> $appScheme")
         //JS直接去回调安卓方法
         handleCallNative(appScheme)
     }

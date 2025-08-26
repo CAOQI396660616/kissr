@@ -118,7 +118,7 @@ class TestActivity : BaseBindingActivity<ActivityTestTestBinding>() { //end
 
 
         HiLog.e(
-            Tag2Common.TAG_RTC,
+            Tag2Common.TAG_12300,
             "获取设备的deviceId ： ${HiRealCache.deviceId}"
         )
 

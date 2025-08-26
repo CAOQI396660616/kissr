@@ -16,7 +16,7 @@ object ActivityCheckTool {
     @JvmStatic
     fun isActivityCanShowMsgBanner(activity: Activity, userSn: Long?): Boolean {
 
-        HiLog.e(Tag2Common.TAG_12301, "isActivityCanShowMsgBanner key = ${activity.title} = ${activity.localClassName}")
+        HiLog.e(Tag2Common.TAG_12300, "isActivityCanShowMsgBanner key = ${activity.title} = ${activity.localClassName}")
         if (activity.title == RouteConst.ACTIVITY_RTV_CALL) return false
         if (activity.title ==  RouteConst.ACTIVITY_CALL_INVITE) return false
 
@@ -25,7 +25,7 @@ object ActivityCheckTool {
 
     @JvmStatic
     fun isActivityCanPlayCallRolling(activity: Activity, userSn: Long?): Boolean {
-        HiLog.e(Tag2Common.TAG_12301, "isActivityCanPlayCallRolling key = ${activity.title} = ${activity.localClassName}")
+        HiLog.e(Tag2Common.TAG_12300, "isActivityCanPlayCallRolling key = ${activity.title} = ${activity.localClassName}")
         if (activity.title == RouteConst.ACTIVITY_RTV_CALL) return false
         return true
     }

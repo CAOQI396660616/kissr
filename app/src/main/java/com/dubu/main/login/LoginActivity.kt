@@ -193,7 +193,7 @@ class LoginActivity : BaseActivity() {
             showLoadingDialog()
             model.emailSendCode(userInputEmail, success = { data ->
                 dismissLoadingDialog()
-                HiLog.e(Tag2Common.TAG_12302, "emailLogin 11--> ${GsonUtils.toJson(data)}")
+                HiLog.e(Tag2Common.TAG_12300, "emailLogin 11--> ${GsonUtils.toJson(data)}")
 
                 isCanSendCode = false
 
@@ -235,11 +235,11 @@ class LoginActivity : BaseActivity() {
         model.emailCodeLogin(userInputEmail, userInputCode, success = { data ->
             dismissLoadingDialog()
             HiLog.e(
-                Tag2Common.TAG_12302,
+                Tag2Common.TAG_12300,
                 "emailCodeLogin 22--> ${GsonUtils.toJson(data)}"
             )
             HiLog.e(
-                Tag2Common.TAG_12302,
+                Tag2Common.TAG_12300,
                 "emailCodeLogin 22--> ${GsonUtils.toJson(data.userVideo)}"
             )
 
@@ -249,11 +249,11 @@ class LoginActivity : BaseActivity() {
 
             model.getJsonList(success = {
                 HiLog.l(
-                    Tag2Common.TAG_12302,
+                    Tag2Common.TAG_12300,
                     "login languageList Http 成功 cList : ${GsonUtils.toJson(HiRealCache.languageList)}"
                 )
                 HiLog.l(
-                    Tag2Common.TAG_12302,
+                    Tag2Common.TAG_12300,
                     "login countryList  Http 成功 cList : ${GsonUtils.toJson(HiRealCache.countryList)}"
                 )
 
@@ -319,7 +319,7 @@ class LoginActivity : BaseActivity() {
         sb.append(" ")
         sb.append(title2)
 
-        HiLog.e(Tag2Common.TAG_12301, "key = = $title2 = $txt")
+        HiLog.e(Tag2Common.TAG_12300, "key = = $title2 = $txt")
 
         sb.setSpan(cs2, s2, s2 + title2.length, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
         sb.setSpan(UnderlineSpan(), s2, s2 + title2.length, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
@@ -361,7 +361,7 @@ class LoginActivity : BaseActivity() {
         val s1 = txt.indexOf(title1) - 1
         val s2 = txt.indexOf(title2) - 1
 
-        HiLog.e(Tag2Common.TAG_12301, "key = $title1 = $title2 = $txt")
+        HiLog.e(Tag2Common.TAG_12300, "key = $title1 = $title2 = $txt")
 
         sb.setSpan(cs1, s1, s1 + title1.length + 1, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
         sb.setSpan(cs2, s2, s2 + title2.length + 1, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)

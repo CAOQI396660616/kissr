@@ -72,12 +72,12 @@ class KeyBoardHeightHelper(private val activity: Activity) {
     }
 
     private val globalLayoutListener = ViewTreeObserver.OnGlobalLayoutListener {
-        HiLog.e(Tag2Common.TAG_12301, "globalLayoutListener = globalLayoutListener")
+        HiLog.e(Tag2Common.TAG_12300, "globalLayoutListener = globalLayoutListener")
         checkKeyboardHeight()
     }
 
     private val drawListener = ViewTreeObserver.OnDrawListener {
-        HiLog.e(Tag2Common.TAG_12301, "drawListener = drawListener")
+        HiLog.e(Tag2Common.TAG_12300, "drawListener = drawListener")
         // 鸿蒙系统在onDraw中检查键盘状态
         checkKeyboardHeight()
     }
@@ -90,7 +90,7 @@ class KeyBoardHeightHelper(private val activity: Activity) {
         val statusBarHeight = rect.top
         val visibleHeight = rect.bottom - statusBarHeight
         val keyboardHeight = screenHeight - visibleHeight - statusBarHeight
-        HiLog.e(Tag2Common.TAG_12301, "111 $screenHeight $statusBarHeight $visibleHeight $keyboardHeight")
+        HiLog.e(Tag2Common.TAG_12300, "111 $screenHeight $statusBarHeight $visibleHeight $keyboardHeight")
         // 鸿蒙系统特殊处理：检测高度是否稳定
         if (isHarmonyOS) {
             handleHarmonyOSKeyboard(keyboardHeight, screenHeight)
@@ -126,7 +126,7 @@ class KeyBoardHeightHelper(private val activity: Activity) {
     }
 
     private fun handleHarmonyOSKeyboard(keyboardHeight: Int, screenHeight: Int) {
-        HiLog.e(Tag2Common.TAG_12301, "222 $initialHeight")
+        HiLog.e(Tag2Common.TAG_12300, "222 $initialHeight")
         if (initialHeight == -1) {
             initialHeight = screenHeight
             return
@@ -143,8 +143,8 @@ class KeyBoardHeightHelper(private val activity: Activity) {
         // 鸿蒙系统：需要连续多次相同高度才确认状态
         val isKeyboardVisible = keyboardHeight > keyboardVisibleThreshold
         val isStableHeight = consecutiveSameHeightCount > 2
-        HiLog.e(Tag2Common.TAG_12301, "222 $isKeyboardVisible ")
-        HiLog.e(Tag2Common.TAG_12301, "222 $isStableHeight")
+        HiLog.e(Tag2Common.TAG_12300, "222 $isKeyboardVisible ")
+        HiLog.e(Tag2Common.TAG_12300, "222 $isStableHeight")
         when {
             // 键盘稳定显示
             isKeyboardVisible && isStableHeight -> {

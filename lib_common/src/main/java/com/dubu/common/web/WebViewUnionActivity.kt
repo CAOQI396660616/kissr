@@ -91,7 +91,7 @@ class WebViewUnionActivity : BaseBindingActivity<ActivityWebviewUnionBinding>() 
                     }
                 }
 
-                HiLog.l(Tag2Common.TAG_12302, "newProgress 成功 url : $newProgress")
+                HiLog.l(Tag2Common.TAG_12300, "newProgress 成功 url : $newProgress")
                 super.onProgressChanged(view, newProgress)
             }
         }

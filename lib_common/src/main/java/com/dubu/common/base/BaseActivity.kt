@@ -99,10 +99,10 @@ abstract class BaseActivity : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
-        HiLog.e(Tag2Common.TAG_12316, "接口通用校验正常: onResume 111111")
+        HiLog.e(Tag2Common.TAG_12300, "接口通用校验正常: onResume 111111")
         EventManager.registerNew<Boolean>(EventKey.TOKEN_INVALIDED) {
             Router.toLoginActivity()
-            HiLog.e(Tag2Common.TAG_12316, "接口通用校验正常: onResume 222222")
+            HiLog.e(Tag2Common.TAG_12300, "接口通用校验正常: onResume 222222")
         }
     }
 

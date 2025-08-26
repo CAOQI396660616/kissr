@@ -48,7 +48,7 @@ object LanguageManager {
         val localeLanguageByCode = getLocaleLanguageByCode(countryCode)
         val isNeedExitApp = MultiLanguages.setAppLanguage(context, localeLanguageByCode)
 
-        HiLog.l(Tag2Common.TAG_12302, "语言切换 成功 isNeedExitApp = [$isNeedExitApp] setLocaleLanguageByCode : ${localeLanguageByCode.toString()} ")
+        HiLog.l(Tag2Common.TAG_12300, "语言切换 成功 isNeedExitApp = [$isNeedExitApp] setLocaleLanguageByCode : ${localeLanguageByCode.toString()} ")
 
         if (isNeedExitApp) {
             AppUtils.relaunchApp(true)

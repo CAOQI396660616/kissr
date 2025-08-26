@@ -71,7 +71,7 @@ class HiRealApplication : com.dubu.common.base.BaseApp() {
         val lastUserAppLang = LanguageManager.getLastUserAppLang()
         MultiLanguages.setDefaultLanguage(lastUserAppLang)
 
-        HiLog.l(Tag2Common.TAG_12302, "initLang =  lastUserAppLang : ${lastUserAppLang.toString()} ")
+        HiLog.l(Tag2Common.TAG_12300, "initLang =  lastUserAppLang : ${lastUserAppLang.toString()} ")
 
     }
 

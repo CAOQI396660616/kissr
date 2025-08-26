@@ -1,8 +1,12 @@
 package com.dubu.common.constant
 
+
 /**
- * Author:v
- * Time:2022/10/19
+ *
+ * 管理所有log 标签的一个类
+ *  新增请注明含义
+ * @author 39666
+ * @date 2025/08/26
  */
 object Tag2Common {
 
@@ -11,10 +15,6 @@ object Tag2Common {
     //返回json 加解密相关
     const val TAG_HTTP_JSON = "FICHAT_HTTP_JSON"
 
-
-    //测试log 主要用于测试RTC sdk相关
-    const val TAG_RTC = "TAG_RTC"
-    const val TAG_RTC_IM = "TAG_RTC_IM"
 
     //测试log 可以递增 12301-123nn
     const val TAG_123XX = "TAG_123XX"
@@ -27,7 +27,6 @@ object Tag2Common {
     const val TAG_12306 = "TAG_12306"
     const val TAG_12307 = "TAG_12307"
     const val TAG_12308 = "TAG_12308"
-    const val TAG_123088 = "TAG_123088"
     const val TAG_12309 = "TAG_12309"
     const val TAG_12310 = "TAG_12310"
     const val TAG_12311 = "TAG_12311"

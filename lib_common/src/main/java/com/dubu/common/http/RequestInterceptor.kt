@@ -67,7 +67,11 @@ class RequestInterceptor : Interceptor {
 
 
         val request = chain.request()
+
+
         val makeMapForGParameterSign = getParameterMap(request)
+
+
 
         val generateSign = if (HiRealCache.sign.isNullOrEmpty()){
             "null"

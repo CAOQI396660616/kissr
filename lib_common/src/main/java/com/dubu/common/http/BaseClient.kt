@@ -31,7 +31,7 @@ abstract class BaseClient<T : Any>(clz: KClass<T>) {
         needShowToast: Boolean? = true
     ): Boolean {
         val code = res.code
-        HiLog.e(Tag2Common.TAG_12316, "checkCodeFailed = $res")
+        HiLog.e(Tag2Common.TAG_12300, "checkCodeFailed = $res")
         if (code != NetConfig.RS_SUCCESS) {
             //只要不是成功200 就是错误 回调错误
             val s = res.msg ?: failServer
@@ -45,11 +45,11 @@ abstract class BaseClient<T : Any>(clz: KClass<T>) {
             if (code == NetConfig.RS_TOKEN_INVALID) {
                 EventManager.post(EventKey.TOKEN_INVALIDED, true)
             }
-            HiLog.e(Tag2Common.TAG_12316, "接口通用校验异常: checkCodeFailed  = ${res.code} : ${res.msg} ")
+            HiLog.e(Tag2Common.TAG_12300, "接口通用校验异常: checkCodeFailed  = ${res.code} : ${res.msg} ")
             return true
         }
 
-        HiLog.e(Tag2Common.TAG_12316, "接口通用校验正常: checkCodeFailed  = ${res.code} ")
+        HiLog.e(Tag2Common.TAG_12300, "接口通用校验正常: checkCodeFailed  = ${res.code} ")
         return false
     }
 

@@ -53,8 +53,8 @@ public class InstallTool {
             String authority = "com.dabai.kiss.chat.fileProvider";
             Uri contentUri = FileProvider.getUriForFile( BaseApp.instance, authority, apkFile);
 
-            HiLog.e(Tag2Common.TAG_12301, "installApk authority" + authority);
-            HiLog.e(Tag2Common.TAG_12301, "installApk apkFile getAbsolutePath" + apkFile.getAbsolutePath());
+            HiLog.e(Tag2Common.TAG_12300, "installApk authority" + authority);
+            HiLog.e(Tag2Common.TAG_12300, "installApk apkFile getAbsolutePath" + apkFile.getAbsolutePath());
 
 
             intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
