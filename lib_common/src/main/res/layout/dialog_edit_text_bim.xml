@@ -78,7 +78,7 @@
             android:layout_height="@dimen/dp_44"
             android:paddingVertical="@dimen/dp_8"
             android:scaleType="centerCrop"
-            android:src="@drawable/ic_chat_emoji"
+            android:src="@drawable/ic_app_logo"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/ivImage"
             app:layout_constraintStart_toEndOf="@+id/ivGift"
