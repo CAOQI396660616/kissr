@@ -52,17 +52,32 @@
     TestActivity
 
 
-2667614758
+我的小米账号 2667614758  qi39107
 
 
 
 
 
 
+keytool -list -v -keystore D:\wpkissR\kissr\app\kissr.jks -alias kissr -storepass a123123 -keypass a123123
 
 
 
 
-
+别名: kissr
+创建日期: 2025年8月26日
+条目类型: PrivateKeyEntry
+证书链长度: 1
+证书[1]:
+所有者: C=SG, L=Singapore, OU=dabai, CN=dabai
+发布者: C=SG, L=Singapore, OU=dabai, CN=dabai
+序列号: 1
+生效时间: Tue Aug 26 09:04:14 HKT 2025, 失效时间: Sat Aug 20 09:04:14 HKT 2050
+证书指纹:
+SHA1: 48:6E:DB:2A:9D:B9:04:B2:A9:65:67:27:52:68:16:E9:82:74:C9:27
+SHA256: A9:2B:22:4E:F6:48:ED:A9:49:AE:2F:8C:CD:D1:72:C1:2D:B2:2F:95:E0:3D:FA:8B:75:9A:44:9C:56:E0:9C:D2
+签名算法名称: SHA256withRSA
+主体公共密钥算法: 2048 位 RSA 密钥
+版本: 1
 
 

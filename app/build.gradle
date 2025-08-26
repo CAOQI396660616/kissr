@@ -44,7 +44,7 @@ android {
     android.applicationVariants.all {
         variant ->
             variant.outputs.all {
-                outputFileName = "Fichat_dev_${variant.versionName}_${timeStamp()}.apk"
+                outputFileName = "KissR_dev_${variant.versionName}_${timeStamp()}.apk"
             }
     }
 
