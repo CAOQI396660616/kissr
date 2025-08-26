@@ -3,14 +3,27 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-<com.ruffian.library.widget.RConstraintLayout
+<!-- 全屏透明背景容器 -->
+<FrameLayout
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_gravity="bottom"
-    android:background="@android:color/transparent"
-    app:background_normal="@color/white"
-    app:corner_radius_top_left="@dimen/dp_20"
-    app:corner_radius_top_right="@dimen/dp_20">
+    android:layout_height="match_parent"
+    android:background="#80000000">
+
+    <!-- 状态栏占位视图 -->
+    <View
+        android:id="@+id/vTop"
+        android:layout_width="match_parent"
+        android:layout_height="0dp" />
+
+    <!-- 登录弹框内容 -->
+    <com.ruffian.library.widget.RConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@android:color/transparent"
+        app:background_normal="@color/white"
+        app:corner_radius_top_left="@dimen/dp_20"
+        app:corner_radius_top_right="@dimen/dp_20">
 
     <!-- 关闭按钮 -->
     <ImageView
@@ -116,6 +129,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnGoogle" />
 
-</com.ruffian.library.widget.RConstraintLayout>
+    </com.ruffian.library.widget.RConstraintLayout>
+
+</FrameLayout>
 
 </layout>

@@ -78,6 +78,12 @@ class LoginDialogActivity : BaseBindingActivity<ActivityLoginDialogBinding>() {
      */
     private fun initClickEvents() {
         bindingApply {
+            // 点击外部区域关闭弹框
+            root.setOnClickListener {
+                HiLog.e(Tag2Common.TAG_12301, "点击外部区域关闭弹框")
+                finish()
+            }
+            
             // 关闭按钮点击事件
             ivClose.setOnClickListener {
                 HiLog.e(Tag2Common.TAG_12301, "点击关闭按钮")
