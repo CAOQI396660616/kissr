@@ -234,32 +234,7 @@ class LoginActivity : BaseActivity() {
         showLoadingDialog()
         model.emailCodeLogin(userInputEmail, userInputCode, success = { data ->
             dismissLoadingDialog()
-            HiLog.e(
-                Tag2Common.TAG_12300,
-                "emailCodeLogin 22--> ${GsonUtils.toJson(data)}"
-            )
-            HiLog.e(
-                Tag2Common.TAG_12300,
-                "emailCodeLogin 22--> ${GsonUtils.toJson(data.userVideo)}"
-            )
 
-            mUserNeedInit = (data.isNeedInit == null || data.isNeedInit == 1)
-            gotoNextPage()
-
-
-            model.getJsonList(success = {
-                HiLog.l(
-                    Tag2Common.TAG_12300,
-                    "login languageList Http 成功 cList : ${GsonUtils.toJson(HiRealCache.languageList)}"
-                )
-                HiLog.l(
-                    Tag2Common.TAG_12300,
-                    "login countryList  Http 成功 cList : ${GsonUtils.toJson(HiRealCache.countryList)}"
-                )
-
-            }, failed = { _, _ ->
-
-            })
 
 
         }, failed = { code, _ ->

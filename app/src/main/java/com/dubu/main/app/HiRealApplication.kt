@@ -59,7 +59,7 @@ class HiRealApplication : com.dubu.common.base.BaseApp() {
         自定义日志将会在Logcat中输出。
         建议在测试阶段建议设置成true，发布时设置为false。
         * */
-        CrashReport.initCrashReport(this, "aaaa6c5f72", true);
+        CrashReport.initCrashReport(this, "3053037171", true);
 
     }
 

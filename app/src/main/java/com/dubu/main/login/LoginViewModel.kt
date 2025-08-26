@@ -46,13 +46,5 @@ class LoginViewModel : BaseViewModel() {
         }
     }
 
-    fun getJsonList(success: (data: JsonList) -> Unit, failed: OnFailed) {
-        launch {
-            val u = client.getJsonList(failed)
-            if (u != null) {
-                success(u)
-            }
-        }
-    }
 
 }

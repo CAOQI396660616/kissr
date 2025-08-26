@@ -4,8 +4,6 @@ import com.dubu.common.beans.UserBean
 import com.dubu.common.beans.apk.AppConfigBean
 import com.dubu.common.beans.config.CountryInfo
 import com.dubu.common.beans.config.LanguageInfo
-import com.dubu.common.beans.me.KolPostBean
-import com.dubu.common.beans.rtc.RtcGiftMsgDataBean
 import com.dubu.common.utils.hi.DeviceIdUtil
 
 /**
@@ -67,22 +65,10 @@ object HiRealCache {
 
 
     /*
-    * 相册去往横向预览页面的时候数据共享
-    * */
-    var photoList: MutableList<KolPostBean>? = null
-    var photoListShowIndex: Int = 0
-
-    /*
     * 获取后台配置接口对应的 国家和语言列表
     * */
     var countryList: MutableList<CountryInfo>? = null
     var languageList: MutableList<LanguageInfo>? = null
-
-    /*
-    * 本地保存RTC视频以后得Gift礼物数据
-    * */
-    var giftRtcResult : HashMap<String, RtcGiftMsgDataBean>? = null
-    var rtcVideoDuration: Int = 0
 
 
     /*
@@ -94,25 +80,6 @@ object HiRealCache {
     * */
     var chatList: MutableList<String>? = null
 
-    //todo allen:server (对接后台数据) 视频通话默认每分钟价格 需要对接后台json配置接口获取这个默认值 暂时写死100
-    var videoGoldDefaultPrice: Int? = 100
-
-    //todo allen:server (对接后台数据) 暂时造假升级app数据
-    var appConfigBean: AppConfigBean? = null
-
-
-
-    fun getRandomChatMessages(n: Int): List<String> {
-        // 确保 chatList 不为空且有内容
-        val sourceList = chatList ?: return emptyList()
-        if (sourceList.isEmpty()) return emptyList()
-
-        // 如果 n 大于列表长度，则最多返回列表所有元素
-        val count = if (n > sourceList.size) sourceList.size else n
-
-        // 打乱顺序并取前 count 条
-        return sourceList.shuffled().take(count)
-    }
 
 
 }

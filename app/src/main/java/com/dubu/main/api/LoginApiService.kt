@@ -28,34 +28,11 @@ interface LoginApiService {
     suspend fun emailCodeLogin(@Body map: Map<String, @JvmSuppressWildcards Any>): BaseResponseBean<UserBean>
 
 
-    @GET(NetWorkConst.JSON_LIST)
-    suspend fun getJsonList(@QueryMap map: Map<String, @JvmSuppressWildcards Any>): BaseResponseBean<JsonList>
-
 }
 
 
 class LoginClient : BaseClient<LoginApiService>(LoginApiService::class) {
 
-    suspend fun getJsonList(failed: OnFailed): JsonList? {
-        val params = newParamMap().apply {
-        }
-
-        val ret = try {
-            service.getJsonList(params)
-        } catch (e: Exception) {
-            e.printStackTrace()
-            failed(RS_DATA_ERROR, e.message ?: failServer)
-            return null
-        }
-
-        if (checkCodeFailed(ret, failed)) {
-            return null
-        }
-
-        LoginManager.initJsonSuccess(ret.data)
-
-        return ret.data
-    }
 
     suspend fun visitorLogin(uuid: String, failed: OnFailed): UserBean? {
         val params = newParamMap().apply {

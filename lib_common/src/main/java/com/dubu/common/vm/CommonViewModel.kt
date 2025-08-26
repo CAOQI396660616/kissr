@@ -1,16 +1,12 @@
 package com.dubu.me.vm
 
+import com.dubu.common.api.CommonClient
 import com.dubu.common.base.BaseViewModel
 import com.dubu.common.beans.UserBean
-import com.dubu.common.beans.common.ReportBean
-import com.dubu.common.beans.common.HttpSysMsgBean
 import com.dubu.common.beans.common.ShareBean
 import com.dubu.common.beans.config.JsonList
 import com.dubu.common.beans.me.UploadResultBean
-import com.dubu.common.beans.rtc.VideoRtcResultBean
 import com.dubu.common.http.OnFailed
-import com.dubu.common.api.CommonClient
-import com.dubu.common.api.CommonPageBean
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
 
@@ -24,17 +20,6 @@ class CommonViewModel : BaseViewModel() {
         CommonClient()
     }
 
-    fun roomDestroy(
-        hangup_by: String,
-        room_state_id: String, success: (data: Any) -> Unit, failed: OnFailed
-    ) {
-        launch {
-            val u = client.roomDestroy( hangup_by, room_state_id, failed)
-            if (u != null) {
-                success(u)
-            }
-        }
-    }
 
     fun getMeUserInfo(success: (user: UserBean) -> Unit, failed: OnFailed) {
         launch {
@@ -45,76 +30,7 @@ class CommonViewModel : BaseViewModel() {
         }
     }
 
-    fun getMeUserInfoV2(success: (user: UserBean) -> Unit, failed: OnFailed) {
-        launch {
-            val u = client.getMeUserInfoV2(failed)
-            if (u != null) {
-                success(u)
-            }
-        }
-    }
-    fun report(
-        reason: String,
-        content: String,
-        kol_id: String,
-        success: (user: ReportBean) -> Unit, failed: OnFailed) {
-        launch {
-            val u = client.report(reason,content,kol_id,failed)
-            if (u != null) {
-                success(u)
-            }
-        }
-    }
-    fun reportUpdate(
-        id: String,
-        audit_status: String,
-        success: (user: UserBean) -> Unit, failed: OnFailed) {
-        launch {
-            val u = client.reportUpdate(id,audit_status,failed)
-            if (u != null) {
-                success(u)
-            }
-        }
-    }
 
-    fun getJsonList(success: (data: JsonList) -> Unit, failed: OnFailed) {
-        launch {
-            val u = client.getJsonList(failed)
-            if (u != null) {
-                success(u)
-            }
-        }
-    }
-
-    fun fansList(
-        page: String,
-        pageSize: String,
-        success: (user: CommonPageBean<UserBean>) -> Unit, failed: OnFailed
-    ) {
-        launch {
-            val u = client.fansList( page, pageSize, failed)
-
-            if (u != null) {
-                success(u)
-            }
-        }
-    }
-
-    //今天:today 昨天yesterday 全部:不传或者ALL
-    fun videoRtcHistory(
-        date_type: String,
-        page: String,
-        pageSize: String,
-        success: (user: CommonPageBean<VideoRtcResultBean>) -> Unit, failed: OnFailed
-    ) {
-        launch {
-            val u = client.videoRtcHistory( date_type,page, pageSize, failed)
-
-            if (u != null) {
-                success(u)
-            }
-        }
-    }
     /**
      * 上传图片
      */
@@ -138,6 +54,7 @@ class CommonViewModel : BaseViewModel() {
             }
         }
     }
+
     fun getShareInfo(success: (data: ShareBean) -> Unit, failed: OnFailed) {
         launch {
             val u = client.getShareInfo(failed)
@@ -146,15 +63,7 @@ class CommonViewModel : BaseViewModel() {
             }
         }
     }
-    fun getSysMsg(page: String,
-                  pageSize: String, success: (data: CommonPageBean<HttpSysMsgBean>) -> Unit, failed: OnFailed) {
-        launch {
-            val u = client.getSysMsg(page,pageSize,failed)
-            if (u != null) {
-                success(u)
-            }
-        }
-    }
+
 
     fun updateUserInfo(
         kol_name: String,
@@ -167,7 +76,16 @@ class CommonViewModel : BaseViewModel() {
         success: (user: UserBean) -> Unit, failed: OnFailed
     ) {
         launch {
-            val u = client.updateUserInfo(kol_name,email,mobile,avatar,gender,birthday,images,failed)
+            val u = client.updateUserInfo(
+                kol_name,
+                email,
+                mobile,
+                avatar,
+                gender,
+                birthday,
+                images,
+                failed
+            )
             if (u != null) {
                 success(u)
             }
@@ -179,7 +97,7 @@ class CommonViewModel : BaseViewModel() {
         success: (data: List<UserBean>) -> Unit, failed: OnFailed
     ) {
         launch {
-            val u = client.getUserList(ids,failed)
+            val u = client.getUserList(ids, failed)
             if (u != null) {
                 success(u)
             }
