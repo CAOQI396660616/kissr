@@ -24,8 +24,8 @@ import com.dubu.main.R
 import com.dubu.main.databinding.ActivityMainBinding
 import com.dubu.me.fragment.MeFragment
 import com.dubu.me.vm.CommonViewModel
-import com.dubu.rewards.fragments.MessageFragment
-import com.dubu.shorts.fragments.ChatFragment
+import com.dubu.rewards.fragments.DesignFragment
+import com.dubu.shorts.fragments.SkinFragment
 import com.hikennyc.view.MultiStateAiView
 import com.permissionx.guolindev.PermissionX
 
@@ -34,8 +34,8 @@ import com.permissionx.guolindev.PermissionX
 class MainActivity : BaseBindingActivity<ActivityMainBinding>() {
     private val tags = arrayOf(
         HomeFragment.TAG,
-        MessageFragment.TAG,
-        ChatFragment.TAG,
+        DesignFragment.TAG,
+        SkinFragment.TAG,
         MeFragment.TAG,
     )
 
@@ -189,11 +189,11 @@ class MainActivity : BaseBindingActivity<ActivityMainBinding>() {
                 trans.add(R.id.fl_content, it, tag)
             }
 
-            MessageFragment.TAG -> MessageFragment.newInstance().also {
+            DesignFragment.TAG -> DesignFragment.newInstance().also {
                 trans.add(R.id.fl_content, it, tag)
             }
 
-            ChatFragment.TAG -> ChatFragment.newInstance().also {
+            SkinFragment.TAG -> SkinFragment.newInstance().also {
                 trans.add(R.id.fl_content, it, tag)
             }
 
@@ -209,8 +209,8 @@ class MainActivity : BaseBindingActivity<ActivityMainBinding>() {
     private fun initFragment() {
         val fragments: Array<BaseFragment> = arrayOf(
             HomeFragment.newInstance(),
-            MessageFragment.newInstance(),
-            ChatFragment.newInstance(),
+            DesignFragment.newInstance(),
+            SkinFragment.newInstance(),
             MeFragment.newInstance(),
         )
 

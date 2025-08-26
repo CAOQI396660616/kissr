@@ -6,7 +6,7 @@ plugins {
 }
 
 android {
-    namespace = "com.dubu.message"
+    namespace = "com.dubu.skin"
     compileSdk versions.compileSdk
 
     defaultConfig {
@@ -14,41 +14,23 @@ android {
         targetSdk versions.targetSdk
     }
 
-    buildTypes {
-        debug {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-        }
-        release {
-            minifyEnabled true
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-        }
-    }
 
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
-
-    lintOptions {
-        abortOnError false
-    }
-
-
     kotlinOptions {
         jvmTarget = '1.8'
     }
     dataBinding {
         enabled = true
     }
-
 }
 
 dependencies {
     implementation project(path: ':lib_common')
     kapt "com.alibaba:arouter-compiler:$versions.arouter_compiler"
     kapt "com.squareup.moshi:moshi-kotlin-codegen:$versions.moshiVersion"
-    kapt "androidx.room:room-compiler:$versions.roomVersion"
 }
 
 kapt {

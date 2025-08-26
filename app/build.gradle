@@ -97,8 +97,8 @@ dependencies {
     implementation project(path: ':lib_common')
     implementation project(path: ':engine_home')
     implementation project(path: ':engine_me')
-    implementation project(path: ':engine_chat')
-    implementation project(path: ':engine_message')
+    implementation project(path: ':engine_skin')
+    implementation project(path: ':engine_design')
     implementation 'androidx.core:core-splashscreen:1.0.1'
     kapt "com.alibaba:arouter-compiler:$versions.arouter_compiler"
     kapt "com.squareup.moshi:moshi-kotlin-codegen:$versions.moshiVersion"
