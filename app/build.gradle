@@ -28,14 +28,14 @@ android {
 
     signingConfigs {
         release {
-            storeFile file("./dubu.jks")
-            keyAlias "dubu"
+            storeFile file("./kissr.jks")
+            keyAlias "kissr"
             storePassword "a123123"
             keyPassword "a123123"
         }
         debug {
-            storeFile file("./dubu.jks")
-            keyAlias "dubu"
+            storeFile file("./kissr.jks")
+            keyAlias "kissr"
             storePassword "a123123"
             keyPassword "a123123"
         }
