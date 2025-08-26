@@ -55,11 +55,14 @@
 我的小米账号 2667614758  qi39107
 
 
+![描述文字](C:\Users\39666\OneDrive\Pictures\image\1.jpg)
+![描述文字](C:\Users\39666\OneDrive\Pictures\image\2.jpg)
+![描述文字](C:\Users\39666\OneDrive\Pictures\image\3.jpg)
 
+我有如上三张图片 我希望他们在Markdown文件中 一排均分展示 怎么写语法
 
-设置用户性别
-
-接口地址： PUT /user/gender
-
-接口描述： 更新用户的性别
-
+<img src="C:/Users/39666/OneDrive/Pictures/image/31.png" alt="图31" style="zoom:15%; float: left;" /> 复制文本-提示“复制成功”
+<img src="C:/Users/39666/OneDrive/Pictures/image/32.png" alt="图33" style="zoom:15%; float: left;" /> 点击人设
+<img src="C:/Users/39666/OneDrive/Pictures/image/33.jpg" alt="图34" style="zoom:15%; float: left;" /> 选择结果
+<img src="C:/Users/39666/OneDrive/Pictures/image/34.png" alt="图34" style="zoom:15%; float: left;" /> 发送消息
+改成MarkDown 语法  

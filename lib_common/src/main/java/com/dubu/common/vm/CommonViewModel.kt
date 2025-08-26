@@ -20,50 +20,6 @@ class CommonViewModel : BaseViewModel() {
         CommonClient()
     }
 
-
-    fun getMeUserInfo(success: (user: UserBean) -> Unit, failed: OnFailed) {
-        launch {
-            val u = client.getMeUserInfo(failed)
-            if (u != null) {
-                success(u)
-            }
-        }
-    }
-
-
-    /**
-     * 上传图片
-     */
-    fun fileUpload(
-        path: RequestBody,
-        file: MultipartBody.Part,
-        failed: OnFailed,
-        success: (data: UploadResultBean) -> Unit
-    ) {
-        launch {
-            client.fileUpload(path, file, failed)?.run(success)
-        }
-    }
-
-
-    fun getUserInfo(id: String, success: (user: UserBean) -> Unit, failed: OnFailed) {
-        launch {
-            val u = client.getUserInfo(id, failed)
-            if (u != null) {
-                success(u)
-            }
-        }
-    }
-
-    fun getShareInfo(success: (data: ShareBean) -> Unit, failed: OnFailed) {
-        launch {
-            val u = client.getShareInfo(failed)
-            if (u != null) {
-                success(u)
-            }
-        }
-    }
-
     fun guestLogin(success: (user: UserBean) -> Unit, failed: OnFailed) {
         launch {
             val ret = client.guestLogin(failed)
@@ -73,45 +29,6 @@ class CommonViewModel : BaseViewModel() {
         }
     }
 
-
-    fun updateUserInfo(
-        kol_name: String,
-        email: String,
-        mobile: String,
-        avatar: String,
-        gender: String,
-        birthday: String,
-        images: MutableList<String>,
-        success: (user: UserBean) -> Unit, failed: OnFailed
-    ) {
-        launch {
-            val u = client.updateUserInfo(
-                kol_name,
-                email,
-                mobile,
-                avatar,
-                gender,
-                birthday,
-                images,
-                failed
-            )
-            if (u != null) {
-                success(u)
-            }
-        }
-    }
-
-    fun getUserList(
-        ids: MutableList<String>,
-        success: (data: List<UserBean>) -> Unit, failed: OnFailed
-    ) {
-        launch {
-            val u = client.getUserList(ids, failed)
-            if (u != null) {
-                success(u)
-            }
-        }
-    }
 
     fun setUserGender(
         sex: String,

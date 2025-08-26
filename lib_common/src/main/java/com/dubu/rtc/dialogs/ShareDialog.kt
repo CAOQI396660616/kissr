@@ -265,41 +265,6 @@ class ShareDialog : BaseBottomDialog() {
 
     private fun httpEngine() {
         showLoading()
-        model.getShareInfo(success = {
-            dismissLoading()
-            shareBean = it
-            changeUI()
-            showSuccessEngine()
-        }, failed = { _, _ ->
-            dismissLoading()
-            showErrorEngine()
-            ToastTool.toastError(R.string.toast_err_service)
-        })
-    }
-
-    private fun changeUI() {
-        val title: String = shareBean?.shareText ?: getString(R.string.app_name)
-        tvDesSum?.text = title
-        val id = (HiRealCache.user?.kolId ?:0).toString()
-        val inviteCode = (HiRealCache.user?.inviteCode ?:"0")
-        val toWebUserInfo = LinkHelper.toWebUserInfo(id, inviteCode)
-
-        val sp= StringBuilder(title)
-        sp.append("\n")
-        sp.append(toWebUserInfo)
-        copyStr = sp.toString()
-
-        HiLog.e(Tag2Common.TAG_12300, "toWebUserInfo = $toWebUserInfo")
-        HiLog.e(Tag2Common.TAG_12300, "copyStr = $copyStr")
-
-        TextViewUtils.setDrawableFirstTxt(
-            tvLink,
-            toWebUserInfo,
-            R.drawable.ic_link,
-            ImageSpan.ALIGN_BASELINE
-        )
-
-
     }
 
     private fun showLoading() {
