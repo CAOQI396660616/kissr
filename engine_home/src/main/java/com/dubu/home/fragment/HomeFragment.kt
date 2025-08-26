@@ -1,14 +1,14 @@
 package com.dubu.home.fragment
 
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.TextView
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.dubu.common.base.BaseFragment
 import com.dubu.common.utils.hi.HiStatusBarTool
 import com.dubu.home.R
 import com.dubu.home.adapters.HomeNewUserAdapter
+import com.dubu.me.vm.CommonViewModel
 import com.hikennyc.view.MultiStateAiView
 
 
@@ -16,6 +16,9 @@ class HomeFragment : BaseFragment() {
     private var multiStateView: MultiStateAiView? = null
     private val mAdapter: HomeNewUserAdapter by lazy {
         HomeNewUserAdapter()
+    }
+    private val commonViewModel: CommonViewModel by lazy {
+        CommonViewModel()
     }
 
     override fun getRootViewId(): Int {
@@ -45,8 +48,21 @@ class HomeFragment : BaseFragment() {
 
 
     private fun initClick(root: View) {
+        // 测试设置用户性别接口
+        testSetUserGender()
+    }
 
-
+    private fun testSetUserGender() {
+        // 测试设置用户性别为"1"（男性）
+        commonViewModel.setUserGender(
+            sex = "1",
+            success = {
+                Log.d(TAG, "设置用户性别成功")
+            },
+            failed = { code, message ->
+                Log.e(TAG, "设置用户性别失败: code=$code, message=$message")
+            }
+        )
     }
 
 
@@ -89,7 +105,6 @@ class HomeFragment : BaseFragment() {
     private fun showSuccessEngine() {
         multiStateView?.viewState = MultiStateAiView.ViewState.CONTENT
     }
-
 
 
 }

@@ -113,5 +113,18 @@ class CommonViewModel : BaseViewModel() {
         }
     }
 
+    fun setUserGender(
+        sex: String,
+        success: () -> Unit,
+        failed: OnFailed
+    ) {
+        launch {
+            val result = client.setUserGender(sex, failed)
+            if (result) {
+                success()
+            }
+        }
+    }
+
 
 }

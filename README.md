@@ -55,7 +55,11 @@
 我的小米账号 2667614758  qi39107
 
 
-- 测试环境: http://api.kissr.love
-- 正式环境: https://api.kissr.ai 
 
+
+设置用户性别
+
+接口地址： PUT /user/gender
+
+接口描述： 更新用户的性别
 
