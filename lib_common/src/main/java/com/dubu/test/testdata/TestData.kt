@@ -1,18 +1,5 @@
 package com.dubu.test.testdata
 
-import com.blankj.utilcode.util.GsonUtils
-import com.dubu.common.R
-import com.dubu.common.base.BaseApp
-import com.dubu.common.beans.UserBean
-import com.dubu.common.beans.common.GiftInfoBean
-import com.dubu.common.beans.me.HelpDataBean
-import com.dubu.common.beans.me.HelpMultiTypeBean
-import com.dubu.common.beans.me.QuestionDataBean
-import com.dubu.common.beans.rtc.*
-import com.dubu.common.constant.Constants
-import com.dubu.common.ext.fromJson
-import com.dubu.common.utils.HiRealCache
-
 
 /**
  * @Description
@@ -24,12 +11,11 @@ object TestData {
 
     //测试数据总开关
 //    const val isCanTest = true
-        const val isCanTest = false
+    const val isCanTest = false
 
     //是否可以去测试页面
 //        const val isCanGotoTestPage = true
-        const val isCanGotoTestPage = false
-
+    const val isCanGotoTestPage = false
 
 
     //搞几个头像
@@ -85,8 +71,6 @@ object TestData {
         mutableListOf.add("10, 我走得很慢，但绝不后退。")
         return mutableListOf
     }
-
-
 
 
     @JvmStatic

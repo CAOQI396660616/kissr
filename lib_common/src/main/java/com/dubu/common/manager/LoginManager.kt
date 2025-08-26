@@ -5,7 +5,6 @@ import com.dubu.common.R
 import com.dubu.common.base.BaseApp
 import com.dubu.common.beans.UserBean
 import com.dubu.common.beans.config.JsonList
-import com.dubu.common.constant.Constants
 import com.dubu.common.constant.SpKey2Common
 import com.dubu.common.constant.Tag2Common
 import com.dubu.common.ext.fromJson
