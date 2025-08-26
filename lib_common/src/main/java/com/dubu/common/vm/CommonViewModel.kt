@@ -9,8 +9,8 @@ import com.dubu.common.beans.config.JsonList
 import com.dubu.common.beans.me.UploadResultBean
 import com.dubu.common.beans.rtc.VideoRtcResultBean
 import com.dubu.common.http.OnFailed
-import com.dubu.rtc.api.CommonClient
-import com.dubu.rtc.api.CommonPageBean
+import com.dubu.common.api.CommonClient
+import com.dubu.common.api.CommonPageBean
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
 

@@ -1,4 +1,4 @@
-package com.dubu.rtc.api
+package com.dubu.common.api
 
 import com.squareup.moshi.JsonClass
 

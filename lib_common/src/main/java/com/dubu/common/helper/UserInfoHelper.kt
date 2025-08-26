@@ -1,7 +1,7 @@
 package com.dubu.common.helper
 
 import com.dubu.common.beans.UserBean
-import com.dubu.rtc.api.CommonClient
+import com.dubu.common.api.CommonClient
 import kotlinx.coroutines.*
 import kotlinx.coroutines.flow.*
 import java.util.concurrent.ConcurrentHashMap

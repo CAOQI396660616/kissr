@@ -1,4 +1,4 @@
-package com.dubu.rtc.api
+package com.dubu.common.api
 
 import com.dubu.common.beans.UserBean
 import com.dubu.common.beans.base.BaseResponseBean
