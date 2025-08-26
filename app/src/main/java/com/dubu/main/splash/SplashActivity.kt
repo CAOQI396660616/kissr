@@ -43,11 +43,13 @@ class SplashActivity : BaseBindingActivity<ActivitySplashBinding>() {
                 HiLog.e(Tag2Common.TAG_12301, "login ******* = ${user.toJson()}")
 //                toMainActivity()
 
-                Router.toLoginDialogActivity("",0)
             },
             failed = { code, msg ->
             }
         )
+
+
+        Router.toLoginDialogActivity("",0)
 
     }
 
