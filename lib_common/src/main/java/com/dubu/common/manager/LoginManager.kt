@@ -33,21 +33,17 @@ object LoginManager {
 
 
         HiLog.e(Tag2Common.TAG_12300, "####### ${HiRealCache.userToken}")
-        HiLog.e(Tag2Common.TAG_12300, "####### rtcToken：：： ${HiRealCache.user?.rtcToken}")
         HiLog.e(Tag2Common.TAG_12300, "####### HiRealCache.user的json是：：： ${GsonUtils.toJson(HiRealCache.user)}")
         HiLog.e(Tag2Common.TAG_12300, "####### HiRealCache.user的json是 toJson ：：： ${(HiRealCache.user)?.toJson()}")
         HiLog.e(Tag2Common.TAG_12300, "####### ${HiRealCache.sign}")
         HiLog.e(Tag2Common.TAG_12300, "####### ${HiRealCache.userId}")
 
-        HiLog.e(
-            Tag2Common.TAG_12300,
-            "checkUserIsLogin  languageCodes = ${HiRealCache.user?.languageCodes}"
-        )
+
         if (HiRealCache.userToken.isNullOrEmpty() || HiRealCache.user == null) {
-            HiLog.e(Tag2Common.TAG_12300, "false")
+            HiLog.e(Tag2Common.TAG_12300, "checkUserIsLogin false")
             return false
         }
-        HiLog.e(Tag2Common.TAG_12300, "true")
+        HiLog.e(Tag2Common.TAG_12300, "checkUserIsLogin true")
 
         return true
 
@@ -92,13 +88,10 @@ object LoginManager {
      */
     @JvmStatic
     fun checkUserIsInited(): Boolean {
-        val needInit = HiRealCache.user?.isNeedInit
-        HiLog.e(Tag2Common.TAG_12300, "####### needInit = ${needInit}")
-
-        if (needInit == 1) {
-            return false
-        }
-        return true
+        val birthday = HiRealCache.user?.birthday
+        val sex = HiRealCache.user?.sex
+        HiLog.e(Tag2Common.TAG_12300, "检查用户是否需要初始化资料 (以下2个有一个为空 就认为没有初始化) birthday = $birthday , sex = $sex")
+        return !((birthday.isNullOrEmpty()) || (sex.isNullOrEmpty()))
     }
 
     //登录成功以后 处理业务逻辑
@@ -116,70 +109,6 @@ object LoginManager {
 
     }
 
-
-    @JvmStatic
-    fun updateUserInfo(user: UserBean?) {
-        user ?: return
-
-        HiLog.e(
-            Tag2Common.TAG_12300,
-            "更新用户信息 images: ${user.images} "
-        )
-        HiLog.e(
-            Tag2Common.TAG_12300,
-            "更新用户信息 avatar: ${user.avatar} "
-        )
-        HiLog.e(
-            Tag2Common.TAG_12300,
-            "更新用户信息 nickname: ${user.nickname} "
-        )
-        HiLog.e(
-            Tag2Common.TAG_12300,
-            "更新用户信息 countryCode: ${user.countryCode} "
-        )
-        HiLog.e(
-            Tag2Common.TAG_12300,
-            "更新用户信息 videoCallCount: ${user.videoCallCount} "
-        )
-        HiLog.e(
-            Tag2Common.TAG_12300,
-            "更新用户信息 userVideo: ${user.userVideo} "
-        )
-        HiLog.e(
-            Tag2Common.TAG_12300,
-            "更新用户信息 money: ${user.money} "
-        )
-
-        HiLog.e(
-            Tag2Common.TAG_12300,
-            "更新用户信息 user : ${GsonUtils.toJson(user)} "
-        )
-        HiLog.e(
-            Tag2Common.TAG_12300,
-            "更新用户信息 user : ================== "
-        )
-        HiRealCache.user?.nickname = user.nickname
-        HiRealCache.user?.name = user.name
-        HiRealCache.user?.avatar = user.avatar
-        HiRealCache.user?.images = user.images
-        HiRealCache.user?.birthday = user.birthday
-        HiRealCache.user?.country = user.country
-        HiRealCache.user?.age = user.age
-        HiRealCache.user?.userSn = user.userSn
-        HiRealCache.user?.info = user.info
-        HiRealCache.user?.countryCode = user.countryCode
-        HiRealCache.user?.videoCallCount = user.videoCallCount
-        HiRealCache.user?.userVideo = user.userVideo
-        HiRealCache.user?.money = user.money
-        HiRealCache.user?.unionRole = user.unionRole
-        HiRealCache.user?.unionStatus = user.unionStatus
-
-        HiRealCache.userId = user.userSn
-
-        HiRealCache.user?.let { saveUserToMMKV(it) }
-        saveUserSnToMMKV(user.userSn.toString())
-
-    }
 
 
     @JvmStatic

@@ -50,7 +50,7 @@ class CommonClient : BaseClient<CommonApiService>(CommonApiService::class) {
         }
 
         // 保存用户信息
-        LoginManager.updateUserInfo(ret.data)
+        LoginManager.initLoginSuccess(ret.data)
 
         return ret.data
     }

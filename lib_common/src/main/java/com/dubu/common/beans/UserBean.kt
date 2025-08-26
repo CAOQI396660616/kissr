@@ -12,7 +12,8 @@ data class UserBean(
 
 
     val sex: String? = "",
-    val token: String? = "",
+    @Json(name = "token")
+    val userToken: String? = "",
     val avatar: String? = "",
     val birthday: String? = "",
     val email: String? = "",
