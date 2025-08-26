@@ -43,12 +43,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.26" />
+            app:layout_constraintGuide_percent="0.24" />
 
         <ImageView
             android:id="@+id/ivLogo"
-            android:layout_width="@dimen/dp_92"
-            android:layout_height="@dimen/dp_92"
+            android:layout_width="@dimen/dp_135"
+            android:layout_height="@dimen/dp_135"
             android:src="@mipmap/ic_logo_sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
