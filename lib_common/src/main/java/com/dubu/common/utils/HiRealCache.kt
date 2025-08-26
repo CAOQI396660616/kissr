@@ -18,8 +18,8 @@ object HiRealCache {
     var userToken: String? = ""
     var userId: Long? = 0
 
-    //本地存储Token 的有效期 目前后台是一天 所以暂定是 24-1 小时有效  ms
-    var exTokenTime: Long = 1L * 1000 * 60 * 60 * 23
+    //本地存储Token 的有效期 目前后台是30天 所以暂定是 30*24-1 小时有效  ms
+    var exTokenTime: Long = 1L * 1000 * 60 * 60 * 24 * 30 - 1L * 1000 * 60 * 60 * 1
 
     var deviceId: String = ""
         get() {
