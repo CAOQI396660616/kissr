@@ -148,6 +148,14 @@
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustUnspecified" />
+        
+        <activity
+            android:name="com.dubu.main.login.LoginDialogActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/LoginDialogTheme"
+            android:windowSoftInputMode="adjustUnspecified" />
 
 
         <activity

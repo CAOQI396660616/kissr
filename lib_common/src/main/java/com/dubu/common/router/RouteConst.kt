@@ -22,6 +22,7 @@ object RouteConst {
 
     /* ----------------------------------------------------------------- APP 路由*/
     const val ACTIVITY_LOGIN = "/main/LoginActivity"
+    const val ACTIVITY_LOGIN_DIALOG = "/main/LoginDialogActivity"
     const val ACTIVITY_SPLASH = "/main/SplashActivity"
     const val ACTIVITY_MAIN = "/main/MainActivity"
     const val ACTIVITY_SIMPLE_WEB = "/web/SimpleWebActivity"
