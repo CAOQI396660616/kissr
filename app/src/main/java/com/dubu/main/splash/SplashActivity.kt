@@ -34,7 +34,17 @@ class SplashActivity : BaseBindingActivity<ActivitySplashBinding>() {
             initOptBar(it, isStatusBarDarkFont = true, isKeyboardEnable = false)
         }
 
-        toMainActivity()
+        // 测试访客登录功能
+        model.guestLogin(
+            success = { user ->
+                android.util.Log.d("SplashActivity", "访客登录成功: ${user.nickname}")
+                toMainActivity()
+            },
+            failed = { code, msg ->
+                android.util.Log.e("SplashActivity", "访客登录失败: code=$code, msg=$msg")
+                toMainActivity() // 即使登录失败也跳转到主页面
+            }
+        )
 //        toLoginActivity()
 
 

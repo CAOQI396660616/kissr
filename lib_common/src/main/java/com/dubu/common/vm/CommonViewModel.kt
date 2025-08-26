@@ -64,6 +64,15 @@ class CommonViewModel : BaseViewModel() {
         }
     }
 
+    fun guestLogin(success: (user: UserBean) -> Unit, failed: OnFailed) {
+        launch {
+            val ret = client.guestLogin(failed)
+            ret?.let {
+                success(it)
+            }
+        }
+    }
+
 
     fun updateUserInfo(
         kol_name: String,

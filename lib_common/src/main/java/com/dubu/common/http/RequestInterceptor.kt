@@ -23,39 +23,27 @@ import java.io.IOException
 class RequestInterceptor : Interceptor {
 
 
-    private fun initHeaderMap(time: String): ArrayMap<String, String> {
+    private fun initHeaderMap(time: String, nonceStr: String): ArrayMap<String, String> {
 
-        val headMap = ArrayMap<String, String>(14)
-        //通用请求头
-
-        headMap["server"] = "xianyu"
-        headMap["Accept"] = "application/json"
-        // 接口 请求时间戳秒
-        headMap["timestamp"] = time
-        //Token
-        headMap["Authorization"] = "Bearer ${HiRealCache.userToken}"
-        headMap["token"] = HiRealCache.userToken
-
-
-        //安卓唯一设备ID
-        headMap["device_id"] = HiRealCache.deviceId
-        //手机系统语言
-        headMap["Accept-Language"] = LanguageManager.getUserAppLangByMMKV().toString() // APP界面语言
-        headMap["lang"] = LanguageUtils.getSystemLanguage().toString()            //手机系统语言
-        //访问平台
-        headMap["platform"] = "Android"
-        // 应用版本
-        headMap["appVersion"] = BuildConfig.versionName
-        headMap["appVersionCode"] = BuildConfig.versionCode
-        // 时区 获取utc时间与本地时区相差时间小时
-        headMap["gmtTd"] = "${DateTool.getTimeZoneRawOffset()}"
-
-        //系统版本号 Android版本号
-        headMap["systemVersion"] = AppTool().getOsVersionCode()
-        //设备型号
-        headMap["device"] = AppTool().getModelName()
-        //设备品牌
-        headMap["phoneBrand"] = AppTool().getBrandName()
+        val headMap = ArrayMap<String, String>()
+        
+        // KissR后台API文档要求的请求头参数
+        headMap["appId"] = "kissr_app_001" // 应用标识
+        headMap["timestamp"] = time // 时间戳
+        headMap["nonceStr"] = nonceStr // 随机字符串
+        headMap["client"] = "ANDROID" // 客户端类型
+        headMap["appVersion"] = BuildConfig.versionName // 应用版本
+        headMap["deviceNumber"] = HiRealCache.deviceId // 设备号
+        headMap["lang"] = LanguageUtils.getSystemLanguage().toString() // 语言
+        
+        // 保留原有的一些通用请求头
+//        headMap["Accept"] = "application/json"
+//        headMap["Content-Type"] = "application/json"
+        
+        // Token相关（如果存在）
+        if (!HiRealCache.userToken.isNullOrEmpty()) {
+            headMap["Authorization"] = "Bearer ${HiRealCache.userToken}"
+        }
 
         return headMap
     }
@@ -63,44 +51,44 @@ class RequestInterceptor : Interceptor {
     override fun intercept(chain: Interceptor.Chain): Response {
         val cur = System.currentTimeMillis()
         val time = (cur / 1000L).toString()
-        val headerMap = initHeaderMap(time)
-
+        val nonceStr = SignatureUtils.generateNonceStr()
+        val headerMap = initHeaderMap(time, nonceStr)
 
         val request = chain.request()
+        val bodyParams = getParameterMap(request)
 
-
-        val makeMapForGParameterSign = getParameterMap(request)
-
-
-
-        val generateSign = if (HiRealCache.sign.isNullOrEmpty()){
-            "null"
-        }else{
-            SignUtils.generateSignMD5(makeMapForGParameterSign, HiRealCache.sign , time)
-
+        // 根据环境获取密钥
+        val secretKey = if (NetConfig.isRelease) {
+            "WMDFG\$UDFE43C@f3sMWN" // 正式环境密钥
+        } else {
+            "WMDFG\$UDFE43C@f3sMWN" // 测试环境密钥
         }
 
+        // 生成签名
+        val signature = try {
+            SignatureUtils.generateSignature(headerMap, bodyParams.mapValues { it.value.toString() }, secretKey)
+        } catch (e: Exception) {
+            e.printStackTrace()
+            "signature_error"
+        }
 
-
+        // 添加签名到请求头
+        headerMap["signature"] = signature
 
         val urlBuilder = request.url.newBuilder()
             .scheme(request.url.scheme)
             .host(request.url.host)
-
-
 
         val build = request.newBuilder()
             .method(request.method, request.body)
             .url(urlBuilder.build())
             .build()
 
-
         //拦截器 --> 添加头部
         val newBuilder = build.newBuilder()
         headerMap.forEach {
             newBuilder.addHeader(it.key, it.value)
         }
-        newBuilder.addHeader("sign", generateSign)
 
 
 

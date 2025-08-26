@@ -3,13 +3,13 @@ package com.dubu.common.api
 import com.dubu.common.beans.UserBean
 import com.dubu.common.beans.base.BaseResponseBean
 import com.dubu.common.beans.common.ShareBean
-import com.dubu.common.beans.config.JsonList
 import com.dubu.common.beans.me.UploadResultBean
 import com.dubu.common.http.BaseClient
 import com.dubu.common.http.NetConfig.RS_DATA_ERROR
 import com.dubu.common.http.NetWorkConst
 import com.dubu.common.http.OnFailed
 import com.dubu.common.manager.LoginManager
+import com.dubu.common.utils.HiRealCache
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
 import retrofit2.http.Field
@@ -64,6 +64,13 @@ interface CommonApiService {
 
     @GET(NetWorkConst.GET_ME_USERINFO)
     suspend fun getMeUserInfo(@QueryMap map: Map<String, @JvmSuppressWildcards Any>): BaseResponseBean<UserBean>
+
+    // 访客登录接口
+    @FormUrlEncoded
+    @POST("user/guest/login")
+    suspend fun guestLogin(
+        @Field("deviceId") deviceId: String
+    ): BaseResponseBean<UserBean>
 
 }
 
@@ -194,6 +201,25 @@ class CommonClient : BaseClient<CommonApiService>(CommonApiService::class) {
         if (checkCodeFailed(ret, failed)) {
             return null
         }
+
+        return ret.data
+    }
+
+    suspend fun guestLogin(failed: OnFailed): UserBean? {
+        val ret = try {
+            service.guestLogin(HiRealCache.deviceId)
+        } catch (e: Exception) {
+            e.printStackTrace()
+            failed(RS_DATA_ERROR, e.message ?: failServer)
+            return null
+        }
+
+        if (checkCodeFailed(ret, failed)) {
+            return null
+        }
+
+        // 保存用户信息
+        LoginManager.updateUserInfo(ret.data)
 
         return ret.data
     }

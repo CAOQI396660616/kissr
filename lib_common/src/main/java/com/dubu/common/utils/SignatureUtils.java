@@ -1,6 +1,9 @@
 package com.dubu.common.utils;
 
 import android.util.Base64;
+
+import com.dubu.common.constant.Tag2Common;
+
 import javax.crypto.Mac;
 import javax.crypto.spec.SecretKeySpec;
 import java.nio.charset.StandardCharsets;
@@ -11,7 +14,8 @@ import java.util.*;
 public class SignatureUtils {
 
     private static final String HMAC_SHA256 = "HmacSHA256";
-    private static final String SECRET_KEY = "your_secret_key_here"; // 从服务端获取
+    // 密钥将在RequestInterceptor中根据环境动态设置
+    private static final String DEFAULT_SECRET_KEY = "WMDFG$UDFE43C@f3sMWN"; // 默认测试环境密钥
 
     /**
      * 生成签名
@@ -19,7 +23,18 @@ public class SignatureUtils {
      * @param bodyParams Body参数
      * @return 签名字符串
      */
-    public static String generateSignature(Map<String, String> headers, Map<String, Object> bodyParams) {
+    public static String generateSignature(Map<String, String> headers, Map<String, String> bodyParams) {
+        return generateSignature(headers, bodyParams, DEFAULT_SECRET_KEY);
+    }
+
+    /**
+     * 生成签名（指定密钥）
+     * @param headers Header参数
+     * @param bodyParams Body参数
+     * @param secretKey 密钥
+     * @return 签名字符串
+     */
+    public static String generateSignature(Map<String, String> headers, Map<String, String> bodyParams, String secretKey) {
         try {
             // 1. 合并所有参数
             Map<String, String> allParams = new TreeMap<>();
@@ -29,24 +44,30 @@ public class SignatureUtils {
                 if (!"signature".equals(entry.getKey()) && !isEmptyValue(entry.getValue())) {
                     allParams.put(entry.getKey(), entry.getValue());
                 }
+
+                HiLog.e(Tag2Common.TAG_12305, "Header  Key = " + entry.getKey() + "Value = " + entry.getValue()  );
             }
 
             // 添加Body参数
             if (bodyParams != null) {
-                for (Map.Entry<String, Object> entry : bodyParams.entrySet()) {
+                for (Map.Entry<String, String> entry : bodyParams.entrySet()) {
                     if (!isEmptyValue(entry.getValue())) {
-                        allParams.put(entry.getKey(), convertToString(entry.getValue()));
+                        allParams.put(entry.getKey(), entry.getValue());
+                        HiLog.e(Tag2Common.TAG_12305, "bodyParams  Key = " + entry.getKey() + "Value = " + entry.getValue()  );
                     }
                 }
             }
 
             // 2. 生成签名字符串
             String signString = buildSignString(allParams);
-
+            HiLog.e(Tag2Common.TAG_12305, "生成签名字符串= " + signString );
             // 3. 生成签名
-            return hmacSha256(signString, SECRET_KEY);
+            String s = hmacSha256(signString, secretKey);
+            HiLog.e(Tag2Common.TAG_12305, "生成签名= " + s  );
+            return s;
 
         } catch (Exception e) {
+            HiLog.e(Tag2Common.TAG_12305, "生成签名= " + "签名生成失败"  );
             throw new RuntimeException("签名生成失败", e);
         }
     }
