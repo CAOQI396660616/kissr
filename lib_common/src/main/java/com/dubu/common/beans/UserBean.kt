@@ -1,6 +1,5 @@
 package com.dubu.common.beans
 
-import com.dubu.common.beans.config.CountryInfo
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 
@@ -8,161 +7,70 @@ import com.squareup.moshi.JsonClass
 @JsonClass(generateAdapter = true)
 data class UserBean(
 
-    @Json(name = "id")
+    @Json(name = "user_id")
     var userSn: Long = 0,
 
-    @Json(name = "kol_id")
-    var kolId: Long = 0,
 
-    var avatar: String? = "",
-
-    @Json(name = "token")
-    var userToken: String? = "",
-
-    val gender: String? = "",
-
-    var name: String? = "",
-    var nickname: String? = "",
-    var age: Int = 0,
+    val sex: String? = "",
+    val token: String? = "",
+    val avatar: String? = "",
+    val birthday: String? = "",
     val email: String? = "",
-
-    @Json(name = "created_at")
-    val createdAt: String? = "",
-
-    @Json(name = "updated_at")
-    val updatedAt: String? = "",
-
-    val uuid: String? = "",
-
-    @Json(name = "invite_code")
-    val inviteCode: String? = "",
-
-    var birthday: String? = "",
+    val nickname: String? = "",
 
     @Json(name = "country_code")
-    var countryCode: String? = "",
-    @Json(name = "lang_codes")
-    var languageCodes: String? = "",
-
-    /*
-    * 下面是临时需要的音视频im相关数据  后面需要对接后台
-    * */
-
-    @Json(name = "im_token")
-    var imToken: String? = "",
-
-    @Json(name = "rtc_token")
-    var rtcToken: String? = "",
-
-    var images: List<String>? = null,
-
-    var country: CountryInfo? = null,
-
-    @Json(name = "is_fresh")
-    var isNeedInit: Int? = 1,   //1标识新用户 需要填写资料
+    val countryCode: String? = "",
+    @Json(name = "created_at")
+    val createdAt: String? = "",
+    @Json(name = "language_code")
+    val languageCode: String? = "",
+    @Json(name = "last_login_time")
+    val lastLoginTime: String? = "",
+    @Json(name = "member_expired_time")
+    val memberExpiredTime: String? = "",
+    @Json(name = "usage_purpose")
+    val usagePurpose: String? = "",
 
 
-    //简介
-    var info: String? = "",
+    @Json(name = "remaining_trial_count")
+    val remainingTrialCount: Int? = 0,
+    @Json(name = "used_trial_count")
+    val usedTrialCount: Int? = 0,
+    @Json(name = "free_trial_count")
+    val freeTrialCount: Int? = 0,
+    @Json(name = "is_notification_enabled")
+    val isNotificationEnabled: Int? = 0,
 
-    //在线离线
-    @Json(name = "online_status")
-    var onlineStatus: String? = "", // online offline
+    @Json(name = "is_member")
+    val isMember: Boolean? = false,
 
-    @Json(name = "video_gold_price")
-    var videoGoldPrice: Int? = 0, // 视频通话价格
-
-    @Json(name = "service_status")
-    var serviceStatus: Int? = 0, // 服务列表是否打开 0关 1开
-
-
-    //本地字段
-    var isClicked: Boolean = false,   //1标识用户 是否被点击 被选中
-
-    //===============================
-    @Json(name = "post_videos")
-    var userVideo: MutableList<UserVideo>? = null,
-
-
-    //视频接通次数
-    @Json(name = "video_call_count")
-    var videoCallCount: Long? = 0,
-
-    //金币
-    var money: Long? = 0,
-
-
-    var vip: Int? = 0,   //1是vip
-
-
-
-    //主播等级
-    @Json(name = "kol_rank")
-    var kolRank: String? = "",
-
-
-    //member成员 owner会长
-    @Json(name = "union_role")
-    var unionRole: String? = "",
-
-    /*
-    #UITool
-    const val UNION_STATUS_APPROVED       = "approved"        // 通过
-    const val UNION_STATUS_REVIEW         = "pending"         // 审核中
-    const val UNION_STATUS_REJECTED       = "rejected"        // 拒绝
-    const val UNION_STATUS_EXIT_REVIEW        = "quit_pending"        // 退会中
-    * */
-    @Json(name = "union_status")
-    var unionStatus: String? = "",
-){
-    /**
-     * 判断用户是否未加入任何工会
-     */
-    fun isNotInUnion(): Boolean {
-        // A. unionRole=null 且 unionStatus=null
-        if (unionRole == null && unionStatus == null) {
-            return true
-        }
-        // B. unionRole="member" 且 unionStatus="rejected"
-        if (unionRole == "member" && unionStatus == "rejected") {
-            return true
-        }
-        // 其他情况返回 false
-        return false
+    )
+/*
+{
+        "user_id": "57761805",
+        "nickname": "Visitor",
+        "avatar": "", // 头像URL
+        "sex": "", // 性别： 0-未设置 1-男性, 2-女性, 3-其他
+        "birthday": "", // 生日，格式：2000-01-01
+         "usage_purpose": "", // 使用目的：0-未设置 1-与朋友聊天, 2-搭讪女孩, 3-玩社交平台
+        "email": "",
+        "is_member": false, // 是否会员
+        "member_expired_time": null, // 会员过期时间
+        "member_type": 0, // 会员类型: 1-周 2-月 3-季 4-年 5-两年 6-永久
+        "third_party_id": "", // 第三方会员ID
+        "third_party_type": 0, // 1- facebook 2-google 3-apple
+        "free_trial_count": 5, // 免费试用的额度
+        "used_trial_count": 0, // 已经用了多少额度
+        "remaining_trial_count": 5, // 剩下多少额度
+        "country_code": "US",
+        "language_code": "en",
+        "is_notification_enabled": true, // 是否开启通知
+        "create_time": 1753754757,
+        "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJraXNzcl9hcHBfYXBpIiwiYXVkIjoia2lzc3JfYXBwX2NsaWVudCIsImlhdCI6MTc1Mzc3MTMwOCwibmJmIjoxNzUzNzcxMzA4LCJleHAiOjE3NTYzNjMzMDgsInVzZXJfaWQiOiI1Nzc2MTgwNSIsImp0aSI6Imp3dF82ODg4NmQyYzYzNDAwNC4yMjk0MDU5NSJ9.u1WLjW6NX5mEhRulNCW-fPiIO6TEw0bM7Ae0poo7nKU"
     }
-
-    /**
-     * 是否加入公会待审核
-     * 条件：unionRole == "member" 且 unionStatus == "pending"
-     */
-    fun isUnionJoinPending(): Boolean {
-        return unionRole == "member" && unionStatus == "pending"
-    }
-
-    /**
-     * 判断用户是否创建工会成功
-     */
-    fun isCreateUnionOK(): Boolean {
-        // B. unionRole="member" 且 unionStatus="rejected"
-        if (unionRole == "owner" && unionStatus == "approved") {
-            return true
-        }
-        // 其他情况返回 false
-        return false
-    }
-}
+* */
 
 
-
-
-@JsonClass(generateAdapter = true)
-data class UserVideo(
-    val files: String? = "",
-    val id: Long? = 0L,
-    val is_top: Int? = 0,
-    val kol_id: Long? = 0L,
-    val type: String? = ""
-)
 
 
 

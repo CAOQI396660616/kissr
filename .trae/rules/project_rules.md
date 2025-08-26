@@ -49,4 +49,8 @@ lib_wheel 是集成了一些项目会用到的一些自定义的控件和一些�
 
 
 
-1 lib_base模块
+1 lib_base模块 这个模块不允许修改 
+2 关于一下的数据新增都必须放在 lib_common下
+    a 数据bean 
+    b assets资源
+    c res资源 例如 抽取的文本 string  抽取的dp数值 等

@@ -8,9 +8,12 @@ import androidx.activity.viewModels
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import com.alibaba.android.arouter.facade.annotation.Route
 import com.dubu.common.base.BaseBindingActivity
+import com.dubu.common.constant.Tag2Common
+import com.dubu.common.ext.toJson
 import com.dubu.common.manager.LoginManager
 import com.dubu.common.router.RouteConst
 import com.dubu.common.router.Router
+import com.dubu.common.utils.HiLog
 import com.dubu.main.R
 import com.dubu.main.databinding.ActivitySplashBinding
 import com.dubu.main.home.MainActivity
@@ -37,16 +40,12 @@ class SplashActivity : BaseBindingActivity<ActivitySplashBinding>() {
         // 测试访客登录功能
         model.guestLogin(
             success = { user ->
-                android.util.Log.d("SplashActivity", "访客登录成功: ${user.nickname}")
+                HiLog.e(Tag2Common.TAG_12301, "login ******* = ${user.toJson()}")
                 toMainActivity()
             },
             failed = { code, msg ->
-                android.util.Log.e("SplashActivity", "访客登录失败: code=$code, msg=$msg")
-                toMainActivity() // 即使登录失败也跳转到主页面
             }
         )
-//        toLoginActivity()
-
 
     }
 
