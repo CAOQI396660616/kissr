@@ -75,6 +75,7 @@ ext {
 
             //adapter
             quickAdapterVersion : '3.0.6',
+            bannerViewPagerVersion : '3.5.11',
 
 
             // recyclerView
@@ -93,6 +94,66 @@ ext {
             // arouter
             arouter             : '1.5.2',
             exo                 : '2.18.5',
+
+            // wire protocol buffer
+            wireVersion         : '4.4.3',
+
+            // mmkv
+            mmkvVersion         : '1.2.10',
+
+            // material dialogs
+            materialDialogsVersion : '3.3.0',
+
+            // popup
+            basePopupVersion    : '3.2.0',
+
+            // photoview
+            photoViewVersion    : '2.0.0',
+
+            // lottie
+            lottieVersion       : '5.2.0',
+
+            // rxandroid
+            rxandroid2Version   : '2.1.1',
+
+            // banner
+            bannerVersion       : '2.2.2',
+            bannerViewPagerVersion : '3.5.11',
+
+            // navigation
+            navigationVersion2  : '2.3.5',
+
+            // aliyun oss
+            ossVersion          : '2.9.5',
+
+            // immersionbar
+            immersionbarVersion : '3.2.2',
+
+            // autosize
+            autosizeVersion     : 'v1.2.1',
+
+            // gsy video player
+            gsyVideoVersion     : 'v10.0.0',
+
+            // multi languages
+            multiLanguagesVersion : '9.5',
+
+            // emoji
+            emojiVersion        : '0.15.0',
+
+            // picture selector
+            pictureSelectorVersion : 'v3.11.2',
+
+            // permission x
+            permissionxVersion  : '1.8.1',
+
+            // toaster
+            toasterVersion      : '13.0',
+
+            // bugly
+            buglyVersion        : '4.1.9.3',
+            autoSizeVersion     : 'v1.2.1',
+            quickAdapterVersion : '3.0.6',
     ]
 
     corelibrary = [

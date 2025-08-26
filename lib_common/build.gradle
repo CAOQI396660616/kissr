@@ -62,7 +62,7 @@ dependencies {
     kapt "com.squareup.moshi:moshi-kotlin-codegen:$versions.moshiVersion"
     kapt "com.alibaba:arouter-compiler:$versions.arouter_compiler"
     // Wire Protocol Buffer runtime
-    api 'com.squareup.wire:wire-runtime:4.4.3'
+    api "com.squareup.wire:wire-runtime:$versions.wireVersion"
     // smartRefresh刷新 https://github.com/scwang90/SmartRefreshLayout
     api "io.github.scwang90:refresh-layout-kernel:$versions.refreshLayoutVersion"
     api "io.github.scwang90:refresh-header-material:$versions.refreshLayoutVersion"
@@ -77,57 +77,58 @@ dependencies {
     api dep.rHelper
 //    api dep.facebooklogin
 
-    api 'com.tencent:mmkv-static:1.2.10'
+    api "com.tencent:mmkv-static:$versions.mmkvVersion"
     // room
     api "androidx.room:room-runtime:$versions.roomVersion"
     api "androidx.room:room-ktx:$versions.roomVersion"
     kapt "androidx.room:room-compiler:$versions.roomVersion"
-    api 'com.afollestad.material-dialogs:core:3.3.0'
-    api 'com.afollestad.material-dialogs:lifecycle:3.3.0'
-    api 'io.github.razerdp:BasePopup:3.2.0'//popup弹窗
+    api "com.afollestad.material-dialogs:core:$versions.materialDialogsVersion"
+    api "com.afollestad.material-dialogs:lifecycle:$versions.materialDialogsVersion"
+    api "io.github.razerdp:BasePopup:$versions.basePopupVersion"//popup弹窗
     /*PhotoView大图*/
-    api 'com.github.chrisbanes:PhotoView:2.0.0'
+    api "com.github.chrisbanes:PhotoView:$versions.photoViewVersion"
     /*Lottie动画*/
-    api 'com.airbnb.android:lottie:5.2.0'
-    api 'io.reactivex.rxjava2:rxandroid:2.1.1'
+    api "com.airbnb.android:lottie:$versions.lottieVersion"
+    api "io.reactivex.rxjava2:rxandroid:$versions.rxandroid2Version"
     //banner相关
-    api 'io.github.youth5201314:banner:2.2.2'
-    api 'com.github.zhpanvip:bannerviewpager:3.5.11'
+    api "io.github.youth5201314:banner:$versions.bannerVersion"
+    api "com.github.zhpanvip:bannerviewpager:$versions.bannerViewPagerVersion"
     //万能适配器 https://github.com/CymChad/BaseRecyclerViewAdapterHelper
-    api 'com.github.CymChad:BaseRecyclerViewAdapterHelper:3.0.6'
+    api "com.github.CymChad:BaseRecyclerViewAdapterHelper:$versions.quickAdapterVersion"
     api dep.circleimageview
-    api "androidx.navigation:navigation-ui-ktx:2.3.5"
-    api "androidx.navigation:navigation-fragment-ktx:2.3.5"
-    implementation 'com.aliyun.dpa:oss-android-sdk:2.9.5'
+    api "androidx.navigation:navigation-ui-ktx:$versions.navigationVersion2"
+    api "androidx.navigation:navigation-fragment-ktx:$versions.navigationVersion2"
+    implementation "com.aliyun.dpa:oss-android-sdk:$versions.ossVersion"
     api "com.google.android.exoplayer:exoplayer-core:$versions.exo"
     api "com.google.android.exoplayer:exoplayer-ui:$versions.exo"
+    api "com.google.android.exoplayer:exoplayer-dash:$versions.exo"
+    api "com.google.android.exoplayer:exoplayer-hls:$versions.exo"
+    api "com.google.android.exoplayer:exoplayer-smoothstreaming:$versions.exo"
     //工具类
     //https://github.com/Blankj/AndroidUtilCode/blob/master/lib/utilcode/README-CN.md
     api "com.blankj:utilcodex:$versions.utilcode"
     //沉浸式状态栏
-    api 'com.geyifeng.immersionbar:immersionbar:3.2.2'
+    api "com.gyf.immersionbar:immersionbar:$versions.immersionBarVersion"
+    api "com.gyf.immersionbar:immersionbar-ktx:$versions.immersionBarVersion"
     /*屏幕适配 https://github.com/JessYanCoding/AndroidAutoSize*/
-    api 'com.github.JessYanCoding:AndroidAutoSize:v1.2.1'
+    api "com.github.JessYanCoding:AndroidAutoSize:$versions.autoSizeVersion"
     /*播放器 https://github.com/CarGuo/GSYVideoPlayer?tab=readme-ov-file*/
-    api 'com.github.CarGuo.GSYVideoPlayer:gsyvideoplayer:v10.0.0'
+    api "com.shuyu:GSYVideoPlayer:$versions.gsyVideoPlayerVersion"
 
     // 语种切换框架：https://github.com/getActivity/MultiLanguages
-    api 'com.github.getActivity:MultiLanguages:9.5'
+    api "com.github.getActivity:MultiLanguages:$versions.multiLanguagesVersion"
 
     /*谷歌emj*/
-    api 'com.vanniktech:emoji-google:0.15.0'
+    api "com.vanniktech:emoji-google:$versions.emojiVersion"
 
     /*图片选择*/
-    api 'io.github.lucksiege:pictureselector:v3.11.2'
-
-    //https://github.com/guolindev/PermissionX
-    api 'com.guolindev.permissionx:permissionx:1.8.1'
-
-    // 吐司框架：https://github.com/getActivity/Toaster
-    api 'com.github.getActivity:Toaster:13.0'
-
-    //https://bugly.qq.com/docs/user-guide/instruction-manual-android/?v=1.0.0
-    api 'com.tencent.bugly:crashreport:4.1.9.3'
+    implementation "io.github.lucksiege:pictureselector:$versions.picture_library"
+    /*权限申请*/
+    api "com.guolindev.permissionx:permissionx:$versions.permissionXVersion"
+    /*吐司框架*/
+    api "com.github.getActivity:Toaster:$versions.toasterVersion"
+    /*腾讯Bugly https://bugly.qq.com/docs/user-guide/instruction-manual-android/?v=1.0.0*/
+    api "com.tencent.bugly:crashreport:$versions.buglyVersion"
 
     //https://github.com/zhaoyubetter/ExtractMultiString
 
