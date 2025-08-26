@@ -10,13 +10,19 @@ package com.dubu.common.constant
  */
 object Tag2Common {
 
+    //  XXXX  _   XXXX    _   XXXX
+    //  项目名    所属动作       过滤尾号
+    //这样保证一次可以看到全部log又能细分下去
+
     //接口相关
-    const val TAG_HTTP = "FICHAT_HTTP_LOG"
+    const val TAG_HTTP = "KISS_HTTP"
     //返回json 加解密相关
-    const val TAG_HTTP_JSON = "FICHAT_HTTP_JSON"
+    const val TAG_HTTP_JSON = "KISS_HTTP_JSON"
+    //请求拦截器里面的加密 #SignatureUtils
+    const val TAG_HTTP_SIGN = "KISS_HTTP_SIGN"
 
 
-    //测试log 可以递增 12301-123nn
+    //测试log 可以递增
     const val TAG_123XX = "TAG_123XX"
     const val TAG_12300 = "TAG_12300"
     const val TAG_12301 = "TAG_12301"
