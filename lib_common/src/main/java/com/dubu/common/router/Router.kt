@@ -28,11 +28,12 @@ object Router {
     /**
      * 跳转到登录弹框页面
      */
-    fun toLoginDialogActivity(block: (Postcard.() -> Unit)? = null) {
-        HiLog.e(Tag2Common.TAG_12300, "toLoginDialogActivity")
-        val p = ARouter.getInstance().build(RouteConst.ACTIVITY_LOGIN_DIALOG)
-        block?.let { p.apply(it) }
-        p.navigation()
+    fun toLoginDialogActivity(json: String, type: Int) {
+        HiLog.e(Tag2Common.TAG_12300, "toLoginDialogActivity  json = $json")
+        ARouter.getInstance().build(RouteConst.ACTIVITY_LOGIN_DIALOG)
+            .withString(RouteConst.P_JSON, json)
+            .withInt(RouteConst.P_TYPE, type)
+            .navigation()
     }
 
     fun toMainActivity(block: (Postcard.() -> Unit)? = null) {
