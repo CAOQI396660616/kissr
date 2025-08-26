@@ -31,7 +31,7 @@
             android:id="@+id/ivTop"
             android:layout_width="match_parent"
             android:layout_height="@dimen/dp_0"
-            android:scaleType="fitCenter"
+            android:scaleType="fitXY"
             android:src="@mipmap/ic_sp_top"
             app:layout_constraintDimensionRatio="h,375:248"
             app:layout_constraintEnd_toEndOf="parent"
@@ -49,19 +49,11 @@
             android:id="@+id/ivLogo"
             android:layout_width="@dimen/dp_92"
             android:layout_height="@dimen/dp_92"
-            android:src="@mipmap/ic_sp_logo"
+            android:src="@mipmap/ic_logo_sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/guidelineV" />
 
-        <ImageView
-            android:layout_width="@dimen/dp_68"
-            android:layout_height="@dimen/dp_20"
-            android:layout_marginTop="@dimen/dp_13"
-            android:src="@mipmap/ic_sp_name"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ivLogo" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
