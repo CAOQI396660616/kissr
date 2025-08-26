@@ -45,7 +45,7 @@ public class SignatureUtils {
                     allParams.put(entry.getKey(), entry.getValue());
                 }
 
-                HiLog.e(Tag2Common.TAG_12305, "Header  Key = " + entry.getKey() + "Value = " + entry.getValue()  );
+                HiLog.e(Tag2Common.TAG_12305, "Header  Key = " + entry.getKey() + ", Value = " + entry.getValue()  );
             }
 
             // 添加Body参数
@@ -53,21 +53,21 @@ public class SignatureUtils {
                 for (Map.Entry<String, String> entry : bodyParams.entrySet()) {
                     if (!isEmptyValue(entry.getValue())) {
                         allParams.put(entry.getKey(), entry.getValue());
-                        HiLog.e(Tag2Common.TAG_12305, "bodyParams  Key = " + entry.getKey() + "Value = " + entry.getValue()  );
+                        HiLog.e(Tag2Common.TAG_12305, "bodyParams  Key = " + entry.getKey() + ", Value = " + entry.getValue()  );
                     }
                 }
             }
 
             // 2. 生成签名字符串
             String signString = buildSignString(allParams);
-            HiLog.e(Tag2Common.TAG_12305, "生成签名字符串= " + signString );
+            HiLog.e(Tag2Common.TAG_12305, "生成签名字符串 = " + signString );
             // 3. 生成签名
             String s = hmacSha256(signString, secretKey);
-            HiLog.e(Tag2Common.TAG_12305, "生成签名= " + s  );
+            HiLog.e(Tag2Common.TAG_12305, "生成签名 = " + s  );
             return s;
 
         } catch (Exception e) {
-            HiLog.e(Tag2Common.TAG_12305, "生成签名= " + "签名生成失败"  );
+            HiLog.e(Tag2Common.TAG_12305, "生成签名 = " + "签名生成失败"  );
             throw new RuntimeException("签名生成失败", e);
         }
     }
