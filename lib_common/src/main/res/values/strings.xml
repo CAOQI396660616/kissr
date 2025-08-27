@@ -3,7 +3,7 @@
     <string name="text_long_2" translatable="false">1修复若干问题\n2修复若干问题\n3修复若干问题\n4修复若干问题\n5修复若干问题\n6修复若干问题\n6修复若干问题\n6修复若干问题\n6修复若干问题\n6修复若干问题</string>
     <string name="text_content" translatable="false"> Allison Burton intended to disclose her identity and pregnancy via a major project.Allison Burton intended to disclose her identity and pregnancy via a major project.Allison Burton intended to disclose her identity and pregnancy via a major project.Allison Burton intended to disclose her identity and pregnancy via a major project.Allison Burton intended to disclose her identity and pregnancy via a major project.Allison Burton intended to disclose her identity and pregnancy via a major project.</string>
 
-    <string name="app_name" translatable="false">KissChat</string>
+    <string name="app_name" translatable="false">KissrAI</string>
     <string name="server_client_id" translatable="false">440557587699-60l79rcaqi2kjrl2ihqigbbh0eov1pj8.apps.googleusercontent.com</string>
     <string name="watch_all" translatable="false">Watch ALL</string>
     <string name="emojicon_test_name" translatable="false">Example</string>
@@ -137,9 +137,9 @@
     <string name="hello_9">Do you want to see me smile first, or flirt first?</string>
     <string name="hello_10">I was about to sleep, but you\'re here. Are you going to lull me to sleep?</string>
     <string name="hello_default">Hey, nice to meet you.</string>
-    <string name="home_tab_home">Home</string>
-    <string name="home_tab_msg">Messages</string>
-    <string name="home_tab_me">Me</string>
+    <string name="home_tab_home">Keyboard</string> <!-- allen fix -->
+    <string name="home_tab_msg">Persona</string> <!-- allen fix -->
+    <string name="home_tab_me">Me</string> <!-- allen fix -->
     <string name="home_share_page">Share Profile</string>
     <string name="home_my_status">My Status</string>
     <string name="home_online">Online</string>
