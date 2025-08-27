@@ -17,7 +17,6 @@
             android:layout_height="match_parent">
 
             <View
-                android:background="@color/clF54B6B"
                 android:id="@+id/vStatus"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/dp_0_5f"
@@ -27,6 +26,7 @@
 
 
             <com.google.android.material.tabs.TabLayout
+                android:layout_marginTop="-10dp"
                 android:id="@+id/tl_home"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/dp_40"
