@@ -12,7 +12,7 @@
         android:id="@+id/cl_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/white">
+        android:background="@color/clF3F4F5">
 
         <View
             android:id="@+id/vTop"
@@ -36,7 +36,7 @@
             app:msv_emptyView="@layout/layout_default_empty"
             app:msv_errorView="@layout/layout_default_error"
             app:msv_loadingView="@layout/layout_default_loading_for_main"
-            app:msv_viewState="loading">
+            app:msv_viewState="content">
 
             <FrameLayout
                 android:id="@+id/fl_content"

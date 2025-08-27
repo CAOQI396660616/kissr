@@ -7,8 +7,6 @@
     android:layout_height="wrap_content"
     android:layout_marginHorizontal="@dimen/dp_8"
     android:layout_marginVertical="@dimen/dp_6"
-    android:paddingHorizontal="@dimen/dp_16"
-    android:paddingVertical="@dimen/dp_12"
     app:background_normal="@color/white"
     app:corner_radius="@dimen/dp_12"
     app:elevation="@dimen/dp_2">
@@ -16,12 +14,12 @@
 
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/ivAvatar"
-        android:layout_width="@dimen/dp_48"
-        android:layout_height="@dimen/dp_48"
-        android:layout_marginVertical="@dimen/dp_5"
+        android:layout_width="@dimen/dp_38"
+        android:layout_height="@dimen/dp_38"
+        android:layout_marginStart="@dimen/dp_13"
+        android:layout_marginTop="@dimen/dp_13"
         android:scaleType="centerCrop"
         android:src="@drawable/ic_default_avatar"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:shapeAppearance="@style/circleImageStyle" />
@@ -32,6 +30,7 @@
         android:layout_height="@dimen/dp_11"
         android:layout_marginTop="@dimen/dp_12"
         android:layout_marginEnd="@dimen/dp_3"
+        android:visibility="gone"
         app:background_normal="@color/cl3CD504"
         app:border_color_normal="@color/white"
         app:border_width_normal="@dimen/dp_1"
@@ -43,23 +42,21 @@
         android:id="@+id/tvName"
         android:layout_width="@dimen/dp_0"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/dp_12"
-        android:layout_marginTop="@dimen/dp_2"
+        android:layout_marginStart="@dimen/dp_7"
+        android:layout_marginTop="@dimen/dp_3"
         android:ellipsize="end"
         android:gravity="start"
         android:maxLines="1"
         android:text="Lily beacy"
         android:textColor="@color/cl272B33"
         android:textSize="@dimen/sp_16"
-        app:layout_constraintEnd_toStartOf="@+id/clHi"
         app:layout_constraintStart_toEndOf="@+id/ivAvatar"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/ivAvatar" />
 
     <com.dubu.common.views.tv.UbuntuRegularTextView
         android:id="@+id/tvUserId"
         android:layout_width="@dimen/dp_0"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/dp_12"
         android:layout_marginTop="@dimen/dp_2"
         android:ellipsize="end"
         android:gravity="start"
@@ -75,35 +72,34 @@
         android:id="@+id/tvTip"
         android:layout_width="@dimen/dp_0"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/dp_12"
-        android:layout_marginTop="@dimen/dp_4"
+        android:layout_marginTop="@dimen/dp_12"
+        android:layout_marginEnd="@dimen/dp_13"
         android:ellipsize="end"
         android:gravity="start"
         android:maxLines="2"
         android:text="Especially powerful, and especially."
         android:textColor="@color/cl6F7480"
         android:textSize="@dimen/sp_14"
-        app:layout_constraintEnd_toStartOf="@+id/clHi"
-        app:layout_constraintStart_toEndOf="@+id/ivAvatar"
-        app:layout_constraintTop_toBottomOf="@+id/tvUserId" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/ivAvatar"
+        app:layout_constraintTop_toBottomOf="@+id/ivAvatar" />
 
     <LinearLayout
         android:id="@+id/llFans"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/dp_12"
-        android:layout_marginTop="@dimen/dp_8"
+        android:layout_marginVertical="@dimen/dp_18"
         android:gravity="center_vertical"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/ivAvatar"
+        app:layout_constraintStart_toStartOf="@+id/tvTip"
         app:layout_constraintTop_toBottomOf="@+id/tvTip">
 
         <ImageView
             android:id="@+id/ivFans"
             android:layout_width="@dimen/dp_16"
             android:layout_height="@dimen/dp_16"
-            android:src="@drawable/ic_app_logo"/>
+            android:src="@drawable/ic_design_text" />
 
         <com.dubu.common.views.tv.UbuntuRegularTextView
             android:id="@+id/tvFansCount"
@@ -116,30 +112,15 @@
 
     </LinearLayout>
 
-    <com.ruffian.library.widget.RConstraintLayout
-        android:id="@+id/clHi"
-        android:layout_width="@dimen/dp_58"
-        android:layout_height="@dimen/dp_34"
-        android:layout_marginEnd="@dimen/dp_4"
-        app:background_normal="@color/clFF6B35"
-        app:corner_radius="@dimen/dp_17"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <ImageView
+        android:layout_marginEnd="@dimen/dp_12"
+        android:id="@+id/ivHi"
+        android:layout_width="@dimen/dp_44"
+        android:layout_height="@dimen/dp_26"
+        android:src="@drawable/ic_design_en"
+        app:layout_constraintBottom_toBottomOf="@+id/llFans"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <com.dubu.common.views.tv.UbuntuMediumTextView
-            android:id="@+id/tvHi"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="+"
-            android:textColor="@color/white"
-            android:textSize="@dimen/sp_18"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-    </com.ruffian.library.widget.RConstraintLayout>
+        app:layout_constraintTop_toTopOf="@+id/llFans" />
 
 
 </com.ruffian.library.widget.RConstraintLayout>
