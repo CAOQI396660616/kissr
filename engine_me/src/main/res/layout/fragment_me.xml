@@ -24,7 +24,6 @@
             android:layoutDirection="locale">
 
             <ImageView
-
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/dp_0"
                 android:src="@drawable/ic_mine_bg"
@@ -155,6 +154,339 @@
                 app:layout_constraintTop_toBottomOf="@id/tv_name" />
 
 
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/dp_19"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@+id/iv_avatar">
+
+
+                <!--1-->
+                <com.ruffian.library.widget.RConstraintLayout
+                    android:id="@+id/clUp"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_55"
+                    android:layout_marginHorizontal="@dimen/dp_16"
+                    android:layoutDirection="locale"
+                    android:orientation="vertical">
+
+                    <com.dubu.common.views.cview.DrawableTextView
+                        android:id="@+id/tv1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="@dimen/dp_10"
+                        android:gravity="center_vertical"
+                        android:text="@string/setting_publish"
+                        android:textColor="@color/cl2C2E33"
+
+                        android:textSize="@dimen/sp_16"
+                        app:drawable="@drawable/ic_set_11"
+                        app:drawableHeight="@dimen/dp_21"
+                        app:drawablePosition="1"
+                        app:drawableWidth="@dimen/dp_21"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:layout_width="@dimen/dp_7"
+                        android:layout_height="@dimen/dp_11"
+                        android:src="@drawable/ic_arrow_right_black"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </com.ruffian.library.widget.RConstraintLayout>
+                <!--2-->
+                <com.ruffian.library.widget.RConstraintLayout
+                    android:id="@+id/clPhoto"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_55"
+                    android:layout_marginHorizontal="@dimen/dp_16"
+                    android:layoutDirection="locale"
+                    android:orientation="vertical">
+
+                    <com.dubu.common.views.cview.DrawableTextView
+                        android:id="@+id/tv2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="@dimen/dp_10"
+                        android:gravity="center_vertical"
+                        android:text="@string/setting_my_photo_album"
+                        android:textColor="@color/cl2C2E33"
+
+                        android:textSize="@dimen/sp_16"
+                        app:drawable="@drawable/ic_set_12"
+                        app:drawableHeight="@dimen/dp_21"
+                        app:drawablePosition="1"
+                        app:drawableWidth="@dimen/dp_21"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:layout_width="@dimen/dp_7"
+                        android:layout_height="@dimen/dp_11"
+                        android:src="@drawable/ic_arrow_right_black"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </com.ruffian.library.widget.RConstraintLayout>
+                <!--3-->
+                <com.ruffian.library.widget.RConstraintLayout
+                    android:id="@+id/clMSet"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_55"
+                    android:layout_marginHorizontal="@dimen/dp_16"
+                    android:layoutDirection="locale"
+                    android:orientation="vertical">
+
+                    <com.dubu.common.views.cview.DrawableTextView
+                        android:id="@+id/tv3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="@dimen/dp_10"
+                        android:gravity="center_vertical"
+                        android:text="@string/setting_important"
+                        android:textColor="@color/cl2C2E33"
+
+                        android:textSize="@dimen/sp_16"
+                        app:drawable="@drawable/ic_set_13"
+                        app:drawableHeight="@dimen/dp_21"
+                        app:drawablePosition="1"
+                        app:drawableWidth="@dimen/dp_21"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:layout_width="@dimen/dp_7"
+                        android:layout_height="@dimen/dp_11"
+                        android:src="@drawable/ic_arrow_right_black"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </com.ruffian.library.widget.RConstraintLayout>
+                <!--4-->
+                <com.ruffian.library.widget.RConstraintLayout
+                    android:id="@+id/clFriend"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_55"
+                    android:layout_marginHorizontal="@dimen/dp_16"
+                    android:layoutDirection="locale"
+                    android:orientation="vertical">
+
+                    <com.dubu.common.views.cview.DrawableTextView
+                        android:id="@+id/tv4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="@dimen/dp_10"
+                        android:gravity="center_vertical"
+                        android:text="@string/setting_invite"
+                        android:textColor="@color/cl2C2E33"
+
+                        android:textSize="@dimen/sp_16"
+                        app:drawable="@drawable/ic_set_14"
+                        app:drawableHeight="@dimen/dp_21"
+                        app:drawablePosition="1"
+                        app:drawableWidth="@dimen/dp_21"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:layout_width="@dimen/dp_7"
+                        android:layout_height="@dimen/dp_11"
+                        android:src="@drawable/ic_arrow_right_black"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </com.ruffian.library.widget.RConstraintLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_0_5f"
+                    android:layout_marginHorizontal="@dimen/dp_16"
+                    android:layout_marginVertical="@dimen/dp_11"
+                    android:background="#FFE0E0E0" />
+
+                <!--1-->
+                <com.ruffian.library.widget.RConstraintLayout
+                    android:id="@+id/clTeam"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_55"
+                    android:layout_marginHorizontal="@dimen/dp_16"
+                    android:layoutDirection="locale"
+                    android:orientation="vertical">
+
+                    <com.dubu.common.views.cview.DrawableTextView
+                        android:id="@+id/tv5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="@dimen/dp_10"
+                        android:gravity="center_vertical"
+                        android:text="@string/setting_join_guild"
+                        android:textColor="@color/cl2C2E33"
+                        android:textSize="@dimen/sp_16"
+                        app:drawable="@drawable/ic_set_20"
+                        app:drawableHeight="@dimen/dp_21"
+                        app:drawablePosition="1"
+                        app:drawableWidth="@dimen/dp_21"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:layout_width="@dimen/dp_7"
+                        android:layout_height="@dimen/dp_11"
+                        android:src="@drawable/ic_arrow_right_black"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </com.ruffian.library.widget.RConstraintLayout>
+                <!--1.1-->
+                <com.ruffian.library.widget.RConstraintLayout
+                    android:id="@+id/clTeamAN"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_55"
+                    android:layout_marginHorizontal="@dimen/dp_16"
+                    android:layoutDirection="locale"
+                    android:orientation="vertical">
+
+                    <com.dubu.common.views.cview.DrawableTextView
+                        android:id="@+id/tv9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="@dimen/dp_10"
+                        android:gravity="center_vertical"
+                        android:text="@string/setting_manager_guild"
+                        android:textColor="@color/cl2C2E33"
+                        android:textSize="@dimen/sp_16"
+                        app:drawable="@drawable/ic_set_21"
+                        app:drawableHeight="@dimen/dp_21"
+                        app:drawablePosition="1"
+                        app:drawableWidth="@dimen/dp_21"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:layout_width="@dimen/dp_7"
+                        android:layout_height="@dimen/dp_11"
+                        android:src="@drawable/ic_arrow_right_black"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </com.ruffian.library.widget.RConstraintLayout>
+                <!--2-->
+                <com.ruffian.library.widget.RConstraintLayout
+                    android:id="@+id/clLang"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_55"
+                    android:layout_marginHorizontal="@dimen/dp_16"
+                    android:layoutDirection="locale"
+                    android:orientation="vertical">
+
+                    <com.dubu.common.views.cview.DrawableTextView
+                        android:id="@+id/tv6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="@dimen/dp_10"
+                        android:gravity="center_vertical"
+                        android:text="@string/setting_stitch_language"
+                        android:textColor="@color/cl2C2E33"
+
+                        android:textSize="@dimen/sp_16"
+                        app:drawable="@drawable/ic_set_22"
+                        app:drawableHeight="@dimen/dp_21"
+                        app:drawablePosition="1"
+                        app:drawableWidth="@dimen/dp_21"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:layout_width="@dimen/dp_7"
+                        android:layout_height="@dimen/dp_11"
+                        android:src="@drawable/ic_arrow_right_black"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </com.ruffian.library.widget.RConstraintLayout>
+                <!--3-->
+                <com.ruffian.library.widget.RConstraintLayout
+                    android:id="@+id/clHelp"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_55"
+                    android:layout_marginHorizontal="@dimen/dp_16"
+                    android:layoutDirection="locale"
+                    android:orientation="vertical">
+
+                    <com.dubu.common.views.cview.DrawableTextView
+                        android:id="@+id/tv7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="@dimen/dp_10"
+                        android:gravity="center_vertical"
+                        android:text="@string/setting_help_center"
+                        android:textColor="@color/cl2C2E33"
+
+                        android:textSize="@dimen/sp_16"
+                        app:drawable="@drawable/ic_set_23"
+                        app:drawableHeight="@dimen/dp_21"
+                        app:drawablePosition="1"
+                        app:drawableWidth="@dimen/dp_21"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:layout_width="@dimen/dp_7"
+                        android:layout_height="@dimen/dp_11"
+                        android:src="@drawable/ic_arrow_right_black"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </com.ruffian.library.widget.RConstraintLayout>
+                <!--4-->
+                <com.ruffian.library.widget.RConstraintLayout
+                    android:id="@+id/clSetting"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_55"
+                    android:layout_marginHorizontal="@dimen/dp_16"
+                    android:layoutDirection="locale"
+                    android:orientation="vertical">
+
+                    <com.dubu.common.views.cview.DrawableTextView
+                        android:id="@+id/tv8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="@dimen/dp_10"
+                        android:gravity="center_vertical"
+                        android:text="@string/setting_settings"
+                        android:textColor="@color/cl2C2E33"
+
+                        android:textSize="@dimen/sp_16"
+                        app:drawable="@drawable/ic_set_24"
+                        app:drawableHeight="@dimen/dp_21"
+                        app:drawablePosition="1"
+                        app:drawableWidth="@dimen/dp_21"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:layout_width="@dimen/dp_7"
+                        android:layout_height="@dimen/dp_11"
+                        android:src="@drawable/ic_arrow_right_black"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </com.ruffian.library.widget.RConstraintLayout>
+
+            </LinearLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
