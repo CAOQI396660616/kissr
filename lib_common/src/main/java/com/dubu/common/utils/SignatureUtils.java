@@ -41,7 +41,7 @@ public class SignatureUtils {
 
             // 添加Header参数（排除signature）
             for (Map.Entry<String, String> entry : headers.entrySet()) {
-                if (!"signature".equals(entry.getKey()) && !isEmptyValue(entry.getValue())) {
+                if (!"signature".equals(entry.getKey()) && !"Authorization".equals(entry.getKey()) && !isEmptyValue(entry.getValue())) {
                     allParams.put(entry.getKey(), entry.getValue());
                 }
 

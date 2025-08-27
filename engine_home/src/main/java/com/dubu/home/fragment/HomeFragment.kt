@@ -58,7 +58,7 @@ class HomeFragment : BaseBindingFragment<FragmentHomeBinding>() {
 
     private fun initClick(root: View) {
         // 测试设置用户性别接口
-        testSetUserGender()
+//        testSetUserGender()
     }
 
     private fun testSetUserGender() {
