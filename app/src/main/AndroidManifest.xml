@@ -154,7 +154,7 @@
             android:exported="false"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
-            android:theme="@style/LoginDialogTheme"
+            android:theme="@style/dialogStyle"
             android:windowSoftInputMode="adjustUnspecified" />
 
 

@@ -7,24 +7,10 @@
         <!--<item name="android:fontFamily" tool:targetApi="l">@font/din_medium</item>-->
     </style>
 
-    <!-- 登录弹框主题样式 -->
-    <style name="LoginDialogTheme" parent="Theme.AppCompat.Light.Dialog">
-        <!-- 背景透明 -->
-        <item name="android:windowIsTranslucent">true</item>
-        <item name="android:windowCloseOnTouchOutside">false</item>
-        <item name="android:windowBackground">@android:color/transparent</item>
-        <item name="android:backgroundDimEnabled">true</item>
-        <item name="android:backgroundDimAmount">0.5</item> <!-- 背景蒙层透明度 -->
 
-        <!-- 从底部弹出 -->
-        <item name="android:windowAnimationStyle">@style/BottomDialogAnimation</item>
+    <style name="dialogStyle" parent="Theme.AppCompat.Light.Dialog">
         <item name="android:windowIsFloating">true</item>
-    </style>
-
-    <!-- 底部弹出动画样式 -->
-    <style name="BottomDialogAnimation" parent="@android:style/Animation.Dialog">
-        <item name="android:windowEnterAnimation">@anim/slide_in_bottom</item>
-        <item name="android:windowExitAnimation">@anim/slide_out_bottom</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
     </style>
 
 </resources>
