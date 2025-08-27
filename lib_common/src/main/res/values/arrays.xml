@@ -47,9 +47,14 @@
         <item>#FFFF2459</item>
         <item>#FFFFA650</item>
     </array>
+
+
+
+
+
     <array name="bt_bg_1">
-        <item>#FF64F565</item>
-        <item>#FF1CEA5A</item>
+        <item>#FFFF4539</item>
+        <item>#FFFFC881</item>
     </array>
     <array name="bt_bg_2">
         <item>#FF5EF0F7</item>

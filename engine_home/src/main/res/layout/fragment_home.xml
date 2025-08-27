@@ -27,6 +27,14 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_0"
+                android:src="@drawable/ic_home_bg"
+                app:layout_constraintDimensionRatio="h,375:375"
+                app:layout_constraintTop_toTopOf="parent" />
+
             <ImageView
                 android:id="@+id/ivAppName"
                 android:layout_width="@dimen/dp_105"
@@ -49,26 +57,101 @@
 
             <ScrollView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="@dimen/dp_0"
+                android:layout_marginTop="@dimen/dp_15"
                 android:overScrollMode="never"
                 android:scrollbars="none"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/vStatus">
+                app:layout_constraintTop_toBottomOf="@+id/ivAppName">
 
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layoutDirection="locale">
+                    android:layout_height="match_parent">
 
-                    <ImageView
+
+                    <com.ruffian.library.widget.RConstraintLayout
+                        android:id="@+id/clBanner"
                         android:layout_width="match_parent"
-                        android:layout_height="@dimen/dp_0"
-                        android:src="@drawable/ic_home_bg"
-                        app:layout_constraintDimensionRatio="h,375:375"
-                        app:layout_constraintTop_toTopOf="parent" />
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/dp_18"
+                        android:layout_marginTop="@dimen/dp_10"
+                        app:background_normal="@color/white"
+                        app:corner_radius="@dimen/dp_15"
+                        app:layout_constraintTop_toTopOf="parent">
+
+
+                        <!--上面的 轮播-->
+                        <com.ruffian.library.widget.RConstraintLayout
+                            android:id="@+id/clTopBanner"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_0"
+                            app:background_normal="@color/clF5F6F7"
+                            app:border_color_normal="@color/white"
+                            app:border_width_normal="@dimen/dp_1"
+                            app:corner_radius_top_left="@dimen/dp_15"
+                            app:corner_radius_top_right="@dimen/dp_15"
+                            app:layout_constraintDimensionRatio="h,339:263">
+
+                            <com.youth.banner.Banner
+                                android:id="@+id/bannerTopVideo"
+                                android:layout_width="@dimen/dp_170"
+                                android:layout_height="0dp"
+                                app:banner_indicator_height="@dimen/dp_5"
+                                app:banner_indicator_normal_color="@color/clDBDBDB"
+                                app:banner_indicator_normal_width="@dimen/dp_5"
+                                app:banner_indicator_radius="@dimen/dp_3"
+                                app:banner_indicator_selected_color="@color/cl333333"
+                                app:banner_indicator_selected_width="@dimen/dp_5"
+                                app:banner_indicator_space="@dimen/dp_5"
+                                app:layout_constraintDimensionRatio="h,170:253"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                        </com.ruffian.library.widget.RConstraintLayout>
+
+                        <com.ruffian.library.widget.RConstraintLayout
+                            android:id="@+id/rootPhoto"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_52"
+                            android:layout_marginHorizontal="@dimen/dp_26"
+                            android:layout_marginVertical="@dimen/dp_13"
+                            app:background_normal="@array/bt_bg_1"
+                            app:corner_radius="@dimen/dp_26"
+                            app:gradient_orientation="TR_BL"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/clTopBanner">
+
+                            <com.dubu.common.views.cview.DrawableTextView
+                                android:id="@+id/tvH1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:drawablePadding="@dimen/dp_5"
+                                android:ellipsize="end"
+                                android:gravity="center"
+                                android:includeFontPadding="false"
+                                android:lineSpacingExtra="0dp"
+                                android:maxLines="1"
+                                android:text="@string/can_cash"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/sp_17"
+                                android:textStyle="bold"
+                                app:drawable="@drawable/ic_home_right"
+                                app:drawableHeight="@dimen/dp_17"
+                                app:drawablePosition="3"
+                                app:drawableWidth="@dimen/dp_16"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                        </com.ruffian.library.widget.RConstraintLayout>
+
+
+                    </com.ruffian.library.widget.RConstraintLayout>
 
 
                 </androidx.constraintlayout.widget.ConstraintLayout>

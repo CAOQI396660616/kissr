@@ -4,14 +4,24 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.TextView
+import androidx.recyclerview.widget.RecyclerView
 import com.dubu.common.base.BaseBindingFragment
 import com.dubu.common.base.BaseFragment
+import com.dubu.common.beans.home.HomeBannerDataBean
+import com.dubu.common.beans.home.HomeTopVideoBean
 import com.dubu.common.utils.hi.HiStatusBarTool
 import com.dubu.home.R
+import com.dubu.home.adapters.BannerVideoAdapter
+import com.dubu.home.adapters.BannerVideoHolder
 import com.dubu.home.adapters.HomeNewUserAdapter
 import com.dubu.home.databinding.FragmentHomeBinding
 import com.dubu.me.vm.CommonViewModel
+import com.dubu.test.testdata.TestData
 import com.hikennyc.view.MultiStateAiView
+import com.shuyu.gsyvideoplayer.listener.GSYSampleCallBack
+import com.youth.banner.indicator.CircleIndicator
+import com.youth.banner.indicator.RectangleIndicator
+import com.youth.banner.listener.OnPageChangeListener
 
 
 class HomeFragment : BaseBindingFragment<FragmentHomeBinding>() {
@@ -51,8 +61,14 @@ class HomeFragment : BaseBindingFragment<FragmentHomeBinding>() {
             HiStatusBarTool.getCompatOptStatusBarHeight(requireContext())
         vStatus.layoutParams = statusLayoutParams
 
+        initView()
         initClick(root)
+
         httpEngine()
+    }
+
+    private fun initView() {
+        handleBanner(TestData.getHomeTopVideoList())
     }
 
 
@@ -79,12 +95,70 @@ class HomeFragment : BaseBindingFragment<FragmentHomeBinding>() {
 
     }
 
+    /*
+       ╔════════════════════════════════════════════════════════════════════════════════════════╗
+       ║   PS: banner
+       ╚════════════════════════════════════════════════════════════════════════════════════════╝
+    */
+
+    private var mBannerAdapter: BannerVideoAdapter<HomeBannerDataBean?>? = null
+
+    private fun handleBanner(list: List<HomeTopVideoBean>) {
+
+        //加载网络图片  banner
+        val convertData = HomeBannerDataBean.convertOptData(list)
+        binding?.bannerTopVideo?.isAutoLoop(false)
+        binding?.bannerTopVideo?.viewPager2?.offscreenPageLimit = 1
+        binding?.bannerTopVideo?.setIntercept(false)
+        binding?.bannerTopVideo?.setUserInputEnabled(true)
+
+        mBannerAdapter = object :
+            BannerVideoAdapter<HomeBannerDataBean?>(
+                convertData
+            ) {
+            override fun onBindView(
+                holder: BannerVideoHolder?,
+                data: HomeBannerDataBean?,
+                position: Int,
+                size: Int
+            ) {
+
+                holder?.ivBanner
+
+            }
+        }
+
+
+        binding?.bannerTopVideo?.setAdapter(mBannerAdapter)
+        binding?.bannerTopVideo?.indicator = CircleIndicator(requireContext())
+
+
+        binding?.bannerTopVideo?.addOnPageChangeListener(object :
+            OnPageChangeListener {
+            override fun onPageScrolled(
+                position: Int,
+                positionOffset: Float,
+                positionOffsetPixels: Int
+            ) {
+            }
+
+            override fun onPageSelected(position: Int) {
+            }
+
+            override fun onPageScrollStateChanged(state: Int) {
+            }
+
+        })
+    }
+
+
 
     /*
-    ╔════════════════════════════════════════════════════════════════════════════════════════╗
-    ║   PS:
-    ╚════════════════════════════════════════════════════════════════════════════════════════╝
+       ╔════════════════════════════════════════════════════════════════════════════════════════╗
+       ║   PS: http
+       ╚════════════════════════════════════════════════════════════════════════════════════════╝
     */
+
 
 
     private fun getData() {

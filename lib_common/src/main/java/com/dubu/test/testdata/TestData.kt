@@ -1,5 +1,7 @@
 package com.dubu.test.testdata
 
+import com.dubu.common.beans.home.HomeTopVideoBean
+
 
 /**
  * @Description
@@ -25,6 +27,37 @@ object TestData {
 
     //美女手机尺寸图片
     //https://b0.bdstatic.com/ugc/img/2024-12-16/925fa7a13f38013d2de6b35195c677ce.png
+
+
+
+    /*
+ * 获取首页顶部 轮播视频的 数据
+ * */
+    @JvmStatic
+    fun getHomeTopVideoList(): MutableList<HomeTopVideoBean> {
+        val mutableListOf = mutableListOf<HomeTopVideoBean>()
+        mutableListOf.add(HomeTopVideoBean("https://pics0.baidu.com/feed/dc54564e9258d109eaecc5caee9978b16d814d8e.jpeg@f_auto?token=11267675242b7e055de8e1d693b86c81"))
+        mutableListOf.add(HomeTopVideoBean("https://pics0.baidu.com/feed/b8014a90f603738d52e9218f8cda045ffa19ecc8.jpeg@f_auto?token=364604795257865a58278cbfdfa12cf5"))
+        mutableListOf.add(HomeTopVideoBean("https://pics0.baidu.com/feed/b3119313b07eca80a62bbdeaaee223d3a04483e5.jpeg@f_auto?token=096049547124ad497543cd5150908880"))
+
+        return mutableListOf
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     @JvmStatic
