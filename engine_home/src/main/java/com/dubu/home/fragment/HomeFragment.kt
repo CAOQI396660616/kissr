@@ -4,22 +4,38 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.TextView
+import com.dubu.common.base.BaseBindingFragment
 import com.dubu.common.base.BaseFragment
 import com.dubu.common.utils.hi.HiStatusBarTool
 import com.dubu.home.R
 import com.dubu.home.adapters.HomeNewUserAdapter
+import com.dubu.home.databinding.FragmentHomeBinding
 import com.dubu.me.vm.CommonViewModel
 import com.hikennyc.view.MultiStateAiView
 
 
-class HomeFragment : BaseFragment() {
+class HomeFragment : BaseBindingFragment<FragmentHomeBinding>() {
+
     private var multiStateView: MultiStateAiView? = null
+
     private val mAdapter: HomeNewUserAdapter by lazy {
         HomeNewUserAdapter()
     }
+
     private val commonViewModel: CommonViewModel by lazy {
         CommonViewModel()
     }
+
+    companion object {
+        const val TAG = "HomeFragment"
+        private const val DEFAULT_INDEX = "DEFAULT_INDEX"
+        fun newInstance(index: Int = 0) = HomeFragment().also {
+            it.arguments = Bundle().apply {
+                putInt(DEFAULT_INDEX, index)
+            }
+        }
+    }
+
 
     override fun getRootViewId(): Int {
         return R.layout.fragment_home
@@ -35,15 +51,8 @@ class HomeFragment : BaseFragment() {
             HiStatusBarTool.getCompatOptStatusBarHeight(requireContext())
         vStatus.layoutParams = statusLayoutParams
 
-
-
         initClick(root)
         httpEngine()
-    }
-
-
-    private fun getData() {
-        showSuccessEngine()
     }
 
 
@@ -71,23 +80,16 @@ class HomeFragment : BaseFragment() {
     }
 
 
-    companion object {
-        const val TAG = "HomeFragment"
-        private const val DEFAULT_INDEX = "DEFAULT_INDEX"
-        fun newInstance(index: Int = 0) = HomeFragment().also {
-            it.arguments = Bundle().apply {
-                putInt(DEFAULT_INDEX, index)
-            }
-        }
-    }
-
-
     /*
     ╔════════════════════════════════════════════════════════════════════════════════════════╗
     ║   PS:
     ╚════════════════════════════════════════════════════════════════════════════════════════╝
     */
 
+
+    private fun getData() {
+        showSuccessEngine()
+    }
 
     private fun httpEngine() {
         getData()

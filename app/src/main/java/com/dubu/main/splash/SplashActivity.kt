@@ -41,7 +41,7 @@ class SplashActivity : BaseBindingActivity<ActivitySplashBinding>() {
         model.guestLogin(
             success = { user ->
                 HiLog.e(Tag2Common.TAG_12301, "login ******* = ${user.toJson()}")
-//                toMainActivity()
+                toMainActivity()
 
             },
             failed = { code, msg ->
@@ -49,7 +49,7 @@ class SplashActivity : BaseBindingActivity<ActivitySplashBinding>() {
         )
 
 
-        Router.toLoginDialogActivity("",0)
+//        Router.toLoginDialogActivity("",0)
 
     }
 
