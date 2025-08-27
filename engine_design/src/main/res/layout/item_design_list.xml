@@ -103,8 +103,7 @@
             android:id="@+id/ivFans"
             android:layout_width="@dimen/dp_16"
             android:layout_height="@dimen/dp_16"
-            android:src="@drawable/ic_fans"
-            android:tint="@color/cl9CA3AF" />
+            android:src="@drawable/ic_app_logo"/>
 
         <com.dubu.common.views.tv.UbuntuRegularTextView
             android:id="@+id/tvFansCount"
