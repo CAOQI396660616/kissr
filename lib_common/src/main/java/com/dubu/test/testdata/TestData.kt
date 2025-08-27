@@ -1,5 +1,6 @@
 package com.dubu.test.testdata
 
+import com.dubu.common.beans.UserBean
 import com.dubu.common.beans.home.HomeTopVideoBean
 
 
@@ -65,6 +66,15 @@ object TestData {
         val mutableListOf = mutableListOf<String>()
         for (i in 0..50) {
             mutableListOf.add("$i -- ")
+        }
+        return mutableListOf
+    }
+
+    @JvmStatic
+    fun getUserList(): MutableList<UserBean> {
+        val mutableListOf = mutableListOf<UserBean>()
+        for (i in 0..50) {
+            mutableListOf.add(UserBean())
         }
         return mutableListOf
     }

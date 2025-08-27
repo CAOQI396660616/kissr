@@ -17,6 +17,7 @@
             android:layout_height="match_parent">
 
             <View
+                android:background="@color/clF54B6B"
                 android:id="@+id/vStatus"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/dp_0_5f"
@@ -25,14 +26,43 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
 
-            <TextView
-                android:layout_width="@dimen/dp_300"
-                android:layout_height="@dimen/dp_300"
-                android:text="@string/app_name"
-                android:textSize="@dimen/sp_24"
-                android:textColor="@color/cl2C2E33"
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tl_home"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_40"
+                android:background="@null"
+                android:scrollbars="none"
+                android:translationZ="0dp"
+                app:elevation="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toBottomOf="@+id/vStatus"
+                app:tabBackground="@null"
+                app:tabContentStart="0dp"
+                app:tabGravity="fill"
+                app:tabIndicator="@drawable/ic_tab_indicator_line"
+                app:tabIndicatorColor="@null"
+                app:tabIndicatorFullWidth="false"
+                app:tabIndicatorGravity="bottom"
+                app:tabIndicatorHeight="@dimen/dp_4"
+                app:tabMinWidth="0dp"
+                app:tabMode="scrollable"
+                app:tabPaddingEnd="0dp"
+                app:tabRippleColor="@null" />
+
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/vp_home"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_0"
+                android:layout_marginTop="@dimen/dp_6"
+                android:overScrollMode="never"
+                android:scrollbars="none"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tl_home" />
+
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
