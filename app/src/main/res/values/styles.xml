@@ -8,29 +8,17 @@
     </style>
 
     <!-- 登录弹框主题样式 -->
-    <style name="LoginDialogTheme" parent="AppTheme">
-        <!-- 无标题栏 -->
-        <item name="windowNoTitle">true</item>
-        <!-- 透明背景 -->
+    <style name="LoginDialogTheme" parent="Theme.AppCompat.Light.Dialog">
+        <!-- 背景透明 -->
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowCloseOnTouchOutside">false</item>
         <item name="android:windowBackground">@android:color/transparent</item>
-        <!-- 非浮动窗口，全屏显示 -->
-        <item name="android:windowIsFloating">false</item>
-        <!-- 半透明遮罩 -->
-        <item name="android:windowContentOverlay">@null</item>
-        <!-- 从底部弹出动画 -->
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:backgroundDimAmount">0.5</item> <!-- 背景蒙层透明度 -->
+
+        <!-- 从底部弹出 -->
         <item name="android:windowAnimationStyle">@style/BottomDialogAnimation</item>
-        <!-- 允许点击外部关闭 -->
-        <item name="android:windowCloseOnTouchOutside">true</item>
-        <!-- 全屏显示 -->
-        <item name="android:windowFullscreen">false</item>
-        <!-- 状态栏透明 -->
-        <item name="android:statusBarColor">@android:color/transparent</item>
-        <!-- 导航栏透明 -->
-        <item name="android:navigationBarColor">@android:color/transparent</item>
-        <!-- 窗口布局在系统栏后面 -->
-        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
-        <!-- 窗口半透明状态栏 -->
-        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowIsFloating">true</item>
     </style>
 
     <!-- 底部弹出动画样式 -->

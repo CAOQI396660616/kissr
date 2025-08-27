@@ -6,7 +6,7 @@
 <!-- 全屏透明背景容器 -->
 <FrameLayout
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
 
     <!-- 状态栏占位视图 -->
     <View

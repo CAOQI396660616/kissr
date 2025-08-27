@@ -65,4 +65,7 @@
 <img src="C:/Users/39666/OneDrive/Pictures/image/32.png" alt="图33" style="zoom:15%; float: left;" /> 点击人设
 <img src="C:/Users/39666/OneDrive/Pictures/image/33.jpg" alt="图34" style="zoom:15%; float: left;" /> 选择结果
 <img src="C:/Users/39666/OneDrive/Pictures/image/34.png" alt="图34" style="zoom:15%; float: left;" /> 发送消息
-改成MarkDown 语法  
+改成MarkDown 语法
+
+
+keytool -exportcert -alias kissr -keystore D:\wpkissR\kissr\app\kissr.jks | openssl sha1 -binary | openssl base64
